@@ -1280,8 +1280,97 @@ Esperimento 3
 Viene aggiunta realismo.  
 Non c'è differenza dal 2  
 
+# Lezione 16  
+
+## La riduzione del pregiudizio  
+
+**Allport** - 1954  
+Il contatto tra persone appartenenti a gruppi diversi - quando positivo - può concorrere a ridurre i livelli di pregiudizio  
+
+Secondo Allport il pregiudizio nasce dalla mancanza di **conoscenza** dell'outgroup.
+
+Il contatto positivo è connotato da:  
+
+- Piacevolezza
+- Interdipendenza positiva
+- Coinvolgimento di individui di pari status
+- Sostegno sociale e istituzionale
+
+**Pettigrew & Tropp** - 2006  
+Meta-analisi con 515 studi, 250k partecipanti.  
+Trovano che il contatto riduce il pregiudizio, con correlazione r = -.21, quindi non forte.  
+
+Se le condizioni ottimali di Allport sono soddisfatte, l'effetto medio è più forte r = -.29  
+L'unica condizione necessaria perché la correlazione sia negativa e significativa è la positività del contatto.  
+L'effetto è più forte per le maggioranze che per le minoranze, r=-.23, r=-.18  
+L'effetto del contatto è dovuto più alla sua qualità che alla quantità  
+
+L'effetto è differente per diversi outgroup e non cambia significativamente per l'età e il genere.  
+
+**Quindi** il contatto consente di diminuire il pregiudizio, le condizioni di Allport sono facilitanti ma non necessarie  
+
+**Altre ricerche** hanno mostrato che il contatto che si verifica è inversamente proporzionale al pregiudizio nei soggetti.  
+
+**Brewer & Miller** - 1984  
+Decategorizzazione: il contatto deve essere il più possibile *personalizzato*  
+Le persone devono essere coinvolte in quanto tali, e non in quanto rappresentanti del gruppo di appartenenza.  
+
+Modello criticato perché:  
+
+- Se l'esperienza è eccessivamente personalizzata non riesco a generalizzare verso tutto l'outgroup.
+
+**Hewstone & Brown** - 1986  
+Mutua differenziazione:  
+La **salienza** dell'appartenenza al gruppo è essenziale, per poter **generalizzare**   
+Modello criticato perché presenta il problema opposto al lavoro di Brewer
 
 
+**Pettigrew** - 1998  
+Modello integrato -> Cerca di integrare fra loro i due modelli precedenti:  
 
+1. Iniziale attenzione agli aspetti individuali
+2. Relazioni positive e piacevoli
+3. Salienza appartenenza al gruppo
+
+**Ma come il contatto riduce il pregiudizio?**  
+**Ovvero da che effetto è mediato?**  
+
+Il primo mediatore trovato è stato l'**Ansia Intergruppi**  
+Definita come paura di interagire con una persona appartenente all'outgroup.  
+Provoca  
+
+- evitamento del contatto
+- rinforzo degli stereotipi negativi
+- atteggiamenti negativi
+- ostilità e aggressività
+
+**Voci & Hewston** - 2003  
+Modello di mediazione.  
+
+Il secondo mediatore trovato è l'**Empatia**  
+Definita come risposta emotiva orientata alla comprensione degli altri, può essere:  
+
+- Empatia cognitiva: vedere le cose con gli occhi di un'altra persona
+- Empatia emotiva: risposta affettiva in risposta alle emozioni di un'altra persona, può essere:  
+    1. Parallela: provare le stesse emozioni di un'altra persona
+    2. Reattiva: provare emozioni in risposta alle emozioni di un'altra persona.
+
+L'empatia consente (**Voci & Hewston** - 2007) di diminuire il pregiudizio.  
+
+Anche la **Minaccia**, realistica e simbolica, aumenta (**Tausch** - 2007) il pregiudizio, ma è correlata con l'ansia intergruppo.  
+
+**Le variabili dipendenti** che indicano pregiudizio utilizzate in questi studi sono:  
+
+- Pregiudizio esplicito
+- Pregiudizio implitcito (IAT)
+- Secondary Transfer Effect (riduzione del pregiudizio verso un gruppo fa sì che diminuisca anche verso altri), può funzionare in caso di gruppi simili.  
+
+**Il contatto indiretto** può essere un'alternativa al *contatto diretto*, non sempre possibile, e ve ne sono 3 tipi:
+
+Il contatto **esteso** avviene quando conosco membri dell'ingroup che hanno contatti con membri dell'outgroup. Nelle condizioni sperimentali viene chiesto di riflettere sulla relazione nello specifico.  
+
+Il contatto tramite **mass media** è una forma di contatto *parasociale*  
+
+Il contatto **immaginato** è una simulazione di contatto 
 
 
