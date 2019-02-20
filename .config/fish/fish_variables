@@ -76,8 +76,8 @@ SETUVAR fish_pager_color_prefix:\x23458588
 SETUVAR fish_pager_color_progress:\x2383a598
 SETUVAR fish_pager_color_secondary:\x23282828
 SETUVAR fish_user_paths:/home/ginko/\x2efzf/bin
-SETUVAR pure_color_mute:\x1b\x5b38\x3b2\x3b214\x3b93\x3b14m
-SETUVAR pure_color_primary:\x1b\x5b38\x3b2\x3b131\x3b165\x3b152m
-SETUVAR pure_color_success:\x1b\x5b38\x3b2\x3b189\x3b174\x3b147m
+SETUVAR pure_color_mute:\x1b\x5b33m
+SETUVAR pure_color_primary:\x1b\x5b90m
+SETUVAR pure_color_success:\x1b\x5b37m
 SETUVAR pure_threshold_command_duration:1116
 SETUVAR pure_version:2\x2e1\x2e1

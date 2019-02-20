@@ -648,3 +648,389 @@ La persona legge in lingua madre traducendo in un'altra lingua silenziosamente, 
 
 
 # Lezione 7
+
+# Lezione 8  
+
+## Il Sonno  
+Il sonno è uno stato fisiologico e mentale di relativa inattività, sicuramente motoria, ma non necessariamente mentale.  
+
+Tutti gli animali hanno stati di quiescienza di riposo, ma solo i mammiferi e gli uccelli dormono propriamente  
+I delfini dormono un emisfero alla volta ogni 60 secondi  
+Anche gli uccelli dormono e hanno il sonno REM, quindi sognano.
+
+**Perché dormiamo**  
+
+- Risparmio energetico
+- Evitare i predatori e il buio
+- Sintesi proteica, ripristino sostanze
+- Ristrutturazione informazioni e apprendimento (passaggio da memoria a breve e lungo termine)
+- Riposo muscolare
+
+Le funzioni che avvengono durante il sonno sono dette *trofiche*, ovvero ristrutturano le sostanze necessarie per la veglia.
+Se non dormiamo moriamo in 2 mesi, come le persone affette dalla 'mucca pazza'
+
+**Caratteristiche** del sonno  
+
+In condizioni ideali, un individuo medio adulto  
+Dormono molto di più i bambini e molto di meno i vecchi  
+La percentuale di sonno rem è più alta da bambini  
+
+
+- Dura circa 8 ore 
+- Costituito da fasi da 90-110 minuti  
+    1. Sonno non-REM  
+        Più lungo nelle prime fasi della notte e si accorcia verso il mattino  
+    2. Sonno REM  
+        Si allunga verso il mattino, breve all'inizio della notte  
+
+**Sonno non-REM**
+
+- Ci sono diversi stadi di profondità del sonno, da 1 a 4  
+    1. Non siamo consci di esserci addormentati (stadio beta)  
+    2. Stato di sonno, perdita della coscienza  
+    3. e 4. Sonno ad onde lente, fasi di sonno non=REM più preziose in cui avvengono i fenomeni trofici e di apprendimento  
+    Si va in stadio 4 solo nelle prime 3 ore del sonno.  
+- Linea narrativa dei sogni ben strutturata, pensieri logici, bianco e nero. 10-15% dei sogni 
+
+**Sonno REM**
+
+- Sogni illogici, incoerenti, simbolici, valore di immagine sensoriale, a colori 70-90%
+
+Ci ricordiamo i sogni perché abbiamo un micro-risveglio di 10-15 secondi, senza il quale non ce li ricordiamo  
+Viene ricordato il sogno perché l'emisfero sinistro riesce a trasformarlo in una linea logica narrativa prima di riaddormentarsi
+
+I sogni non sono pensieri ma *esperienze*, perché la regione deputata a checkare la realtà (corteccia prefrontale sinistra) sta dormendo.  
+Nei sogni lucidi c'è convivenza di processi di sogno e di coscienza, perché alcune parti del cervello sono attivate 
+
+I contenuti psichici dei sogni sono simili tra persone di culture diverse  
+
+**La privazione di sonno** 
+
+- È associata all'insorgere di demenza e di malattie neuro-degenerative  
+- Più notti di privazione provocano irritabilità, allucinazioni, sonno giornaliero.  
+- L'attività onirica è ***necessaria***, quindi se non è svolta durante la notte verrà effettuata di giorno  
+
+**Studi**  
+Studenti universitari devono memorizzare parole prima di addormentarsi vs la mattina  
+La rievocazione del materiale era drammaticamente migliore nel primo gruppo  
+
+C'è una correlazione tra sonno a onde lente nell'ippocampo e sequenze ricordate
+
+**Il substrato neurochimico del sonno**  
+Si può dormire solo se c'è un substrato neurochimico di supporto  
+
+**Strutture Neurali**  
+
+Il circuito attivante è la *formazione reticolare ascendente* che si basa so neurotrasmettitori catecolaminergico (adrenalina e noradrenalina)  
+È infatti impossibile dormire sotto effetto di adrenalina e noradrenalina, come quando si è arrabbiati o si ha fatto sport  
+
+Il *locus coeruleus* è attivo sempre quando siamo svegli, e sempre inattivo quando dormiamo  
+
+Il *bulbo* è responsabile dell'inibizione motoria durante il sonno, si possono muovere solo i muscoli oculomotori, e si attiva durante la fase REM*  
+
+Nella fase REM c'è un substrato diverso  
+
+**Neuro-ormoni**  
+
+- Melatonina (sonnolenza)  
+    Secreta spontaneamente quando fuori c'è oscurità  
+    Quella venduta è più che altro un placebo  
+- Orexina (ipocretina)  
+    Associata al risveglio  
+    Deficit associato a depressione e narcolessia
+
+**Neuro-Trasmettitori**  
+
+- Serotonina  
+    Promuove il sonno
+- Dopamina  
+    Ci fa risvegliare
+- Noradrenalina  
+    inibisce il sonno REM  
+- Acetilcolina  
+    induce il sonno REM  
+
+A fine giornata abbiamo sonno perché il substrato si attiva e anche perché nel nostro sangue aumentano i livelli di un peptide chiamato Delta-Sleep-Inducing-Peptide (DSTP)  
+Quando ci svegliamo non c'è traccia di DSTP  
+Il DSTP stimola l'ipotalamo
+
+**Modello colinergico del replay ippocampale** (vedi slide)  
+Relazione tra acetilcolina e apprendimento  
+
+- Veglia informazione neocorteccia -> ippocampo  
+- Sws informazione ippocampo -> neocorteccia
+
+**Correlati elettrofisiologici del sonno**  
+Con l'EEG più alto di 8Hz non ci si può addormentare  
+Per questo è impossibile dormire con gli occhi aperti  
+
+Veglia:   Bisogna passare per l'alfa per dormire  
+Stadio 1: Gli stati intermedi sono detti ipnagogici (theta)  
+Stadio 2: Sonno, onde theta, meccanismo di mantenimento del sonno  
+            Si può osservare attraverso i complessi K e i fusi del sonno (EEG con frequenza alfa)  
+Stadio 3: Onde Delta appaiono, sonno a onde lente
+Stadio 4: Solo onde Delta
+REM:      Caratterizzata dall'EEG simile alla veglia
+
+
+# Lezione 9
+
+**Laboratori del sonno**  
+Aiutano a rilassarsi con un arredamento familiare  
+Posizionano elettrodi attorno agli occhi (canti esterni degli occhi) a destra e sinistra e sopra e sotto per gli ammiccamenti  
+Gli occhi sono importanti per capire se la persona si trova in sonno rem o no  
+
+Durante la fase rem, detta anche *sonno paradossale* poiché l'EEG è particolare in quella fase, si osservano molti movimenti oculari
+
+**I movimenti oculari non sono inibiti**  
+Sono stati effettuati numerosi studi per capire se c'è una relazione tra i movimenti oculari e il contenuto dei sogni  
+
+Lo studio si pratica svegliando le persone dopo 10-20 minuti che sono entrate in fase REM, dopodiché vengono interrogate sul contenuto dei sogni immediatamente  
+
+Un'altra ipotesi è che le scariche ponto-geniculo-occipitali tipiche della fase REM vadano a interferire casualmente con l'attività elettro-oculografica, e per qualche motivo il blocco dell'elettromiogramma caratteristico della fase REM non coinvolga gli occhi  
+Infatti le eccitazioni occipitali programmano saccadi  
+Questo è supportato dal fatto che rumori ambientali esterni vengano integrati all'interno dei sogni  
+
+
+Le due ipotesi ovviamente non si contraddicono  
+
+## I Ritmi Biologici  
+
+La risposta alla domanda su cosa sono i ritmi biologici **NON si inizia a rispondere con il sonno**, che è solo un particolare tipo di ritmo biologico
+
+I ritmi biologici sono ***oscillazioni periodiche nell'attività fisiologica degli organismi***  
+Sono frutto dell'adattamento ad analoghi fenomeni periodici predicibili del mondo esterno  
+
+Il bioritmo implica il verificarsi di cambiamenti biologici specifici nell'organismo  
+
+Gli eventi che l'hanno determinato sono principalmente:  
+
+- Rotazione della Terra attorno all'asse  
+- Rotazione della Luna attorno alla Terra  
+- Rotazione della Terra attorno al Sole
+
+**Ritmo Circadiano**: Il ritmo che si ripete ogni 24 ore  
+**Ritmo Ultradiano**: Il ritmo che si ripete in cicli inferiori alle 24 ore (fasi del sonno)  
+**Ritmo Circatrigintano**: Il ritmo che rispecchia le fasi lunari  
+
+**Il ritmo Circadiano**  
+
+- 06.45 Picco nella pressione sanguigna  
+- 07:30 Si ferma la produzione di melatonina  
+- 08:30 Probabili movimenti intestinali
+- 09:00 Massima secrezione di testosterone
+- 14:30 Massima coordinazione visuo-motoria
+- 15:30 Massimo tempo di reazione  
+- 17:00 Massima efficienza cardiovascolare e forza muscolare  
+- 18:30 Massima pressione sanguigna
+- 19:00 Massima temperatura corporea
+- 21:00 Ricomincia la secrezione di melatonina
+- 22:30 Movimenti intestinali inibiti
+- 02:00 Sonno più profondo
+- 04:30 Minima temperatura corporea
+
+C'è un ritmo circadiano specifico per l'espressione di determinato geni, per cui tutte le funzioni correlate a questi geni seguono il ritmo circadiano.  
+Per esempio l'ormone della crescita viene secreto in una certa fase della notte in un certo orario in una certa stagione  
+
+I ritmi circadiani regolane le variazioni periodiche dei valori corporei che includono pressione sanguigna, livelli ormonali  con *straordinaria precisione* e dipendono da 2 fattori principali:  
+1. Sincronizzazione con la quantità di luce esterna (***foto-sincronizzazione***)  
+    La luce inibisce la produzione di melatonina  
+    Infatti per agevolare il passaggio ad altri fusi-orari l'esposizione alla luce può aiutare  
+2. Grazie ad un orologio endogeno, con precisione del minuto, situato nel nucleo soprachiasmatico dell'ipotalamo (che è il motivo per cui il jet-lag ti sfascia)  
+    Funziona grazie a dei neuroni che sparano con regolarità tenendo il tempo  
+
+    L'orologio endogeno è stato scoperto attraverso espianti cerebrali.  
+    Sono state estratte sezioni del cervello, includendo il nucleo soprachiasmatico dell'ipotalamo, permettendogli di sopravvivere in liquido extra-cellulare, e hanno registrato le scariche, scoprendo che:  
+    Le cellule di quella zona continuavano a scaricare sincronizzati con il ritmo luce-buio  
+
+    Hanno anche trapiantato il NSC dell'ipotalamo:  
+    Hanno individuato criceti con ritmi spontanei non esattamente di 24 ore, ma magari di 22 ore  
+    Facendoli accoppiare tra di loro si trovano proli con ritmi ancora inferiori (20 ore), ottenendo la così detta ***mutazione tau***  
+
+    Espiantando il nsc si ottiene un cambiamento del ritmo circadiano del ricevente coerente con la durata dell'orologio biologico  
+    
+Nella drosophila melanogaster (mosca della frutta) è stato identificato il gene PER che modifica il ritmo circadiano  
+il gene TIM regola la funzionalità del gene PER. Individui mutanti per il gene TIM non mostrano un ritmo circadiano *endogeno* se posti in una condizione di luce costante  
+il gene CLOCK (Circadian Locomotor Output Cycles Kaput) nei topi regola il ritmo circadiano endogeno negli animali con sistemi nervosi più sviluppati. Topi con danni alle 2 copie dei geni CLOCK perdono il ritmo circadiano endogeno  
+
+Per studiare il ritmo circadiano endogeno dei topi si calcolano quanti giri di una ruota fanno a determinate ore.  
+Un danno al gene CLOCK fa in modo che questo ritmo scompaia
+
+Il ritmo circadiano applicato alla temperatura corporea genera una sinusoide con periodo giornaliero  
+
+**Il ritmo Circannuale**  
+Difficile da studiare negli uomini, poiché le nostre attività sono stereotipate e indipendenti dalle stagioni  
+
+Si può studiare nelle scimmie attraverso  
+
+- La concentrazione del testosterone in funzione della stagione  
+    È più alta nella regione autunnale.  
+    Il testosterone regola la sessualità e l'aggressività.  
+    Ciò è adattivo, perché in questo modo i piccoli nascono nella stagione primaverile  
+    Bassi livelli di testosterone in primavera producono inoltre il fatto che in quel periodo le scimmie siano più empatiche e meno aggressive verso i cuccioli  
+
+L'ormone SOMATOTROPO (della crescita) negli esseri umani è regolato da un ritmo ultradiano, circadiano e circannuale  
+
+L'ormone Somatotropo viene prodotto esclusivamente durante il sonno, durante le prime 3 ore nello specifico, maggiormente d'estate  
+  
+Infatti se durante la notte i bambini non possono dormire si produce una crescita insufficiente  
+
+**Il ritmo Ultradiano** del sonno  
+Se viene disturbato da rumore ci sono molti meno momenti di sonno ad onde lente  
+Il rumore infatti velocizza l'EEG  
+
+Il sonno diurno è necessariamente diverso da quello notturno, dura di meno, ma in condizioni ambientali normale non è terribile ma comunque inferiore a livello di tempo di sonno a onde lente  
+Se disturbato da rumori invece rischia di non esserci *mai* sonno ad onde lente  
+
+**Studio di relazione tra ora di inizio del sonno e durata**  
+Se una persona va a dormire nella solita ora il sonno ha la durata massima.  
+Più si va a dormire tardi più linearmente si abbassa la durata del sonno  
+Il motivo è la mancanza del substrato neurochimico  
+
+
+**Neuro ormoni**  
+
+1. Follicolo-Stimolante stimola la crescita del follicolo di Graaf nell'ovaio (è un ormone estrogeno)
+2. Ormone Luteinizzante stimola la crescita del corpo luteo nell'utero (progesterone)
+
+Questi primi due regolano la sensibilità sensoriale delle donne e le fluttuazioni nel comportamento sessuale  
+Per esempio durante la fase dell'ormone del progesterone vengono preferite persone simili a noi (che condividono corredo genetico), poiché non c'è rischio di concepimento, e viceversa durante la fase estrogenica  
+
+Sono stati fatti anche studi sui potenziali evocati uditivi, che sono più alti nella fase estrogenica  
+
+Ciò vale anche con i tratti 'virili'
+
+3. Ormone Tiroideo regola il metabolismo e accrescimento della tiroide
+
+# Lezione 10  
+
+## Le Asimmetrie Emisferiche  
+
+Il corpo calloso garantisce la continuità anatomica e funzionale tra i due emisferi  
+
+È un tratto fibroso costituito da diverse centinaia di milioni di fibre bianche di diverso diametro  
+È possibile identificare diverse tipologie di fibre a seconda delle connessioni che effettuano  
+Serve principalmente per la continuità motoria e sensoriale.  
+Il corpo calloso è detto anche commissura.  
+
+Può essere tagliato in caso di epilessia grave, o in caso di tumori al suo interno  
+Si può anche nascere senza corpo calloso.  
+
+I diversi tipi di connessioni sono:  
+
+- Omotopiche  
+    Connettono due parti omologhe dei due emisferi (a specchio)
+- Eterotopiche  
+    Connettono due parti non omologhe 
+- Ipsilaterali  
+    Connettono parti intraemisferiche, non passando quindi per il corpo calloso  
+
+L'informazione impiega 3ms quando molto semplice a passare da un emisfero all'altro  
+
+**Sindrome da disconnessione interemisferica**  
+
+Se il paziente parla descrive solo quello che l'emisfero sinistro sa e vede  
+
+Usando la stimolazione tachistoscopica lateralizzata si trova infatti che l'emisfero destro è alessico  
+
+**Sintomi**  
+
+- emianomia  
+- emialessia  
+- perdita dell'equivalenza visuo-percettiva  
+    ovvero l'incapacità di comparare stimoli presenti nei diversi campi visivi  
+
+**Paziente J.W.**  
+
+Sottoposto a callosotomia a 25 anni per epilessia grave  
+
+Oggetti non visti posti nella mano sinistra non possono essere nominati ma possono essere usati appropriatamente (come una matita, un martello)  
+
+Il centro della lettura si trova nella regione occipitale sinistra.  
+Se viene recisa la connessione tra esso e l'emisfero sinistro (commissura posteriore) ma non la parte anteriore della commissura si osserva nei pazienti un'impossibilità di dire la parola ma la capacità di visualizzarne il contenuto, e arrivarci per induzione  
+
+Questi pazienti sono interessanti perché ci permettono di studiare le funzioni diversificate degli emisferi  
+
+Per esempio, l'emisfero destro può solo:  
+
+- Leggere parole concrete ma non astratte  
+- Automatismi verbali, frasi fatte, parolacce 
+- Comprensione della grammatica base 
+- Nessuna abilità di spelling
+
+**Zaidel**  
+
+1. Il lessico dell'emisfero destro è ricco e corrisponde a quello di un diciottenne
+2. La comprensione delle frasi è limitata a sequenza brevi e sintatticamente semplici
+3. Lo span di memoria  a breve termine dell'emisfero destro è di 3+-1  
+4. L'emisfero destro non sa evocare l'immagine fonologica di un nome né dire se 2 parole fanno rima tra loro
+
+**Gazzaniga**  
+
+1. Le abilità cognitive dell'emisfero destro sono nettamente inferiori a quelle di uno scimpanzé
+2. L'emisfero destro ha solo qualche competenza semantica
+3. L'emisfero destro è completamente inetto nella matematica e nel ragionamento
+
+**Studio sulla self-recognition**  
+La capacità di riconoscersi allo specchio è considerata un marker delle capacità cognitive  
+È interessante capire quale emisfero sia migliore a riconoscere la propria faccia  
+
+Si osserva che l'emisfero sinistro è specializzato nel riconoscimento della propria immagine, mentre il destro quella delle facce familiari  
+
+Infatti l'emisfero sinistro possiede le rappresentazioni autobiografiche  
+
+**Studio sui volti**  
+Si utilizza la presentazione chimerica, ovvero due foto tagliate a metà e rimescolate  
+
+Ovviamente per chiedere risposte all'emisfero destro bisogna chiedere di indicare la risposta, mentre a quello sinistro lo si può domandare verbalmente  
+
+**Capacità di ricostruzione**  
+L'emisfero destro è superiore nella capacità di ricostruzione, o più in generale nel gestire forme tridimensionali, ovvero nelle capacità visuospaziali  
+
+**Abilità ortografia**  
+Compito di distinzione di lettere, con dei prime congruenti vs non contruenti  
+
+Il prime era la stessa lettera ma maiuscola  
+
+Se un emisfero ha capacità ortografiche presenterà un vantaggio nella condizione di prime compatibile  
+
+L'emisfero destro non mostra vantaggi, ed è molto più lento di quello sinistro  
+
+L'emisfero sinistro mostra vantaggi dati dal prime  
+
+**Non ci sono effetti**  nella memoria, nella vigilanza.  
+**Ci sono effetti temporanei e incostanti** come il *mutismo*, la *disprassia*, ovvero difficoltà nei movimenti automatici, come la mancanza di coordinazione tra le due mani, e la *mano estranea*, ovvero il paziente non riconosce una mano nell'altra ad occhi chiusi.  
+
+Ci sono **effetti positivi** nel fenomeno dell'analisi seriale, poiché usano due sistemi di ricerca visuo-spaziale contemporaneamente.  
+
+**Fenomeni inspiegabili** se non attraverso transfer interemisferico  
+
+In compiti basati sull'informazione spaziale, viene chiesto al paziente di spostare lo sguardo sul cerchio luminoso presentato nel LVF ma sulla posizione corrispondente nell'altro campo b  
+
+In compiti basati sugli oggetti, viene illuminata una forma nel RVF e chiesto di spostare lo sguardo su quella forma nel LVF  
+
+Ciò è spiegabile attraverso la comunicazione sottocorticale.  
+Le informazioni gestite dai centri sottocorticali (collicolo, talamo, ipotalamo) sono molto grossolane.  
+
+Un altro esperimento lo conferma:  
+Vengono misurati i tempi di riconoscimento di forme già viste, e ci si accorge che c'è un vantaggio nel momento in cui quelle informazioni erano ridondanti (ovvero viste anche dall'altro emisfero), anche se tutto il compito poteva essere eseguito con un solo emisfero  
+
+**Posizioni**  
+Secondo Zaidel e Corballis c'è effettivamente trasferimento sottocorticale di informazioni connotative e contestuali.  
+
+Secondo Gazzaniga ci osno strategie di cross-cuing, ovvero l'emissione da parte di un emisfero di comportamenti esterni atti a stimolare i recettori sensoriali dell'emisfero opposto, come contare sottovoce,toccare il ginocchio opposto, o muovere una spalla.  
+Dopo le prime osservazioni ciò è stato impedito, quindi l'ipotesi non regge per ora  
+
+**Compiti di relazioni logiche**  
+Sembra che un solo emisfero non abbia capacità logiche senza connessioni con l'altro  
+
+**Compiti di disegno**  
+Disegnare ciò che le parole indicano concetti, in alcuni casi c'è confusione sulla parola disegnata, a volte c'è collaborazione emisferica nel controllo della mano sinistra.  
+
+**Spiegazione di decisioni ingiustificate** l'emisfero sinistro crea spiegazioni logiche quando non è in grado di spiegare le scelte compiute dal destro  
+
+L'emisfero sinistro interpreta come vecchie immagini mai viste ma congruenti con altre immagini già viste.  
+
+ 
+
+

@@ -285,7 +285,7 @@ Il contenuto ha importanza nella misura in cui evoca un contesto e quindi degli 
 **Tversky & Kahneman** - da 1973
 Per ragionare usiamo delle ***euristiche*** che ci permettono di semplificare il giudizio, ma in questo modo perdiamo la parte essenziale del ragionamento probabilistico, andando quindi verso un errore sistematico (*bias*)  
 Le euristiche sono metodi semplificatori che compensano i limiti di elaborazione della mente umana;  
-NOn sono però procedimenti solo semplificati ma sono procedimenti che obbediscono a meccanismi loro propri, indipendenti dal contenuto del ragionamento.  
+Non sono però procedimenti solo semplificati ma sono procedimenti che obbediscono a meccanismi loro propri, indipendenti dal contenuto del ragionamento.  
 Producono Biases  
 
 - Euristica della disponibilità  
@@ -310,4 +310,134 @@ Producono Biases
     1. Completa sospensione delle relazioni diplomatiche fra USA e Cina
     2. Un attentato nucleare causato dalla Cina  
     Viene creduto più probabile che siano più probabili tutti e due gli eventi assieme che uno da solo.  
+
+
+# Lezione 4  
+> **Esperimento di Linda**  
+> l'89% degli studenti testati e l'85% degli esperti in statistica testati effettuano una *conjunction fallacy*  
+
+> Viene speigato da Tversy e Kahneman affermando che le persone considerano la plausibilità degli eventi e non le loro proprietà logico-matematiche  
+
+> Viene avanzata l'ipotesi che nell'esempio di Linda (filosofa femminista ecc) si effettui l'errore di congiunzione perché implicitamente essere solo una commessa nega il fatto che sia femminista, viene quindi fatto un esperimento di controllo nel quale è esplicitato che non c'è negazione, e ottengono di nuovo l'errore.  
+
+> **Esperimento di Borg (famoso tennista)**  
+> Le possibili previsioni sono:  
+1. Vincerà il match  
+2. Perderà il match  
+3. Perderà il primo set ma vincerà il match  
+4. Vincerà il primo set ma perderà il match  
+
+> **Esperimento di John P.**  
+> mite 42enne spostato con due bambini, tranquillo e introverso, possiede una società, commercia pietre e metalli tra cui uranio, ha avuto una condanna di 6 mesi e una multa, ora è indagato  
+1. È un pedofilo  
+2. È coinvolto nella vendita di documenti segreti e in operazioni di spionaggio  
+3. È un tossico  
+4a. Ha ucciso un suo impiegato  
+4b. Ha ucciso un suo impiegato per impedirgli di parlare con la polizia  
+
+> L'ultimo item può essere uno dei due tra i diversi gruppi
+> L'ultimo item viene considerato più  probabile, nella seconda condizione (4b)
+
+> Questo è detto conjunction error anziché fallacy perché è spiegato da un evento causale che *aumenta* la probabilità 
+
+> La questione è come ci rappresentiamo la storia
+
+**La fallacia della probabilità primaria**  
+**Kahneman e Tversky** - 1973  
+
+La probabilità primaria è intesa come a priori, prima di avere informazioni sull'esito  
+
+**Esperimento sugli avvocati/ingegneri**  
+1o gruppo: 30 avvocati e 70 ingegneri intervistati  
+2o gruppo: 70 avvocati e 30 ingegneri intervistati  
+Al soggetto vengono date 5 descrizioni ***tratte a caso***  
+Deve indicare la probabilità che sia avvocato o ingegnere.  
+
+I due gruppi non tengono conto dell'informazione iniziale, e non c'è differenza tra le valutazioni dei due gruppi sulle stesse descrizioni  
+Addirittura quando la descrizione è neutra viene scelto a caso il gruppo  
+Secondo K e T ciò avviene per l'euristica della rappresentatività  
+Ma questo non spiega il caso neutro  
+Se l'item casuale viene dato da solo o per primo separato dagli altri scompare l'errore  
+
+**Problema dei taxi**  
+I soggetti trascurano completamente la base rate.  
+Secondo gli autori ciò è spiegato dal fatto che la seconda informazione sia più specifica
+
+Nella seconda variante dell'esperimento in cui non danno la percentuale di taxi ma quella dei loro incidenti, le persone considerano quella variabile per la valutazione  
+
+**Problema della pillola**  
+**Problema del tumore al seno**  
+Faccio la proporzione tra i falsi positivi e i positivi reali 
+
+# Lezione 5  
+**Teoria dei nudge** - Suggerimenti  
+**Paternalismo Libertario**  
+Public Policy  
+Formulare provvedimenti politici che tutelano o aumentano la libertà di scelta  
+Ma cerca di influenzare i comportamenti degli individui al fine di migliorarne il benessere  
+
+**Umani ed Econi**  
+
+L'econe è l'homo oeconomicus, l'uomo che usa tutte le sue risorse cognitive per massimizzare il risultato  
+Mentre gli umani non massimizzano, errano in modo prevedibile e hanno una razionalità limitata  
+
+Di conseguenza gli esseri umani usano le euristiche  
+
+Un ***pungolo*** è qualsiasi elemento che incide in misura significativa sul comportamento degli umani ma che viene ignorato dagli econi.  
+
+Un esempio di pungolo è lo status quo bias (inerzia): trapianti  
+La cosa che cambia tra gli stati nei quali la donazione degli organi post-mortem è solo il fatto che si parte nello stato in cui si donano vs non si donano.  
+È lo stesso sistema degli abbonamenti col mese gratis  
+
+**Sistema 1 e 2**  
+
+- Il sistema 1 risponde velocemente, inconsciamente, automaticamente, ma con facilità ad errare.  
+Si usa per decisioni ripetute e giornaliere  
+- Il sistema 2 è lento, conscio, serve sforzo, si usa per decisioni complesse ma è affidabile  
+
+**Euristiche**  
+Secondo Kahneman e Tversky le euristiche sono essenziali ma ci portano a conseguenze negative.  
+
+- **Ancoraggio**  
+    Priming iniziali modificano le risposte successive quando c'è incertezza  
+
+**Stimoli Sociali**  
+
+- Volersi omologare
+- Essere spinti all'omologazione  
+
+La ***norma locale*** e la ***norma provinciale*** differiscono per diffusione della generalizzazione  
+La più funzionale è quella provinciale  
+
+
+# Lezione 6 
+
+Teorema di Bayes  
+La probabilità condizionata di H dato D è la ***probabilità a posteriori***  
+
+La probabilità a posteriori di H dato un valore di D è uguale alla probabilità che D si verifichi dato H come vero per la probabilità a priori d H tutto fratto la probabilità se stesso + la probabilità di D dato non-H e la probabilità di non-H
+
+Ci interessa vedere se le stime delle persone che non conoscono questo teorema su problemi di questo genere.  
+La cosa che risulta evidente è che la prima informazione viene generalmente scartata (probabilità primaria)  
+
+Il motivo per cui le persone mostrano il bias della probabilità primaria è che nel problema solo un'informazione attiva schemi causali, e quindi viene considerata solo quella.  
+Se entrambe le informazioni attivassero schemi causali, o nessuna delle due, il bias non si presenterebbe.  
+
+## Razionalità Ecologica  
+
+**Homo Heuristicus** - Gigerenzer  
+
+Gegerenzer contrappone una teoria all'approccio delle euristiche di T e K, chiamandola intelligenza ecologica.  
+
+La razionalità non coincide con la coerenza, né con l'esaustiva computazione delle informazioni, ma con una abilità intuitiva e adattiva.  
+Cioè non siamo in grado di capire le percentuali, ma utilizziamo più facilmente le frequenze, perché la percentuale è un prodotto culturale relativamente recente, mentre abbiamo sempre utilizzato le frequenze.  
+
+Così come i nostri sistemi percettivi si sono adattati, così i nostri processi di ragionamento, che sono strutturati in modo conforme al formato delle informazioni, così come erano presente nell'ambiente in cui l'uomo si è adattato.
+
+Secondo Gegerenzer non è che non abbiamo implementati degli algoritmi *byasiani*, ma andiamo in quella direzione, ***solo*** quando le informazioni hanno un formato simile a quelle incontrate in natura, ovvero solo quando mostrano causalità e sono strutturate con frequenze.  
+
+La letteratura ha mostrato che le persone non considerano la probabilità primaria, i falsi positivi e non sono in grado di integrare le informazioni in modo bayesiano.  
+
+La questione per lui non è se abbiamo dei buoni sistemi statistici, ma quanto i nostri algoritmi sono adattati all'ambiente.  
+
 

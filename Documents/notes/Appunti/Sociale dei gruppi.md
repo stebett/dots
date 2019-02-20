@@ -718,4 +718,134 @@ Questo è l'effetto del pregiudizio
 Le persone esposte al prime white sono più veloci a processare le parole stereotipiche per i bianchi e quelle positive (dei bianchi), mentre dei neri quelle negative (dei neri)  
 Questo è l'effetto pregiudizio stereotipico
 
+# Lezione 9
 
+Esempio di paradigma applicato a giovani/anziani  
+
+- Giovani stereotipiche positive  
+    Forti  
+    Attivi  
+    Sani
+- Giovani stereotipiche negative  
+    Distratti  
+    Pigri  
+    Ribelli
+- Anziani stereotipiche positive  
+    Saggi  
+    Buoni  
+    Affettuosi
+- Anziani stereotipiche negative  
+    Malati  
+    Lenti  
+    Deboli
+
+Prime giovane:  
+Stereotipo: Sarò più veloce in giovani stereotipiche positive 
+Pregiudizio stereotipico: più veloce in giovani stereotipiche positive
+
+**Profezia che si auto-avvera**  
+Quando ho una rappresentazione stereotipica metterò in atto dei comportamenti che fanno sì che sia più probabile osservare l'avverarsi delle mie credenze  
+
+Questo anche in virtù del punto 2 della formazione degli stereotipi (conferma)
+
+**La minaccia dello stereotipo** Steele - 2002  
+Disegno 2x2  
+Bianchi vs Neri, test che rileva differenze in QI tra bianchi e neri vs controllo (ricerca con quesiti), tutto between  
+Le risposte dei bianchi sono uguali in entrambi le condizioni (la minaccia dello stereotipo non ha un inverso)  
+Le risposte dei neri sono più accurate nella condizione di controllo, nella quale sono pari a quelle dei bianchi.  
+
+**Autostereotipizzazione**  
+L'individuo descrive se stesso utilizzando più frequentemente tratti stereotipici riferiti alla propria categoria di appartenenza rispetto a a tratti non stereotipici  
+
+È più alta nel caso delle etichette denigratorie  
+
+Ovviamente ciò provoca bias all'interno dei gruppi minoritari  
+
+
+# Lezione 10
+
+## Basi Motivazionali del Pregiudizio  
+
+**Teorie**  
+
+- Differenze individuali  
+
+    1. Personalità autoritaria  
+        **Adorno** - 1950, è fra le prime teorie  
+        Il pregiudizio è una sorta di patologia, una sindrome di personalità per la quale c'è un transfer tra l'odio verso i genitori autoritari e gli outgroup  
+        Teoria molto popolare negli anni '50, ma presenta lacune  
+        È infatti improbabile che una malattia sia così pervasiva nella popolazione, inoltre il pregiudizio è soggetto a fluttuazioni storiche e temporali.  
+        È una teoria abbandonata, ma ha sviluppato degli strumenti ancora utili:  
+        **RWA** (right wing authoritarianism), secondo la quale la causa della personalità deviata è l'insieme delle esperienze effettuate in un ambiente estremista di destra.  
+        Le persone RWA hanno esperienze di vita all'insegna della convenzionalità e disciplina.  
+        È stata creata una scala per misurarla, che ora viene utilizzata ora per misurare differenze individuali, ovvero il contesto educativo nel quale gli individui sono stati cresciuti  
+
+        Il secondo modello nato dalla teoria di Adorno è la Social Dominance Orientation (**SDO**), anche questa utilizzata come misura di differenza individuale  
+        È una teoria proposta da Sidanius ne 1999, che sostiene che all'interno del contesto sociale ci sonon delle gerarchie sociali, in cui alcuni gruppi sono più in alto di altri.  
+        Le persone con punteggi alti di SDO riconoscono valore nella gerarchia sociale, e che senza di essa il mondo non sarebbe giusto o non sarebbe possibile viverci in maniera serena.  
+          
+
+    2. Frustrazione-aggressività  
+        Secondo questa teoria il pregiudizio è esito di uno stato di frustrazione (come la teoria di Adorno), data in generale dal mancato soddisfacimento di un bisogno  
+        L'energia accumulata può essere scaricata attraverso l'aggressività, ma spesso l'individuo o non sa la causa o la vera fonte della frustrazione è inattaccabile, quindi trova un capro espiatorio, che spesso è un gruppo minoritario, per definizione più debole.  
+
+        Teoria abbandonata, poiché identifica aspetti motivazionali sul piano puramente individuale, non tenendo conto del fatto che il pregiudizio sia un fenomeno di gruppo.  
+
+- Aspetti socio-economici  
+    1. Deprivazione relativa  
+        Continua a sostenere che il pregiudizio sia esito di insoddisfazione o frustrazione.  
+        Però in questo caso l'insoddisfazione è di tipo relativo, derivata dal fatto che l'individuo si senta in posizione di svantaggio in una determinata situazione.  
+        La frustrazione quindi non è oggettiva.  
+        Sono state fatte ricerche (negli anni 50)  
+        Sono state trovate molte lamentele per la mancata promozione in aereonautica, mentre non nella polizia militare, mentre in realtà vi erano più promozionoi nella polizia militare.  
+
+        Il motivo è che l'oggetto di paragone era differente.
+
+        La deprivazione può essere egoistica, cioè a causa della sua condizione individuale, oppure fraterna, ovvero a causa della sua condizione di gruppo.  
+        Il pregiudizio sarà più elevato quando la deprivazione è di tipo fraterno.  
+        **Esperimento**  
+        Confronto tra partecipanti *gratificati*, *egoisticamente deprivati*, *collettivamente deprivati*, *collettivamente & egoisticamente deprivati*.  
+        Il disegno dell'esperimento è 1x4, e trovano che i livelli di pregiudizio sono più alti per deprivazione egoistica e collettiva, successivamente quella collettiva, mentre trovano che la deprivazione egoistica ***non*** provoca pregiudizio o addirittura lo riduce.  
+          
+        È una teoria a scarsissimo valore predittivo, sembra più utile a spiegare fenomeni a *posteriori*  
+
+    2. Conflitto realistico  
+        Teoria di Sherif (1966), secondo la quale il pregiudizio è causato dalla competizione tra gruppi per risorse limitate.  
+        Il pregiudizio è quindi dato da interdipendenza negativa.  
+        Si chiama conflitto realistico perché il conflitto è dato dall'interdipendenza negativa esclusivamente sul piano delle risorse materiali.  
+        Il conflitto può essere ridotto da uno scopo sovraordinato, ovvero da obiettivi che sono rilevanti per i diversi gruppi ma che possono essere raggiunti solo attraverso la cooperazione.  
+        Esperimento dei campi estivi.  
+        3 fasi:                 conoscenza, divisione, cooperazione
+        Variabile dipendente:   condotta intergruppi
+        Variabile indipendente: livello di interazione (assente, competitiva, cooperativa) tra i gruppi  
+        In ultima analisi ci dice che il pregiudizio dipende da  
+        1. presenza di due o più gruppi
+        2. conflitto per risorse  
+
+        Ci piace perché introduce l'importanza degli scopi sovraordinati  
+        Ha utilizzato le dinamiche intergruppo per spiegare il pregiudizio  
+
+        Criticata perché se l'obbiettivo sovraordinato non riesce ad essere raggiunto il conflitto aumenta.  
+        Non si rende conto che basta la mera categorizzazione sociale nella genesi del pregiudizio.  
+        Inoltre il fatto che ogni obiettivo sovraordinato introduca sempre un terzo outgroup non è positivo.  
+
+    3. Intergroup Threat Theory  
+        Stephan - 2009, modifica la teoria del conflitto realistico, sostenendo che basti la minaccia simbolica, ovvero la minaccia ai valori, alle tradizioni e alla cultura e moralità dell'ingroup.  
+
+    4. Sociofunctional Model  
+        Cottrell 2005, esistono diversi tipi di minacce simboliche e realistiche che danno origine a specifiche risposte affettive  
+        Minacce realistiche  
+        1. Minaccia economica - Rabbia
+        2. Minaccia alla sicurezza - Paura
+        3. Minaccia alla reciprocità per condizione o per scelta - Pietà o Rabbia  
+
+        Minacce simboliche  
+        Dipendono più che altro da ***chi*** mi minaccia simbolicamente.  
+        1. Se è l'outgroup, generalmente è il disgusto.
+        2. Se è l'ingroup, generalmente è colpa.  
+        ecc.  
+        Essendo che le minacce diverse provocano diverse risposte emotive diverse, queste vanno distinte  
+
+
+- Aspetti psico-sociali  
+    1. Identità sociale
