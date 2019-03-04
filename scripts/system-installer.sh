@@ -4,6 +4,7 @@
 cd $HOME
 wget https://raw.githubusercontent.com/ginkobab/dots/master/.pkglist
 sudo pacman -S (cat .pkglist)
+rm .pkglist
 
 mkdir packs && cd packs
 
@@ -30,10 +31,11 @@ git --git-dir=$HOME/.dots --work-tree=$HOME config --local status.showUntrackedF
 
 ### --------------- SUCKLESS ---------------
 cd $HOME/packs/dwm-git/src/dwm && sudo make clean install
-cd $HOME/packs/dmenu-git/src/dwm && sudo make clean install
-cd $HOME/packs/st-git/src/dwm && sudo make clean install
-cd $HOME/packs/surf/src/dwm && sudo make clean install
-cd $HOME/packs/tabbed-git/src/dwm && sudo make clean install
+cd $HOME/packs/dmenu-git/src/dmenu && sudo make clean install
+cd $HOME/packs/st-git/src/st && sudo make clean install
+cd $HOME/packs/surf && sudo make clean install
+cd $HOME/packs/tabbed-git/src/tabbed && sudo make clean install
+cd $HOME/packs/slstayts/src/sl && sudo make clean install
 
 ### --------------- DAEMONS ---------------
 systemctl enable --now tlp
