@@ -1,0 +1,39 @@
+{
+    "application:activate-next-tab": {
+            "command": "application:activate-next-tab",
+                "keys": [
+                    "Alt L"
+                ]
+        },
+        
+        
+    "docmanager:close": {
+      "command": "docmanager:close",
+      "keys": [
+        "Alt Q"
+      ],
+      "selector": ".jp-Activity",
+      "title": "Close Activity",
+      "category": "File Operations"
+    },
+        "editmenu:clear-all": {
+      "command": "editmenu:clear-all",
+      "keys": [
+        "Alt H"
+      ],
+      "selector": "[data-jp-undoer]",
+      "title": "Clear All",
+      "category": "Editing"
+    },
+            
+    "runmenu:run-all": {
+      "command": "runmenu:run-all",
+      "keys": [
+        "Alt R"
+      ],
+      "selector": "[data-jp-code-runner]",
+      "title": "Run All",
+      "category": "Run Menu"
+    }           
+            
+}
