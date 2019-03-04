@@ -10,7 +10,6 @@ ranger
 ripgrep
 tlp
 w3m
-wpa_supplicant
 xf86-input-evdev
 xf86-input-synaptics
 xf86-video-intel
@@ -18,4 +17,5 @@ xorg-server
 xorg-xbacklight
 xorg-xinit
 xorg-xsetroot
-zathura-pdf-mupdf
+zathrua
+zathura-pdf-poppler
