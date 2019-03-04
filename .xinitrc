@@ -1,0 +1,1 @@
+/home/ginko/dot_files/xinitrc
