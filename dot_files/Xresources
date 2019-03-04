@@ -1,0 +1,23 @@
+!--General settings ---------------   
+
+Xft.dpi:            96
+Xft.antialias:      true
+Xft.hinting:        true
+Xft.rgba:           rgb
+Xft.authint:        true
+Xft.hintstyle:      hintfull
+Xft.lcdfilter:      lcddefault
+
+!--Urxvt configs ---------------  
+
+URxvt.font:                 xft:Anonymice Powerline:size=13:antialias=true
+URxvt*internalBorder:       0
+URxvt*externalBorder:       0
+URxvt*saveline:             2000
+URxvt*termName:             rxvt-256color
+URxvt*scrollBar:            false
+Urxvt*scrollBar_right:      false
+
+urxvt*background:           #282828
+urxvt*foreground:           #f2f2f2
+
