@@ -10,6 +10,7 @@ fi
 xrdb -merge ~/.Xresources
 xsetroot -solid '#928374'
 
+setxkbmap -option caps:escape
 exec slstatus &
 exec dwm
 
