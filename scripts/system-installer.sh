@@ -14,7 +14,7 @@ git clone https://github.com/ginkobab/jupyterlab-vim
 
 ### --------------- FONT ---------------
 cd /usr/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf
+sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf
 
 fc-cache
 
@@ -23,6 +23,8 @@ cd $HOME
 echo ".dots" >> .gitignore
 
 git clone --bare https://github.com/ginkobab/dots $HOME/.dots
+
+rm $HOME/.config/fish/fish_variables
 git --git-dir=$HOME/.dots --work-tree=$HOME checkout
 git --git-dir=$HOME/.dots --work-tree=$HOME config --local status.showUntrackedFiles no
 
