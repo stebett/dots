@@ -33,7 +33,9 @@ git --git-dir=$HOME/.dots --work-tree=$HOME config --local status.showUntrackedF
 git clone https://github.com/chriskempson/base16-shell.git $HOME/.config/base16-shell
 cd $HOME/.config/base16-shell/scripts
 rm base16-flat.sh
-sed "s/\$color13/\$color21/" base16-gruvbox-dark-medium.sh > base16-flat.sh
+sed "66 s/13/21/" base16-gruvbox-dark-medium.sh > base16-flat.sh
+cd ..
+sed i.bak "31 s/for//" profile_helper.fish
 ### --------------- SUCKLESS ---------------
 cd $HOME/packs/dwm-git/src/dwm && sudo make clean install
 cd $HOME/packs/dmenu-git/src/dmenu && sudo make clean install
