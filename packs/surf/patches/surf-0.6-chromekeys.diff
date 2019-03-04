@@ -1,0 +1,106 @@
+diff --git a/config.def.h b/config.def.h
+index 80a0feb..f8dc533 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -71,23 +71,23 @@ static Key keys[] = {
+     { MODKEY,               GDK_minus,  zoom,       { .i = -1 } },
+     { MODKEY,               GDK_plus,   zoom,       { .i = +1 } },
+ 
+-    { MODKEY,               GDK_l,      navigate,   { .i = +1 } },
+-    { MODKEY,               GDK_h,      navigate,   { .i = -1 } },
++    { MODKEY,               GDK_i,      navigate,   { .i = +1 } },
++    { MODKEY,               GDK_o,      navigate,   { .i = -1 } },
+ 
+     { MODKEY,               GDK_j,      scroll_v,   { .i = +1 } },
+     { MODKEY,               GDK_k,      scroll_v,   { .i = -1 } },
+     { MODKEY,               GDK_b,      scroll_v,   { .i = -10000 } },
++    { MODKEY,               GDK_f,      scroll_v,   { .i = +10000 } },
+     { MODKEY,               GDK_space,  scroll_v,   { .i = +10000 } },
+-    { MODKEY,               GDK_i,      scroll_h,   { .i = +1 } },
+-    { MODKEY,               GDK_u,      scroll_h,   { .i = -1 } },
++    { MODKEY,               GDK_l,      scroll_h,   { .i = +1 } },
++    { MODKEY,               GDK_h,      scroll_h,   { .i = -1 } },
+ 
+     { 0,                    GDK_F11,    fullscreen, { 0 } },
+     { 0,                    GDK_Escape, stop,       { 0 } },
+-    { MODKEY,               GDK_o,      source,     { 0 } },
+-    { MODKEY|GDK_SHIFT_MASK,GDK_o,      inspector,  { 0 } },
++    { MODKEY,               GDK_u,      source,     { 0 } },
++    { MODKEY|GDK_SHIFT_MASK,GDK_u,      inspector,  { 0 } },
+ 
+     { MODKEY,               GDK_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO") },
+-    { MODKEY,               GDK_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
+     { MODKEY,               GDK_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND") },
+ 
+     { MODKEY,               GDK_n,      find,       { .b = TRUE } },
+diff --git a/surf.1 b/surf.1
+index 1530ec6..8d1caf4 100644
+--- a/surf.1
++++ b/surf.1
+@@ -114,10 +114,10 @@ which surf should use.
+ .B Escape
+ Stops loading current page or stops download.
+ .TP
+-.B Ctrl\-h
++.B Ctrl\-o
+ Walks back the history.
+ .TP
+-.B Ctrl\-l
++.B Ctrl\-i
+ Walks forward the history.
+ .TP
+ .B Ctrl\-k
+@@ -126,17 +126,20 @@ Scrolls page upwards.
+ .B Ctrl\-j
+ Scrolls page downwards.
+ .TP
++.B Ctrl\-h
++Scroll horizontally to the left.
++.TP
++.B Ctrl\-l
++Scroll horizontally to the right.
++.TP
+ .B Ctrl\-b
+ Scroll up one whole page view.
+ .TP
+-.B Ctrl\-Space
++.B Ctrl\-f or Ctrl\-Space
+ Scroll down one whole page view.
+ .TP
+-.B Ctrl\-i
+-Scroll horizontally to the right.
+-.TP
+ .B Ctrl\-u
+-Scroll horizontally to the left.
++Show the sourcecode of the current page.
+ .TP
+ .B Ctrl\-Shift\-k or Ctrl\-+
+ Zooms page in.
+@@ -147,7 +150,7 @@ Zooms page out
+ .B Ctrl\-Shift\-q
+ Resets Zoom
+ .TP
+-.B Ctrl\-f and Ctrl\-\e
++.B Ctrl\-/
+ Opens the search-bar.
+ .TP
+ .B Ctrl\-n
+@@ -174,9 +177,6 @@ Reloads the website without using the cache.
+ .B Ctrl\-y
+ Copies current URI to primary selection.
+ .TP
+-.B Ctrl\-o
+-Show the sourcecode of the current page.
+-.TP
+ .B Ctrl\-Shift\-a
+ Toggle through the the
+ .I cookie policies.
+@@ -196,7 +196,7 @@ Toggle if the
+ .I stylefile 
+ file should be loaded. This will reload the page.
+ .TP
+-.B Ctrl\-Shift\-o
++.B Ctrl\-Shift\-u
+ Open the Web Inspector (Developer Tools) window for the current page.
+ .TP
+ .B Ctrl\-Shift\-s
