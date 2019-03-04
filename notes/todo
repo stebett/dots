@@ -1,13 +1,20 @@
 todo
 
+/instalelr
+   • fish as default shell
+   • text dimension
+
 /Desktop
    • Set up `ranger` properly
          ▸ shortcuts
          ▸ icons
+         ▸ cd
   
    • set up `fzf`
-         ▸ color
-         ▸ shortcuts
+               ▪ color
+               ▪ shortcuts
+         ▸ debug
+
    • set up `surf`
          ▸ chromebar
          ▸ bookmarks
@@ -29,18 +36,17 @@ todo
          ▸ screenlock
 
    • set up :st
-         ▸ dimension
+               ▪ dimension
 
 /NeoVim
    • incsearch
    • deoplete — supertab?
    • easymotion - vim-sneak?
    • ultisnips
-   • easy-align
+               ▪ easy-align
    • nerdtree -git -plugin
    • remove deoplete in branch 
    • qq to QQ
-   • ctrl to alt
    
 
 /Jupyter 
@@ -48,14 +54,14 @@ todo
    • “`” to kj
    • set up `pyvenv`
                ▪ requirements.txt
-         ▸ prompt
+               ▪ prompt
    • set up `system`
          ▸ startup — sinit
          ▸ slock
                ▪ slstatus
          ▸ rgb
                ▪ X
-         ▸ CAPSLOCK to ESC
+               ▪ CAPSLOCK to ESC
 
    • set up `battery`
          ▸ my_lightweight_ → reddit
