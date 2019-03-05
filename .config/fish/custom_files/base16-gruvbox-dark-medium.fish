@@ -18,14 +18,7 @@ set -l color0D '#83a598'
 set -l color0E '#d3869b'
 set -l color0F '#d65d0e'
 
-set -xU FZF_DEFAULT_OPTS "
-  --height=60% --reverse
-
-  --color bg+:$color01,bg:$color00,spinner:$color09,hl:$color09
-  --color fg:$color04,header:$color0D,info:$color0A,pointer:$color09
-  --color marker:$color0F,fg+:$color06,prompt:$color0A,hl+:$color09
-
-"
+set -x FZF_DEFAULT_OPTS " --height 60% --reverse --color bg+:$color01,bg:$color00,spinner:$color09,hl:$color09 --color fg:$color04,header:$color0D,info:$color0A,pointer:$color09 --color marker:$color0F,fg+:$color06,prompt:$color0A,hl+:$color09 "
   #--color=bg+:$color01,bg:$color00,spinner:$color0C,hl:$color0D
   #--color=fg:$color04,header:$color0D,info:$color0A,pointer:$color0C
   #--color=marker:$color0C,fg+:$color06,prompt:$color0A,hl+:$color0D
