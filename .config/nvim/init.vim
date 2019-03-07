@@ -55,8 +55,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " au BufRead,BufNewFile *.md 
-let g:goyo_width = 200
-let g:goyo_height = 200
+let g:goyo_width = 400
+let g:goyo_height = 400
 
 
 "-------------------------COLORS PART-------------------------
