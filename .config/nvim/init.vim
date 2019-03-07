@@ -3,6 +3,8 @@ filetype off
  
 call plug#begin()
 
+" Plug 'jremmen/vim-ripgrep'
+
 Plug 'junegunn/goyo.vim'
 
 Plug 'ryanoasis/vim-devicons'
@@ -15,7 +17,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'metakirby5/codi.vim'
 
 "Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -54,7 +55,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " au BufRead,BufNewFile *.md 
-
+let g:goyo_width = 200
+let g:goyo_height = 200
 
 
 "-------------------------COLORS PART-------------------------
@@ -95,8 +97,14 @@ noremap <leader>b :Buffers<cr>
 "History fzf navigation
 noremap <leader>h :History<cr>
 
-"Ag search
-noremap <leader>f :Ag<cr>
+"Ag word search in current di
+noremap <leader>r :Rg<cr>
+
+noremap <leader>g :Goyo<cr>
+
+"fzf search
+" command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden  --color "always" '.shellescape(<q-args>, 1, <bang>0)
+noremap <leader>f :Files ~<cr>
 
 "Search word under cursor in project tree (?) using Ag
 noremap <leader>d :exe ':Ag ' . expand('<cword>')<CR>
@@ -172,6 +180,9 @@ inoremap jk <ESC>
 
 
 "------------------------SETTINGS--------------------------
+
+"grep
+set grepprg=rg\ --vimgrep
 
 " Spellcheck
 set spelllang=en_us,it_it
