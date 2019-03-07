@@ -3,6 +3,8 @@ filetype off
  
 call plug#begin()
 
+Plug 'junegunn/goyo.vim'
+
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/vim-easy-align'
@@ -32,9 +34,12 @@ Plug 'morhetz/gruvbox'
 
 Plug 'vim-syntastic/syntastic'
 
-Plug 'xolox/vim-misc'
+Plug 'vim-pandoc/vim-pandoc'
 
-Plug 'xolox/vim-notes'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-notes'
 
 call plug#end()
 
@@ -47,6 +52,9 @@ let g:notes_directories = ['~/notes']
 " easy align in normal and visual mode
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" au BufRead,BufNewFile *.md 
+
 
 
 "-------------------------COLORS PART-------------------------
@@ -165,6 +173,8 @@ inoremap jk <ESC>
 
 "------------------------SETTINGS--------------------------
 
+" Spellcheck
+set spelllang=en_us,it_it
 
 " Set to auto read when a file is changed from the outside
 set autoread
