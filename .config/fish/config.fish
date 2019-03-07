@@ -7,7 +7,7 @@ end
 
 # fzf
 if status --is-interactive
-    source "$HOME/.config/fish/custom_files/base16-gruvbox-dark-medium.fish"
+    source "$HOME/.config/fish/custom_files/fzf_opts.fish"
 end
 
 # Autologin
