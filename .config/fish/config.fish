@@ -23,6 +23,7 @@ if status --is-interactive
     source "$BASE16_SHELL/profile_helper.fish"
 end
 
+source "$BASE16_SHELL/profile_helper.fish"
 # Pyenv
 #set -U PYENV_ROOT $HOME/.pyenv
 #set PATH $PYENV_ROOT/bin $PATH
