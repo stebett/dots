@@ -5,6 +5,10 @@ call plug#begin()
 
 " Plug 'jremmen/vim-ripgrep'
 
+" Plug 'zxqfl/tabnine-vim'
+
+" Plug 'ervandew/supertab'
+
 Plug 'junegunn/goyo.vim'
 
 Plug 'ryanoasis/vim-devicons'

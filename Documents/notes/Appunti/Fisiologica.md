@@ -1,10 +1,10 @@
-# Fisiologica
+**Fisiologica**
 
-## Lezione 1
+# Lezione 1
 
 
 **Contenuti**
-    * Neuroscienze Cognitive 
+* Neuroscienze Cognitive 
     * Cognitive Neuroscience: the biology of the mind Gazzaniga 
     
 
@@ -19,11 +19,12 @@ E' un approccio altamente multidisciplinare basato sulle nuove tecnologie.
 L'interesse per il cervello risale alla civilta' egizia.
 
 Successivamente i Greci discutono dell'anima:
-    - Platone -> anima *immortale* -> anima razionale collocata nel **cervello**
-    - Aristotele -> anima *sostanzialistica* -> anima collocata nel **cuore**  -> vasi sanguigni come nervi
+- Platone -> anima *immortale* -> anima razionale collocata nel **cervello**
+- Aristotele -> anima *sostanzialistica* -> anima collocata nel **cuore**  -> vasi sanguigni come nervi
+
 Avevano capito che il l'*anima* era alla base del movimento e del pensiero
 
-Dopo Cristo lo scienziato ellenista Galeno scopre i nervi attraverso esperimenti sugli animali.
+Dopo Cristo lo scienziato ellenista `Galeno` scopre i nervi attraverso esperimenti sugli animali.
 Inoltre scopre la *corteccia* cerebrale coniandone il nome stesso.
 Purtroppo localizza l'anima nel pneuma (fluido) all'interno dei ventricoli cerebrali. Concezione sopravvissuta fino al 1800.
 
