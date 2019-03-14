@@ -1,9 +1,16 @@
 **To Do List**
 
+# Python Debug
+    [ ] pbd/ipbd/pbdpp
+    [ ] import logging
+    [ ] git bissect
+
+
 # Installer
     [ ] fish as default shell
     [ ] text dimension
     [ ] virtualenv
+
 
 # Fzf
     [ ] hidden files

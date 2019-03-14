@@ -5,11 +5,11 @@ call plug#begin()
 
 Plug 'junegunn/goyo.vim'
 
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/vim-easy-align'
 
-Plug 'metakirby5/codi.vim'
+"Plug 'metakirby5/codi.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -38,8 +38,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
 Plug 'ncm2/ncm2-path'
-Plug 'ncm2/cm2-bufword'
+Plug 'ncm2/ncm2-bufword'
 Plug 'roxma/nvim-yarp'
+
+Plug 'alfredodeza/pytest.vim'
+Plug 'plytophogy/vim-virtualenv'
 "Plug 'ervandew/supertab'
 
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -48,8 +51,10 @@ Plug 'roxma/nvim-yarp'
 " Plug 'Shougo/echodoc.vim'
 
 Plug 'itchyny/lightline.vim'
-
-Plug 'scrooloose/nerdtree'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+"Plug 'scrooloose/nerdtree'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'morhetz/gruvbox'
 
@@ -100,6 +105,8 @@ let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['autopep8']}
 nnoremap <F2> :ALEFix<cr>
 
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+
 "-------------------------COLORS PART-------------------------
 colo gruvbox
 
@@ -129,8 +136,8 @@ filetype indent on
 "-------------------------LEADER PART-------------------------
 let mapleader = " "
 
-noremap <leader>db :PymodeLint<CR>
-nmap <leader><leader> :NERDTreeToggle<CR>
+nnoremap <leader>db oimport pdb; pdb.set_trace()<esc>
+nmap <leader><leader> :Ranger<CR>
 
 "Fast saving
 nmap <leader>w :w!<cr>
@@ -168,19 +175,19 @@ noremap <Leader>k <C-w>5+
 
 " Quickly create a new terminal in a vertical split
 tnoremap <Leader>\| <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
-noremap <Leader>\| :vsp<CR><C-w><C-w>:term<CR>
+nnoremap <Leader>\| :vsp<CR><C-w><C-w>:term<CR>
 
 " Quickly create a new terminal in a horizontal split
 tnoremap <Leader>- <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>- :sp<CR><C-w><C-w>:term<CR>
 
-" Create neovim in a vertical split
-tnoremap <Leader>\\ <C-\><C-n>:vsp new<CR>
-noremap <Leader>\\ :vsp new<CR>
+" Create neovim in a vertical split with ranger
+tnoremap <Leader>\\ <C-\><C-n>:vsp new<CR>:Ranger<CR>
+nnoremap <Leader>\\ :vsp new<CR>:Ranger<CR>
 
-" Create neovim in horizontal splits
-tnoremap <Leader>_ <C-\><C-n>:sp new<CR>
-noremap <Leader>_ :sp new<CR>
+" Create neovim in horizontal splits with ranger
+tnoremap <Leader>_ <C-\><C-n>:sp new<CR>:Ranger<CR>
+nnoremap <Leader>_ :sp new<CR>:Ranger<CR>
 
 
 "disable highlight 
@@ -200,7 +207,10 @@ vnoremap <leader>P "+P
 
 "------------------------CUSTOM MAPPINGS--------------------------
 
-nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
+nnoremap <F4> :Pytest file<cr>
+nnoremap <F6> :Pytest file --pdb<cr>
+nnoremap <F7> :
 
 "Navigation
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -217,7 +227,7 @@ inoremap <A-k> <Esc><C-w>k
 inoremap <A-l> <Esc><C-w>l
 
 " Go in normal mode from terminal
-tnoremap jk <C-\><C-n>
+tnoremap <A-Esc> <C-\><C-n>
 
 
 "------------------------SETTINGS--------------------------

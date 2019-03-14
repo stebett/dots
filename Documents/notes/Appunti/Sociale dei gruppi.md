@@ -279,15 +279,18 @@ Modello 2x2 = 4 pregiudizi possibili
 **Misure di pregiudizio latente**  
 
 - Bogus Pipeline (Segall, 1971)   
+
     a. Disegno 2x2 -     questionario (*within*) + 'macchina della verita' (*between*)'
     b. Disegno funzionante **solo** se l'individuo e' disposto a condividere il pregiudizio
 
 - Risposta Comportamentale      
+
     1. Misurazione delle risposte fisiologiche 
     2. Paradigma della fila di sedie (distanza di seduta)
     3. Allocazione di risorse 
 
-- Bias Verbali  
+- Bias Verbali 
+
     1. Linguistic Intergroup Bias (Maass - 1989)  
       Misura l'astrattezza del linguaggio:
       Linguaggio astratto ancorato a caratteristiche disposizionali
@@ -302,3 +305,85 @@ Modello 2x2 = 4 pregiudizi possibili
       
       Punteggi simili tra ingroup e outgroup
 
+
+# Lezione 4
+
+    3. Priming - Payne, 2001
+       **Semantico**   
+        1. Presentazione subliminale
+        2. Presentazione ambigua
+        3. Identificazione oggetto/azione ambigua
+
+        Oppure  
+        1. Presentazione subliminale
+        2. Presentazione parola
+        3. Riconoscimento parola (Ha senso compiuto?)
+
+        **Valutativo** (Diverso **solo** per il 3o blocco)
+        1. Presentazione subliminale
+        2. Presentazione parola
+        3. Interpretazione (positiva/negativa)
+
+        Oppure
+        *Affective Misattribution Procedure (AMP) - Payne, 2005*
+        1. Presentazione subliminale
+        2. Presentazione ideogramma cinese
+        3. Valutazione ideogramma
+
+        Avviene un effetto di esposizione attraverso questo esperimento, ma e' abbastanza difficile che avvenga
+
+    4.  Misure di neuroimmagine  
+        Attivazione dell'insula e dell'amigdala dopo la presentazione di immagini di outgroup
+
+
+## Il Pregiudizio Etnico
+
+Stereotipi legati all'aggressivita' e criminalita'  
+Si accompagna alla percezione che l'outgroup abbia uno status inferiore  
+Al pregiudizio e' associata ansia e senso di minaccia  
+
+**Freeman** - 2011
+- Mouse Tracker
+
+**Payne** - 2001
+- Weapon Bias  
+    1. Priming - bianco/nero  
+    2. Oggetto ambiguo - utensile/pistola  
+
+    Misura:   
+    1. Reaction time
+    2. Accuratezza
+
+    Identifichiamo piu' velocemente le pistole quando esposti al prime black e viceversa  
+    Facciamo piu' errori quando esposti a black + utensile, gli altri errori non sono diversi tra loro  
+    Questo effetto emerge maggiormente quando le persone sono costrette ad eseguire il compito piu' velocemente
+
+**Correl** - 2002  
+- Shooter Bias  
+    Videogioco  
+    Disegno 2x2 Bianco/Nero - Armato/Non armato   
+
+    **Risultati**   
+    Target Armato -> + veloce se nero, accuratezza invariante
+    Target Disarmato -> +veloce a non sparare se bianco, - accuratezza se nero
+    Effetto minore sulle persone allenate       
+    Effetto presente anche nelle persone di colore  
+    
+**Eberhardt** - 2006  
+- Looking Deathworthy  
+    Sentenze capitali variano in base al colore della pelle dell'assassino e della vittima  
+    1. Uccidere un bianco rende piu' probabile la pena di morte  
+    2. Un assassino nero ha piu' probabilita' di essere condannato a morte  
+    
+    Fa degli esperimenti in cui manipola la stereoticipita' dell'assassino e il colore della pelle della persona uccisa.  
+    Disegno 2x2. Risultati:  
+    1. Quando la vittima e' nera, stessa probabilita' di dare pena di morte  
+    2. Se vittima e assassino sono bianchi c'e' meno probabilita' di pena di morte rispetto a assassino nero e vittima bianca  
+
+**Wilson** - 2017   
+- Fisicita' e Minaccia  
+    Le caratteristiche positive degli outgroup diventano negative nel complesso.  
+
+    Esperimento:    
+    Attribuzione di muscolosita' maggiore se il target e' nero, ancora maggiore se il partecipante e' bianco.  
+    Pero' se il target e' nero la sua muscolosita' viene correlata maggiormente ad un possibile danno (*minacciosita'*), sia che il partecipante sia bianco che sia nero
