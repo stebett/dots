@@ -3,33 +3,49 @@ filetype off
  
 call plug#begin()
 
-" Plug 'jremmen/vim-ripgrep'
-
-" Plug 'zxqfl/tabnine-vim'
-
-" Plug 'ervandew/supertab'
-
 Plug 'junegunn/goyo.vim'
 
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/vim-easy-align'
-" Plug 'szymonmaszke/vimpyter'
-
-" Plug 'goerz/jupytext.vim'
 
 Plug 'metakirby5/codi.vim'
-
-"Plug 'godlygeek/tabular'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Plug 'szymonmaszke/vimpyter'
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'autozimu/LanguageClient-neovim', {
+ "            \ 'branch': 'next',
+  "           \ 'do': 'bash install.sh',
+   "          \ }
 
-" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'klen/python-mode'
+
+Plug 'majutsushi/tagbar'
+
+Plug 'tpope/vim-surround'
+
+Plug 'scrooloose/nerdcommenter'
+
+" Plug 'neomake/neomake'
+
+Plug 'yuttie/comfortable-motion.vim'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-jedi'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/cm2-bufword'
+Plug 'roxma/nvim-yarp'
+"Plug 'ervandew/supertab'
+
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'deoplete-plugins/deoplete-jedi'
+
+" Plug 'Shougo/echodoc.vim'
 
 Plug 'itchyny/lightline.vim'
 
@@ -37,31 +53,52 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'morhetz/gruvbox'
 
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
-Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc' 
 
-Plug 'vim-pandoc/vim-pandoc-syntax'
-
-"Plug 'xolox/vim-misc'
-"Plug 'xolox/vim-notes'
+Plug 'vim-pandoc/vim-pandoc-syntax' " change with next
+"Plug 'godlygeek/tabular' "Required for markdown
+"Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
 call plug#end()
 
 "------------------------PLUG SETTINGS--------------------------
+set hidden
 
-map <C-n> :NERDTreeToggle<CR>
-
-let g:notes_directories = ['~/notes']
+nmap <F8> :TagbarToggle<CR>
 
 " easy align in normal and visual mode
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " au BufRead,BufNewFile *.md 
-let g:goyo_width = 400
+let g:goyo_width = 900
 let g:goyo_height = 400
 
+" ncm2 options
+
+autocmd BufRead,BufNewFile,BufEnter *.py call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+set shortmess+=c
+
+inoremap <c-c> <ESC>
+
+let g:ncm2#auto_popup = 0
+inoremap <silent> <S-tab> <c-r>=ncm2#manual_trigger()<cr>
+let g:ncm2#total_popup_limit = 10
+inoremap <expr><A-n> pumvisible() ? "\<C-n>" : "\<A-n>"
+inoremap <expr><A-p> pumvisible() ? "\<C-p>" : "\<A-p>"
+
+"Ale Options
+
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['autopep8']}
+nnoremap <F2> :ALEFix<cr>
 
 "-------------------------COLORS PART-------------------------
 colo gruvbox
@@ -90,61 +127,60 @@ filetype indent on
 
 
 "-------------------------LEADER PART-------------------------
-let mapleader = ","
+let mapleader = " "
+
+noremap <leader>db :PymodeLint<CR>
+nmap <leader><leader> :NERDTreeToggle<CR>
 
 "Fast saving
 nmap <leader>w :w!<cr>
 
+"Fast go out from open panes
+nmap <leader>q :q<cr>
+
 "Buffer fzf navigation
-noremap <leader>b :Buffers<cr>
+noremap <leader>sb :Buffers<cr>
 
 "History fzf navigation
-noremap <leader>h :History<cr>
+noremap <leader>sh :History<cr>
 
-"Ag word search in current di
-noremap <leader>r :Rg<cr>
+"Rg word search in current di
+"noremap <leader>sw :Rg<cr>
 
 noremap <leader>g :Goyo<cr>
 
 "fzf search
-" command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden  --color "always" '.shellescape(<q-args>, 1, <bang>0)
-noremap <leader>f :Files ~<cr>
+noremap <leader>sf :Files ~<cr>
 
 "Search word under cursor in project tree (?) using Ag
-noremap <leader>d :exe ':Ag ' . expand('<cword>')<CR>
+noremap <leader>sw :exe ':Rg ' . expand('<cword>')<CR>
 
 
 " Resize
-noremap <Leader>, <C-w>3<
-noremap <Leader>. <C-w>3>
-inoremap <Leader>, <C-w>3<
-inoremap <Leader>. <C-w>3>
-noremap <Leader>< <C-w>3-
-noremap <Leader>> <C-w>3+
+noremap <Leader>h <C-w>5<
+noremap <Leader>l <C-w>5>
+noremap <Leader>j <C-w>5-
+noremap <Leader>k <C-w>5+
 " Quickly create a new terminal in a new tab
-tnoremap <Leader>c <C-\><C-n>:tab new<CR>:term<CR>
-noremap <Leader>c :tab new<CR>:term<CR>
-inoremap <Leader>c <Esc>:tab new<CR>:term<CR>
+" tnoremap <Leader>c <C-\><C-n>:tab new<CR>:term<CR>
+" noremap <Leader>c :tab new<CR>:term<CR>
+" inoremap <Leader>c <Esc>:tab new<CR>:term<CR>
 
 " Quickly create a new terminal in a vertical split
 tnoremap <Leader>\| <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
 noremap <Leader>\| :vsp<CR><C-w><C-w>:term<CR>
-inoremap <Leader>\| <Esc>:vsp<CR><C-w><C-w>:term<CR>
 
 " Quickly create a new terminal in a horizontal split
 tnoremap <Leader>- <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>- :sp<CR><C-w><C-w>:term<CR>
-inoremap <Leader>- <Esc>:sp<CR><C-w><C-w>:term<CR>
 
 " Create neovim in a vertical split
 tnoremap <Leader>\\ <C-\><C-n>:vsp new<CR>
 noremap <Leader>\\ :vsp new<CR>
-inoremap <Leader>\\ <Esc>:vsp new<CR>
 
 " Create neovim in horizontal splits
 tnoremap <Leader>_ <C-\><C-n>:sp new<CR>
 noremap <Leader>_ :sp new<CR>
-inoremap <Leader>_ <Esc>:sp new<CR>
 
 
 "disable highlight 
@@ -164,6 +200,8 @@ vnoremap <leader>P "+P
 
 "------------------------CUSTOM MAPPINGS--------------------------
 
+nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
+
 "Navigation
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
@@ -180,10 +218,11 @@ inoremap <A-l> <Esc><C-w>l
 
 " Go in normal mode from terminal
 tnoremap jk <C-\><C-n>
-inoremap jk <ESC>
 
 
 "------------------------SETTINGS--------------------------
+"no swap
+set noswapfile
 
 "grep
 set grepprg=rg\ --vimgrep
@@ -266,7 +305,6 @@ set noshowmode
 
 
 
-"Nerdtree toggle
 
 "moving between windows
 "let g:tmux_navigator_no_mappings = 1
@@ -279,4 +317,47 @@ set noshowmode
 "nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 
+"Deoplete options
 
+"Source
+
+"Enable only on .py files
+"au BufRead,BufNewFile *.py call deoplete#enable()
+
+"" Autoclose snippets at top
+"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+"" Don't autocomplete, max list lenght=10
+"call deoplete#custom#buffer_option('auto_complete', v:false)
+"call deoplete#custom#option('max_list', 10)
+"let g:deoplete#sources = {}
+"call deoplete#custom#source('_',
+            "\ 'disabled_syntaxes', ['Comments', 'String'])
+"call deoplete#custom#option('sources', {
+            "\ 'python': ['jedi'],
+            "\ })
+
+"" Manual completion (copy-pasted from :help deoplete)
+"inoremap <silent><expr> <TAB>
+"\ pumvisible() ? "\<C-n>" :
+"\ <SID>check_back_space() ? "\<TAB>" :
+"\ deoplete#mappings#manual_complete()
+"function! s:check_back_space() abort "{{{
+"let col = col('.') - 1
+"return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction"}}}
+
+
+" Python Mode Settings
+
+"let g:pymode_rope_completion_bind = '<Tab>'
+"let g:pymode_rope_complete_on_dot = 0
+
+"let g:pymode_rope_goto_definition_bind = '<Leader>sd'
+"let g:pymode_rope_rename_bind = '<Leader>dw'
+
+"let g:pymode_syntax_indent_errors = 0
+"let g:pymode_syntax_space_errors = 0
+"let g:pymode_options_colorcolumn = 0
+
+"let g:python3_host_prog = '/home/ginko/.virtualenvs/env/bin/python3'
