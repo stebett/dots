@@ -6,7 +6,7 @@ wget https://raw.githubusercontent.com/ginkobab/dots/master/.pkglist
 sudo pacman -S (cat .pkglist)
 rm .pkglist
 
-chsh -s /usr/local/bin/fish
+fish
 mkdir packs && cd packs
 
 # git clone https://aur.archlinux.org/mellowplayer.git
@@ -25,10 +25,9 @@ python3 -m venv ~/.virtualenvs/env
 # put requirements here
 
 ### --------------- FISH AS DEFAULT SHELL ---------------
-sudo chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 
 ### --------------- VIM-PLUG ---------------
-sudo chsh -s /usr/bin/fish
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
