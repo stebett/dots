@@ -166,8 +166,8 @@ noremap <leader>sw :exe ':Rg ' . expand('<cword>')<CR>
 " Resize
 noremap <Leader>h <C-w>5<
 noremap <Leader>l <C-w>5>
-noremap <Leader>j <C-w>5-
-noremap <Leader>k <C-w>5+
+noremap <Leader>k <C-w>5-
+noremap <Leader>j <C-w>5+
 " Quickly create a new terminal in a new tab
 " tnoremap <Leader>c <C-\><C-n>:tab new<CR>:term<CR>
 " noremap <Leader>c :tab new<CR>:term<CR>
@@ -229,6 +229,15 @@ inoremap <A-l> <Esc><C-w>l
 " Go in normal mode from terminal
 tnoremap <A-Esc> <C-\><C-n>
 
+"make your md file pdf with his own name
+function ToPdf()
+    let workfile = bufname('%')
+    let workfile2 = substitute(workfile, 'md', 'pdf', '')
+    exe 'w'
+    exe '!' . 'pandoc -V geometry:margin=.6in --pdf-engine=pdflatex $HOME/Documents/notes/metadata.yaml "%" -o ' . "pdf/'" . workfile2 . "'"
+endfunction
+
+nnoremap <F10> :call ToPdf()<cr><cr>
 
 "------------------------SETTINGS--------------------------
 "no swap
