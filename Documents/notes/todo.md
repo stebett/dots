@@ -7,8 +7,8 @@
 
 
 # Installer
-    [ ] mirrors
-    [ ] tlpconf
+    [x] tlpconf
+    [x] chrome
     [ ] requirements python
     [x] text dimension
     [x] VimPlug
