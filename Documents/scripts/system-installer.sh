@@ -20,6 +20,18 @@ sudo wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Anony
 
 fc-cache
 
+### --------------- VIRTUALENV --------------- 
+python3 -m venv ~/.virtualenvs/env
+# put requirements here
+
+### --------------- FISH AS DEFAULT SHELL ---------------
+sudo chsh -s /usr/bin/fish
+
+### --------------- VIM-PLUG ---------------
+sudo chsh -s /usr/bin/fish
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ### --------------- DOT FILES --------------- 
 cd $HOME
 echo ".dots" >> .gitignore
@@ -31,12 +43,11 @@ git --git-dir=$HOME/.dots --work-tree=$HOME checkout
 git --git-dir=$HOME/.dots --work-tree=$HOME config --local status.showUntrackedFiles no
 
 ### --------------- SUCKLESS ---------------
-cd $HOME/packs/dwm-git/src/dwm && sudo make clean install
-cd $HOME/packs/dmenu-git/src/dmenu && sudo make clean install
-cd $HOME/packs/st-git/src/st && sudo make clean install
-cd $HOME/packs/slstauts/src/sl && sudo make clean install
+cd $HOME/Packs/dwm-git/src/dwm && sudo make clean install
+cd $HOME/Packs/dmenu-git/src/dmenu && sudo make clean install
+cd $HOME/Packs/st-git/src/st && sudo make clean install
+cd $HOME/Packs/slstauts/src/sl && sudo make clean install
 
 ### --------------- DAEMONS ---------------
 systemctl enable --now tlp
-
 
