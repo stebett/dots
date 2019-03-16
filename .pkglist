@@ -1,6 +1,7 @@
 acpi
 acpid
 alsa-utils
+base-devel
 fish
 git
 htop

@@ -7,11 +7,8 @@ sudo pacman -S (cat .pkglist)
 rm .pkglist
 
 fish
-mkdir packs && cd packs
 
-# git clone https://aur.archlinux.org/mellowplayer.git
-# cd mellowplayer && makepkg -si && cd ..
-
+mkdir Packs && cd Packs
 git clone https://github.com/ginkobab/jupyterlab-vim
 
 ### --------------- FONT ---------------
@@ -47,6 +44,17 @@ cd $HOME/Packs/dmenu-git/src/dmenu && sudo make clean install
 cd $HOME/Packs/st-git/src/st       && sudo make clean install
 cd $HOME/Packs/slstatus/src/sl     && sudo make clean install
 
+### --------------- FONT SIZE ---------------
+chmod a+x $HOME/Documents/scripts/fontsize.sh
+source $HOME/Documents/scripts/fontsize.sh
+
 ### --------------- DAEMONS ---------------
+cd $HOME/Packs
+git clone https://aur.archlinux.org/google-chrome.git
+cd google-chrome
+makepkg -si
+
+### --------------- DAEMONS ---------------
+sudo ln -s $HOME/.tlpconf /etc/default/tlp
 systemctl enable --now tlp
 

@@ -1,15 +1,19 @@
 **To Do List**
 
 # Python Debug
-    [ ] pbd/ipbd/pbdpp
+    [x] pbd/ipbd/pbdpp
     [ ] import logging
     [ ] git bissect
 
 
 # Installer
-    [ ] fish as default shell
-    [ ] text dimension
-    [ ] virtualenv
+    [ ] mirrors
+    [ ] tlpconf
+    [ ] requirements python
+    [x] text dimension
+    [x] VimPlug
+    [x] fish as default shell
+
 
 
 # Fzf
@@ -20,24 +24,23 @@
     [ ] sinit
     [ ] wifi autoscan
     [ ] script to control all colors
-    [ ] source directly colors for terminal
+    [x] source directly colors for terminal
 
 # Battery
     [ ] powertop 
     [ ] tlp
 
 # Neovim
-    [ ] best completion
-        [ ] tab not working
-    [ ] best syntax
-    [ ] best errors
-        [ ] terminal pane, quickfix pane
+    [x] best completion
+    [x] tab not working
+    [x] best syntax
+    [x] best errors
+    [x] terminal pane, quickfix pane
     [ ] best folding
     [ ] easymotion/vim-sneak
     [ ] git, nerdtree git
     [ ] nerdtree and tagbar colors
-    [ ] shortcuts for pandas
-    
+    [x] shortcuts for pandoc
     [x] pdf conversion -- fix newline
 
 
@@ -47,7 +50,7 @@
     [ ] Join cells
     
 # Ranger
-    [ ] Colorscheme
+    [x] Colorscheme
     [ ] New tab
 
 # Projects
