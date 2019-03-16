@@ -42,10 +42,10 @@ git --git-dir=$HOME/.dots --work-tree=$HOME checkout
 git --git-dir=$HOME/.dots --work-tree=$HOME config --local status.showUntrackedFiles no
 
 ### --------------- SUCKLESS ---------------
-cd $HOME/Packs/dwm-git/src/dwm && sudo make clean install
+cd $HOME/Packs/dwm-git/src/dwm     && sudo make clean install
 cd $HOME/Packs/dmenu-git/src/dmenu && sudo make clean install
-cd $HOME/Packs/st-git/src/st && sudo make clean install
-cd $HOME/Packs/slstauts/src/sl && sudo make clean install
+cd $HOME/Packs/st-git/src/st       && sudo make clean install
+cd $HOME/Packs/slstatus/src/sl     && sudo make clean install
 
 ### --------------- DAEMONS ---------------
 systemctl enable --now tlp
