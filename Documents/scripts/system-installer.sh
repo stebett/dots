@@ -44,6 +44,11 @@ cd $HOME/Packs/dmenu-git/src/dmenu && sudo make clean install
 cd $HOME/Packs/st-git/src/st       && sudo make clean install
 cd $HOME/Packs/slstatus/src/sl     && sudo make clean install
 
+### --------------- RANGER DEVICONS ---------------
+cd $HOME/Packs
+git clone https://aur.archlinux.org/ranger_devicons.git
+cd ranger_devicons && makepkg -si
+    
 ### --------------- FONT SIZE ---------------
 chmod a+x $HOME/Documents/scripts/fontsize.sh
 source $HOME/Documents/scripts/fontsize.sh
@@ -51,8 +56,7 @@ source $HOME/Documents/scripts/fontsize.sh
 ### --------------- DAEMONS ---------------
 cd $HOME/Packs
 git clone https://aur.archlinux.org/google-chrome.git
-cd google-chrome
-makepkg -si
+cd google-chrome && makepkg -si
 
 ### --------------- DAEMONS ---------------
 sudo ln -s $HOME/.tlpconf /etc/default/tlp
