@@ -423,3 +423,228 @@ Le tecniche migliori per lo scienziato neurocognitivo sono:
 
 
 - - -
+
+# Lezione 5
+
+
+**Neuropsicologia Clinica (ancora)**  
+
+- Studi su gruppi con lesioni focali  
+    Diversi pazienti con diverse lesioni, se c'è un sintomo comune **e** una patologia comune, si possono legare le cose  
+    
+**Studi esemplificativi**  
+Studio dei deficit cognitivi conseguenti a lesioni cerebrali  
+
+- Popolazione di **studio**: persone con danni al lobo frontale
+- Popolazione di **controllo**: persone ospedalizzate
+- **Risultati**: stessa prestazione nei compiti di riconoscimento, ma prestazione inferiori in compiti come la lettura
+- **Ma**: non posso attribuire un rapporto di causa effetto al danno al lobo frontale con un deficit nella lettura
+- **Quindi**: aggiungo altri compiti di controllo:
+- **Aggiungo**: Compito di ordinamento temporale di ricordi 
+        compito B: familiarità con l'immagine ricordata
+        compito C: ordinamento temporale dei ricordi
+- **Risultati**: I pazienti con lesioni temporali hanno scarsa performance nel compito C e buona in B
+- **Ma**: ancora non basta per correlare danno e prestazione
+- **Applico la dissociazione doppia**: Aggiungo un gruppo di soggetti con un danno cerebrale ad un'altra regione cerebrale 
+
+**Studi Farmacologici**  
+Conoscendo le proprietà dei farmaci, il confronto del comportamento in base all'assunzione del farmaco posso inferire concetti.  
+**Studi esemplicativi**  
+
+- Studio sul circuito della dopamina  
+I pazienti apprendono il valore di simboli al computer, schiacciandoci sopra.  
+I possibili effetti sono Rinforzo (dopamina), nulla (placebo), punizione (Antagonista della dopamina)
+
+- Studio sulla *Neuroestetica*  
+Quando apprezziamo un'opera d'arte o altre cose belle si liberano oppioidi nel cervello  
+Se si liberano nel cervello antagonisti degli oppioidi non si prova piacere nell'ascoltare il brano preferito  
+
+## Metodi di Neuroimmagine  
+
+**Tomografia Assiale Computerizzata** (TAC)  
+Basata sulla somministrazione di raggi X  
+
+1. Persona supina, proiettato raggio di raggi X e in base a come i raggi colpiscono la lastra tomografica si inferisce la densità dei tessuti attraversati
+2. I raggi vengono sparati da diverse direzioni
+3. La lastra rimane bianca quando non viene colpita dai raggi X, mentre si annerisce se colpita
+
+Quindi i tessuti *iperdensi* sono chiari, mentre quelli *ipodensi* sono scuri.  
+
+**Angiografia**  
+Visualizzazione del sistema vascolare attraverso un colorante o un tracciante  
+
+**Tecniche neurometaboliche** (invasive)  
+Visualizzazione zone più attive attraverso l'afflusso di sangue e il consumo di ossigeno e zucchero  
+
+- Regional Cerebral Blood Flow (rCBF)  
+    Si iniettava Xenon 133 dissolto in soluzione salina, emette radiazioni gamma che vengono rilevati da sensori esterni  
+    Difetti: Radioattiva, tempi di annichilazione lunghi  
+    Pregi: Misura ipoperfusione in pazienti con malattie degenerative, in pratica ha permesso di scoprire l'Alzheimer e il Parkinson, perché il problema di queste malattie è a livello metabolico e non strutturale 
+
+- Single Photon Emission Tomography (SPET)  
+    Scarsa risoluzione spaziale: 10cm  
+    Radioattiva, tempi di annichilazione lunghi (1 ora)  
+    TAC negativa per pazienti con deterioramento intellettivo, con la SPET si vede l'ipoperfusione temporoparietale bilaterale, senza anomalie strutturali visibili alla TAC  
+
+**Tecniche neurometaboliche e neurofunzionali** (non invasive)
+
+- Positron-emission tomography (PET )  
+    Si usa un tracciante (o15), moderatamente invasiva
+    In circa mezzo minuto emette positroni dal cervello, grazie al ciclotrone che rende instabili le molecole, facendole interagire con degli elettroni e facendole annichilire producendo due elettroni  
+    In base a quanto sangue ha ogni zona emetterà più o meno luce.  
+    Permette di visualizzare l'attività
+    Ha permesso di scoprire l'anoxia (cecità per danno cerebrale, ipometabolismo in v1)  
+    **Esempio paradigmatico di studio** - Zeki - 1993  
+    Prima condizione: Mette a confronto dei Mondrian (rettangoli colorati) con dei Mondrian in bianco e nero nella  
+    Seconda condizione: Confronto tra puntini in movimento e statici  
+    In ogni osservazione si attiva v1 e v2  
+    In mondrian colorati meno mondrian in bianco e nero si osserva l'attivazione di v4, scoprendo che questa zona è adibita alla percezione del colore  
+    In puntini statici meno in movimento osservo l'attivazione in v5, scoprendo che è adibita alla percezione del movimento
+
+- Functional Magnetic Resonance Imaging (fMRI)  
+    Soggetto posto in un campo magnetico uniforme, debolmente irradiato da onde radio, misurato in Tesla (1.5, 3):il campo gravitazionale della Terra è 30k-50k microTesla, ma compunque non è dannosa per la salute  
+    Risoluzione temporale 3-5 secondi, se Event-Related di solito 30s  
+    Non può contenere oggetti metallici né elettronici  
+
+    Per ottenere la visualizzazione funzionale, sfruttiamo il fatto che l'emoglobina e la desossi-emoglobina funzionino come marker endogeno, attraverso il loro rapporto, *effetto BOLD* (blood oxygen level dependent)
+
+    Allo stato normale l'orientamento dei protoni ruotanti è casuale  
+    Nel campo magnetico i protoni vengono allineati  
+    Quando viene applicato l'impulso radio, gli assi dei protoni si spostano in modo prevedibile mentre i protoni entrano in uno stato di elevata energia.  
+    Quando l'impulso viene spento, i protoni rilasciano la loro energia mentre tornano a orientarsi nella direzione del campo magnetico  
+    
+    Ricapitolando:  
+    1. Effetto molecolare dell'applicazione del campo magnetico sugli *atomi di idrogeno* è registrato da un rilevatore a Bobina
+    2. Disomogeneità locale del segnale elettromagnetico di risonanza causato dalla densità dei nucli di idrogeno nei diversi tessuti, che produche immagini anatomiche ad alta risoluzione  
+    3. Tecnica BOLD, l'emoglobina e la desossiemoglobina forniscono informazioni sulla quantità di sangue affluente ???
+
+    Diversi modelli di fMRI:  
+    1. A blocchi: si presenta solo un tipo di stimolo per n secondi, si fa una pausa, e si ripete
+    2. Correlato ad eventi: Presentazione a tempo variabile degli stimoli
+
+    **Esempio di studio fMRI**  
+    Presentazione di puntini luminosi con disegno a blocchi.  
+    L'attivazione di v1 è indipendente dal movimento dei blocchi, si attiva ad ogni presentazione.  
+    L'attivazione dell'area MT (v5) avviene solo quando i puntini sono in movimento. 
+
+
+
+
+# Lezione 6
+
+> Presentazione parole in compito di studio
+
+> Alcune parole vengono rievocate, altre no.  
+Attraverso l'fMRI si può osservare nel compito di studio quali parole verranno successivamente ricordate.  
+Infatti nel giro frontale inferiore sinistro avviene il lavoro del compito di memoria, e attraverso il segnale BOLD si può inferire quali parole verranno ricordate  
+Nel giro fusiforme della corteccia occipitotemporale di sinistra (visual word form area) si osserva un'attività superiore durante il compito quando le parole saranno ricordate, rispetto a quando saranno dimenticate.  
+Mentre in v1 e m1 non si osserva nessun cambiamento nei livelli del segnale BOLD
+
+> Studio sul compito di traduzione  
+La persona legge silenziosamente parole in lingua madre, compito di controllo.  
+La persona legge in lingua madre traducendo in un'altra lingua silenziosamente, compito effettivo.
+
+- Transcranial Magnetic Stimulation (TMS)  
+    Produco lesioni virtuali transitorie.  
+    È sviluppata da Pascual-Leone, funziona sviluppando un campo magnetico dal coil.  
+    In ambito clinico si usa allo scopo di attivare alcuni gruppi di pazienti in determinate aree.  
+    Si usa molto in ambito di ricerca, data la sicurezza.  
+    Per esempio si può usare per inibire l'area di Broca, nel giro temporale inferiore di sinistra.  
+
+    Risoluzione spaziale 1-1.5cm, modesta  
+    Risoluzione temporale modesta  
+
+    **Esempi di studio**  
+    Stimolazione della corteccia visiva mentre il soggetto è impegnato in un compito di studio.  
+    Quando l'impulso segue lo stimolo di 70-130 ms, il partecipante non riesce ad identificare lo stimolo la maggior parte delle volte.  
+
+    Compito di stimolazione tattile  
+    Le informazioni provenienti da altre forme sensoriali che aiutano a costruire lo spazio attivano i neuroni della corteccia visiva anche in persone non vedenti.  
+    Nell'esplorazione tattile si attivano corteccia frontale, sensoriale ma soprattutto visiva.  
+    Somministrando la TMS a 10, 180 e 400 ms nella  corteccia centrale, nella regione occipitale centrale, sinistra, e destra.  
+    L'effetto più significativo è nella stimolazione a 180ms nella corteccia occipitale centrale e sinistra.  
+        
+- Transcranical direct current stimulation (tDCS)  
+    Si manda una corrente diretta in aree specifiche del cervello.  
+    Il tDCS anodale porta ad un miglioramento della prestazione, perché porta ad eccitazione i neuroni, viceversa la stimolazione catodale.  
+    Risoluzione spaziale bassa  
+    Risoluzione temporale nulla
+
+    **Esempi di studio**  
+    Presentazioni di facce di persone che cadono con espressione buffa vs sofferente.  
+    Andando a stimolare l'area visiva si trova una diminuzione della percezione di divertimento
+
+- Diffusion tensor imaging (DIT)  
+    Utilizzata per studiare la struttura anatomica dei tratti assonici che formano la materia bianca cerebrale, ad esempio il *fascicolo arcuato* o il *corpo calloso*  
+    
+    Essendo gli assoni sono delimitati da lipidi, e all'interno contengono acqua.  
+    Uno scanner MRI misura la densità e il movimento dell'acqua, che non è casuale ma anisotropica.  
+
+    Osservando la connettività posso dedurre effetti di lesioni o strutture assoniche anormali
+
+**Tecniche elettrofunzionali**
+
+- Event-related brain potentials (ERP)  
+
+- Electroencephalogram (EEG)  
+    Berger scopre che le oscillazioni elettriche prodotte dal cervello non sono casuali, ma dipendano dallo stato di attivazione (*arousal*) del soggetto, aumentando l'ampiezza e diminuendo la frequenza.  
+    alpha waves: pazienti sdraiati con occhi chiusi, onde lente a frequenza bassa, presenti durante veglia rilassata, a occhi chiusi o mentre fantastichiamo, ovvero mentre non stiamo elaborando coscientemente le informazioni visive, stato di stand-by (ritmo sensomotorio Mu) della corteccia visiva e sensomotoria mentre siamo immobili, non osserviamo nessun movimento, non immaginiamo né pianifichiamo nessun movimento. (8-13Hz)  
+    beta waves: pazienti con occhi aperti, onde rapide a frequenza alta, presenti durante stato di allerta (>13Hz)  
+    Pazienti ipnotizzati mostrano frequenze più lente (onde alpha)  
+    
+    La maggiore ampiezza dell'EEG dipende da un maggior numero di neuroni che collaborano nello stesso compito.  
+    Tanto più sono attivo tanto più i neuroni compiono attività differenti  
+    Lo stato di sonno REM è simile allo stato vigile.  
+    **Basi biologiche**  
+    I campi elettromagnetici possono essere:  
+    1. Oscillatori, registrati dall'EEG, riflettono l'arousal
+    2. Event related, registrati dall'ERF, riflettono l'attivazione specifica.  
+    I segnali evocati sono *nascosti* all'interno dell'encefalogramma  
+    Le oscillazioni ritmiche dell'EEG hanno origine nella corteccia ma il sistema di regolazione (*pacemaker*) è situato nei **nuclei talamici**  
+    Dipendono anche dal *ritmo circadiano*  
+
+    La differenza di potenziale (dipolo elettrico) prodotto dai neuroni, quando prodotta da milioni di neuroni è registrabile dall'EEG  
+    **Origini Elettro-ioniche neuronali**  dell'EEG  
+    Le variazioni di potenziale registrate sullo scalpo sono registrate dalla somma dei potenziali post-sinaptici sia eccitatori che inibitori di neuroni morfologicamente disposti in strati sistemici organizzati, **i cui dendriti apicali sono orientati perpendicolarmente alla superficie corticale**, come le cellule piramidali, le colonne cellulari come quelle della corteccia visiva.  
+    Mentre quando i dendriti apicali sono orientati parallelamente alla superficie corticale i segnali magnetici sono rilevabili dalla MEG  
+    Mentre quando le cellule non sono disposte in modo organizzato generano dei campi chiusi non rilevabili.  
+    La differenza nella profondità tra i diversi potenziali sinaptici ne determina il segno positivo o negativo.  
+    In superficie infatti registro un potenziale di segno inverso rispetto a quello reale.  
+    Il potenziale post-sinaptico extracellulare sarà positivo o negativo in base al tipo di sinapsi: per le sinapsi inibitori (GABA), ho dei segnali negativi all'interno e positivi all'esterno  
+    Il terzo fattore è che nel caso in cui ci siano delle scissure nella corteccia il potenziale può essere invertito.  
+
+    **Registrazione**  
+    Avviene posizionando degli elettrodi sul cranio (pochi in ambito ospedaliero, molti di più in sperimentazione)  
+    C'è una cuffia elastica o una rete che tiene a distanza uniforme gli elettrodi, costituiti da plastica e un metallo altamente conduttore, per assicurarne il contatto con lo scalpo si usa un gel elettroconduttivo (sale, acqua e talco)  
+    Ci sono due punti standard bilaterali: il *Nazion* (nz), sopra il naso, e l'*Inion*, la sporgenza alla fine del cranio, in linea con il nazion, in modo da poterne calcolare la distanza (34-36 cm negli adulti), che serve per calcolare le coordinate standard per il resto degli elettrodi.  
+    Per esempio la regione rolandica (cz) si trova esattamente al centro tra i due.  
+    Le sigle utilizzate sono quelle del sistema internazionale 10 20, perché usa il 10%, 20% ecc.  
+    O = occipitale  
+    P = parietale  
+    F = Frontale  
+    T = temporale
+    A = anteriore  
+    C = centrale  
+    P = posteriore
+    numeri dispari emisfero sinistro, numeri pari emisfero destro, z per il centro.  
+    
+
+
+    
+
+
+
+
+- Magnetoencephalography (MEG)  
+    Molto costosa  
+    Ottima risoluzione spaziale e temporale  
+    Misura i campi magnetici prodotti dagli scambi elettrici neuronali  
+    Siccome viviamo in ambienti molto inquinati dal punto di vista elettro-magnetico, quindi per misurare i debolissimi segnali prodotti dal cervello vanno protetti.  
+    Per fare ciò la MEG è costituita da pareti metalliche, con all'interno vuoto, poi un tubo pieno di elio liquido, per far funzionare i superconduttori e per annullare forme di energie che potrebbero interferire  
+    Il segnale viene captato da dei magnometri, collegati da superconduttori.  
+    Essendo che a differenza dei campi elettrici, quelli magnetici non si distorcono, la MEG ha una migliore risoluzione spaziale dell'EEG  
+
+    Può registrare i potenziali evocati, aiutando a localizzare determinate aree.  
+
+
+# Lezione 7

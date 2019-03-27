@@ -9,17 +9,6 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style:bold" };
 
 static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style:bold";
-/*
-/ static const char col_gray1[]       = "#222222";
-/ static const char col_gray2[]       = "#444444";
-/ static const char col_gray3[]       = "#bbbbbb";
-/ static const char col_gray4[]       = "#eeeeee";
-/ static const char col_cyan[]        = "#005577";
-/ static const char col_graybg[]      = "#282828";
-/ static const char col_grayborder[]  = "#554330";
-/ static const char col_barbg[]       = "#7e3517";
-/ static const char col_bargrey[]     = "#665c54";
-*/
 
 static const char col_bg[]          = "#282828";
 static const char col_red1[]        = "#cc241d";
@@ -53,8 +42,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,         0,        -1 },
 	{ "st",       NULL,       NULL,       0,            0,           1,         1,        -1 },
-	{ "MellowPlayer", NULL,   NULL,       1 << 8,       0,           0,         0,        -1 },
-	{ "WhatsApp",     NULL,   NULL,       1 << 7,       0,           0,         0,        -1 },
+	{ "octave-gui", NULL,       NULL,       0,            0,           1,         1,        -1 },
 };
 
 /* layout(s) */

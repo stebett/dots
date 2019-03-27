@@ -226,6 +226,22 @@ inoremap <A-j> <Esc><C-w>j
 inoremap <A-k> <Esc><C-w>k
 inoremap <A-l> <Esc><C-w>l
 
+" Accents
+inoremap `a <C-v>224
+inoremap ``a <C-v>225
+inoremap `e <C-v>232
+inoremap ``e <C-v>233
+inoremap `i <C-v>236
+inoremap ``i <C-v>237
+inoremap `o <C-v>242
+inoremap ``o <C-v>243
+inoremap `u <C-v>249
+inoremap ``u <C-v>250
+
+inoremap `E <C-v>200
+
+
+
 " Go in normal mode from terminal
 tnoremap <A-Esc> <C-\><C-n>
 
@@ -234,7 +250,7 @@ function ToPdf()
     let workfile = bufname('%')
     let workfile2 = substitute(workfile, 'md', 'pdf', '')
     exe 'w'
-    exe '!' . 'pandoc -V geometry:margin=.6in --pdf-engine=pdflatex $HOME/Documents/notes/metadata.yaml "%" -o ' . "pdf/'" . workfile2 . "'"
+    exe '!' . 'pandoc -V geometry:margin=.6in --pdf-engine=pdflatex $HOME/Documents/notes/metadata.yaml "%" -o ' . "$HOME/Documents/notes/Appunti/pdf/'" . workfile2 . "'"
 endfunction
 
 nnoremap <F10> :call ToPdf()<cr><cr>

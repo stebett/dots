@@ -1,7 +1,7 @@
-Sociale dei gruppi
+Psicologia Sociale dei gruppi
 
 
-# Lezione 1 **5 marzo**
+# Lezione 1
 
 Bibliografia
       
@@ -387,3 +387,335 @@ Al pregiudizio e' associata ansia e senso di minaccia
     Esperimento:    
     Attribuzione di muscolosita' maggiore se il target e' nero, ancora maggiore se il partecipante e' bianco.  
     Pero' se il target e' nero la sua muscolosita' viene correlata maggiormente ad un possibile danno (*minacciosita'*), sia che il partecipante sia bianco che sia nero
+
+
+# Lezione 5
+
+## Il pregiudizio Sessuale
+
+- Forma di pregiudizio estremamente pervasivo
+- Minoranza silenziosa
+- È espresso anche in maniera esplicita
+- Criterio di categorizzazione meno evidente  
+    A differenza del pregiudizio di genere e di razza coinvolge una categoria percepita come ambigua, perché il criterio di categorizzazione è meno evidente  
+    *Anche se* l'orientamento sessuale è percepibile dal volto
+
+**Herek** - 2000
+
+- Conia il termine pregiudizio sessuale  
+    Prima il pregiudizio sessuale era visto come una sorta di rabbia provata da persone represse senza una vita sessuale che cercavano di negare le loro tendenze omosessuali  
+    Non usa la parola omofobia, che richiama la dimensione clinica-patologica  
+    Inoltre chiamarlo pregiudizio aiuta a ricordarsi che è un atteggiamento e come tale ha le 3 componenti cognitiva emotiva e comportamentale
+- Punteggi alti di pregiudizio sessuali in persone altamente religiose
+
+**Kite e Deaux** - 1987
+
+- Teoria dell'inversione di genere  
+    1. I maschi gay sono percepiti come meno virili di quelli eterosessuali
+    2. Le lesbiche sono valutate meno femminili rispetto alle femmine eterosessuali
+    3. Ai maschi gay sono attribuiti tratti stereotipici generalmente attribuiti alle femmine eterosessuali, e viceversa. Questo è molto visibile nella dimensione sportive (lesbiche giocano a calcio)
+
+**Brewer** - 2001  
+La teoria dell'inversione di genere non è in grado di cogliere un fenomeno molto importante, il **sub-grouping**  
+Secondo la teoria del sub-grouping, noi possiamo attribuire stereotipi a delle sotto-categorie differenti dagli stereotipi della categoria generale.  
+Gli scenari quindi probabili sono due:  
+
+1. Applico alla categoria generale una sorta di mediazione tra le caratteristiche stereotipiche delle sotto-categorie
+2. Applico alla categoria generale gli stereotipi di una categoria specifica
+
+Nel caso del pregiudizio sessuale si applica il secondo caso  
+
+Nel momento in cui chiedo di attivare le sotto-categorie, se il soggetto è maschio la donna lesbica viene rappresentata più femminile, al contrario di ciò che accade con un soggetto donna.
+
+**Atteggiamento Emotivo**  
+La risposta emotiva prevalente nel pregiudizio sessuale è il *disgusto*  
+
+- Violazione delle condotte morali sessuali
+- Violazione dei valori sacri della famiglia e del matrimonio
+- Violazione della morale religiosa
+- Contagio morale
+- Contagio fisico (HIV)
+- Ci può essere un'iperstereotipizzazione positiva, ma fa sempre parte del pregiudizio indiretto
+
+Il disgusto è così relazionato all'atteggiamento verso l'omosessualità che vale anche la relazione doppia:  
+**Dasgupta** - 2009  
+
+- 2 fattori: evocazione (controllo rabbia disgusto, *between*), IAT (arabi, omo, *within*)
+- Rievocazione di un episodio connotato emotivamente con il disgusto
+- VD: pregiudizio verso Gay/Etero, Arabi/Americani con IAT 
+- Aumento del bias verso gay/etero con condizione di rievocazione di rabbia.
+- Aumento del bias verso Arabi/Americani con condizione di rievocazione di rabbia, anche se inferiormente all'aumento del bias omo attraverso il disgusto.
+- È intelligente aver incluso la condizione di rabbia nel disegno, individuando il disgusto tra tutte le emozioni negative, e la condizione di arabi, individuando gli omosessuali tra tutte le minoranze.
+
+**Inbar** - 2012
+
+- Rievocazione del disgusto attraverso un odore
+- VD pregiudizio verso omosessuali
+- In questo esperimento non ci sono le individuazioni specifiche che l'esperimento di Dasgupta possiede.  
+
+**Golec de Zavala** - 2014
+
+- Disegno a due fattori: 
+    1. Telefono dell'etero vs. omo (*within*)
+    2. Questionario sui prodotti (*within*)
+- Immagina di usare il telefono di una persona omosessuale vs. eterosessuale, avendo dimenticato il proprio
+
+- VD: Indicate la desiderabilità di acquisto di alcuni prodotti:  
+    1. Prodotti per lavare mani e bocca (specific cleansing products)
+    2. Prodotti per lavare altre parti del corpo.
+    3. Disinfettanti per oggetti
+    4. Altri prodotti del corpo
+
+- Risultati:  
+    Desiderabilità del prodotto per lavare mani e bocca aumenta statisticamente nella condizione del telefono dell'omo
+
+**Prunas, Sacchi, Brambilla** - 2017  
+
+Viene presentato a degli psicoterapeuti un caso di uomo che soffriva di disturbi di rabbia vs. compulsione sessuale
+
+Viene chiesto quanto sarebbe efficace la teoria in base alla sessualità della persona
+
+Se il disturbo è di rabbia non c'è differenza  
+Se il disturbo è di compulsione sessuale la terapia sarà meno efficace se la persona è omosessuale.  
+Inoltre è più facile che un omosessuale guarisca da un disturbo di rabbia che da un disturbo di compulsione sessuale  
+
+
+In realtà nella popolazione non c'è differenza nella distribuzione di disturbi compulsivi tra omosessuali ed eterosessuali
+
+# Lezione 6
+
+**Etichette categoriali**
+
+- omosessuali, gay, lesbiche, meridionali, persone di colore, obesi  
+
+**Etichette Denigratorie**
+
+- Frocio, culattone, ciccione, finocchi, ecc.
+
+Secondo alcune ricerche l'esposizione ad etichette denigratorie modifica i risultati di test come l'IAT o nel compito del joystick (allontanare/avvicinare immagini gay/etero)  
+
+**Galinsky** - 2013  
+Effetti delle etichette denigratorie sulla percezione dell'ingroup
+
+- VD: negatività percepita dell'etichetta.
+- VI: etichetta: controllo, denigratoria, non denigratoria
+- Le differenze emergono nel caso della differenza denigratoria:  
+    Se un omosessuale la utilizza verso un omosessuale c'è poca percezione di negatività, mentre nel caso di attribuzione da etero a gay c'è molta negatività percepita.  
+    Tuttavia auto-attribuirsi etichette denigratorie aumenta l'effetto di self-discrimination
+
+**Riconoscimento dell'orientamento sessuale attraverso il volto**  
+Il contesto è quello della formazione delle impressioni, e dell'importanza dell'aspetto fisico in questo processo.  
+Dal volto percepiamo automaticamente sesso, etnia ed età.  
+Mentre l'orientamento sessuale fa parte delle caratteristiche percettivamente non ovvie.  
+
+**Rule, Ambady**  
+Selezione foto di persone omosessuali e eterosessuali attraverso facebook  
+Il compito è di indicare più velocemente possibile se il volto sia di una persona omosessuale o no.  
+
+- Risultati:  
+    Accuratezza del 62%  
+    Tempo limitato (50ms)  
+    Indipendente dal contesto culturale
+
+
+- Condizioni che favoriscono il riconoscimento: 
+    1. Attivazione sessuale. **Rule, Ambady**   
+        VI: immaginare una situazione romantica o sessuale oppure no  
+            Quando il prime è presente c'è più accuratezza nel riconoscere volti maschili gay, ma non volti femminili lesbiche.  
+            Inoltre quando le donne sono in fase preovulatoria sono più accurate nel riconoscere gli uomini gay, ma non le donne lesbiche.  
+            Questo non avviene nella situazione invertita  
+    2. Familiarità con il target **Brambilla**  
+        Non è l'essere omosessuale ma il fatto di frequentare omosessuali ad aiutare nel riconoscimento.  
+        84 partcipanti  
+        Misure di familiartità con questionario.  
+        Compito di selezione (stesso di Rule e Ambady)  
+        Risultati:  
+            Correlazione positiva tra familiarità e accuratezza.
+    3. Pregiudizio **Rule, Brambilla**  
+        3 possibili ipotesi:  
+        1. Correlazione positiva
+        2. Correlazione negativa
+        3. Correlazione nulla
+
+        2035 giovani adulti eterosessuali Canadesi, Americani e Italiani  
+        Misura di pregiudizio implicito ed esplicito con questionario
+        Compito di selezione  
+        Nessuna differenza in base alla nazionalità o al sesso.  
+        Non c'è differenza nel riconoscimento di maschi o femmine  
+        Correlazione negativa tra il pregiudizio e l'accuratezza, quindi viene comprovata la seconda ipotesi (+ familiarità + accuratezza)
+
+    4. Livello di stereotipicità del volto **Freeman, Ambady, Rule**  
+        Le persone sono più accurate nel riconoscere l'orientamento sessuale quando i volti sono più stereotipici, ovvero sono più *gender inverted*: se i volti sono più mascolini vengono categorizzati eterosessuali, e viceversa.  
+
+**Kosinzki** - 2017  
+Reti neurali vs Umani nel riconoscimento dell'orientamento sessuale di una persona.  
+Vincono le reti neurali, con uno score di 90%  
+
+I markers sono:  
+
+- Volti più gender-atipical (mento stretto, pelle chiara, pochi peli per gli uomini, meno trucco, pelle più scura, tratti più definiti per le donne)
+- Non sappiamo ovviamente se la differenza nei volti sia prodotto della cultura o geneticamente o anche ormonalmente determinata.
+- Non sappiamo neanche se sta riconoscimento solo i volti stereotipici o 
+reale.  
+
+Conseguenze dell'esperimento di Kosinzki (**Rule**)  
+
+- VI: presentazione di curricula identici tranne per la foto
+- VD: riconoscimento del successo nella professione (ingegnere vs infermiere)
+- Risultati:  
+    Infermieri più di successo se volti gay stereotipici e Ingegneri più di successo se volti etero stereotipici
+
+
+# Lezione 7  
+
+## Il Pregiudizio di Genere - Sessismo  
+
+Forma di pregiudizio *estremamente* pervasiva  
+Ai maschi viene riconosciuta una superiorità in potere e status  
+Alle donne viene riconosciuta superiorità nelle dimensioni relazionali, ma non in quelle tecniche  
+
+**Eagly e Steffen** - 1984  
+Il contenuto degli stereotipi sessuali è connesso alla divisione sociale del lavoro.  
+Dato che sono più brave in mansioni legate alla cura secondo lo stereotipo, le donne andranno più probabilmente in quella direzione, e viceversa il fatto che in quelle mansioni lavorino più donne rinforza lo stereotipo.  
+Vale lo stesso per gli uomini con professioni tecniche o manuali  
+
+**Effetti**  
+La rottura dello stereotipo determina una risposta negativa  
+Disapprovazione per la violazione delle norme  
+Tendenza a ritenere le differenze di genere più rilevanti di quanto in effetti non siano, sopratutto nei processi sociali.  
+
+
+**Glick e Fiske** - 1996  
+Studio del sessismo - *Il sessismo ambivalente*  
+Sostengono che esistano due forme di sessismo  
+1. Sessismo ostile: forma tradizionale, caratterizzata dalla supremazia dell'uomo e subordine della donna. Forte ostilità verso le donne che violano le norme di genere.
+Esempi:  
+Le donne vogliono usurpare il potere degli uomini.  
+Le donne si lamentano troppo del maschilismo  
+Le donne provocano gli uomini e poi li rifiutano per divertimento.  
+
+2. Sessismo Benevolo: Esalta eccessivamente le caratteristiche 'positive' delle donne, che determina però disparità di accesso a istituzioni e ruoli tra i sessi  
+Per quanto realizzato sia, un uomo non è mai completo come persona se non ha l'amore di una donna.  
+Molte donne hanno una qualità di purezza che pochi uomini posseggono.  
+Le donne tendono ad avere una maggiore sensibilità morale rispetto agli uomini.  
+
+Gli uomini sono molto più alti in punteggi di sessismo ostile.  
+Le donne tendono a rifiutare il sessismo ostile, ma accettano e condividono un certo livello di sessismo benevolo  
+
+Ciò giustifica il sistema e fa in modo che lo status quo venga mantenuto  
+
+**Effetti**  
+
+- Glass Ceiling:  
+    L'attribuzione di stereotipi legati alla scarsa competenza e potere determina una maggiore resistenza ad assumere le donne in posizioni di potere.
+
+    Le poche donne che riescono ad assumere posizioni di potere, assumono punteggi di sessismo ostile (***queen bee***) 
+
+- Glass Cliff (Ryan)  
+    Le donne ottengono posizioni di alta leadership solo quando le compagnie versano in condizioni critiche  
+    Ciò determina che la donna abbia molte più probabilità di essere vista come causa della crisi aziendale  
+    Quindi viene in questo modo rinforzato lo stereotipo  
+
+    **Esperimenti**  
+    1. I partecipanti dovevano selezionare un candidato per una posizione di leadership per un'azienda in crisi vs azienda  
+        esperimento 2x2 uomo o donna, crisi o crescita  
+        Quando la situazione è in crescita i soggetti preferiscono un uomo, quando è in declino la donna viene molto più preferita
+
+    2. Indicare quali tratti un buon leader deve avere.  
+        Deve scegliere tra 6 tratti 'maschili' e 6 'femminili'  
+        Quando la situazione è di crescita vengono ritenute più rilevanti caratteristiche maschili e viceversa  
+
+
+
+
+# Lezione 8
+
+## Basi Cognitive del Pregiudizio  
+
+Il processo di **Categorizzazione**  
+È il processo attraverso il quale classifichiamo oggetti o esseri umani, nel secondo caso si parla di *categorizzazione sociale*  
+Le categorie sociali sono delle classi di conoscenza che contiene strutture definite da degli elementi prototipici più rappresentativi dei suoi esemplari.  
+La somiglianza al prototipo è generalmente il mezzo attraverso il quale misuriamo l'appartenenza al gruppo di esemplari con coi interagiamo.  
+In funzione di ciò gli esemplari occupano posizioni gerarchicamente posizionate nel gruppo  
+
+A volte il prototipo non coincide con uno specifico esemplare.  
+Inoltre i confini non sono sempre ben definiti  
+
+La categorizzazione è un processo indispensabile e inevitabile per  
+
+- Semplificare il mondo
+- Economizzare le nostre risorse cognitive 
+- Far fronte quindi alla moltitudine di stimoli che ci colpiscono  
+
+Tuttavia la categorizzazione produce distorsioni nella cognizione e percezione.  
+
+**Principio di Accentuazione**  
+
+- Massima accentuazione delle somiglianze intra-categoriali
+- Massima accentuazione delle differenze inter-categoriali
+
+> **Tajfel e Wilkes** - 1963  
+Valutazione delle otto linee presentate con vs senza riferimenti categoriali, secondo Tajfel categorizzando le 4 linee corte separatamente da quelle lunghe si dovrebbe osservare il principio di Attenuazione  
+
+
+Gli **Schemi**  
+Un schema è un insieme coerente di cognizioni interconnesse (pensieri, convinzione, credenza) che ci permette di comprendere rapidamente una persona, una situazione, un evento o un luogo sulla base di informazione limitate  
+
+Lo **stereotipo**
+
+- È la componente cognitiva del pregiudizio ed è l'insieme di caratteristiche che attribuisco ad un gruppo, ovvero lo ***schema di gruppo*** 
+- È uno schema cognitivo
+- Origina dalla categorizzazione sociale
+- Introduce ordine e semplicità, dove sono presenti complessità e varianza casuali
+- Dirige il comportamento
+- Ha 4 funzioni  
+     1. Descrive il gruppo
+     2. Prescrive il comportamento
+     3. Giustificazione dello status del gruppo
+     4. Giustificazione del sistema
+
+Essendo che gli stereotipi derivano dala categorizzazione è necessariamente inaccurato, ed è vittima del principio di accentuazione  
+
+Secondo la Devine il processo di attivazione degli stereotipi avviene ogni volta che avviene la percezione di un outgroup  
+Invece, secondo Fiske e Neuberg, 1990  
+
+- Le prime impressioni sono guidate da processi top-down
+- L'elaborazione top down avviene spontaneamente con poco sforzo e poco attenzione
+- Quella bottom-up richiede sforzo motivazionale e risorse cognitive disponibili
+
+Infatti quando siamo motivati elaboriamo le informazioni nel dettaglio  
+In quel caso riusciamo ad essere influenzati dagli stereotipi  
+
+**Formazione degli stereotipi**  
+
+1. Per contatto con il singolo  
+    Ovvero generalizzo le prime impressionoi con membri di gruppi sconosciuti
+2. Per conferma  
+    Sono molto più sensibile alle caratteristiche che confermano le mie rappresentazioni della categorie rispetto a quelle che la disconfermano
+3. Per apprendimento  
+    Gli stereotipi vengono appresi dalle norme sociali e culturali, nei valori sociali, verso i 5 anni sono già formati  
+
+
+**Attivazione degli stereotipi **  
+**Wittenbrink e Judd e Park** - 1997  
+
+Esperimento:
+
+1. Priming semantico (bianco/nero)
+2. Parola 
+    Distribuita secondo stereotipicità e valenza (positiva o negativa)  
+    Quelle stereotipiche dei neri sono controstereotipiche dei bianchi
+    Ci sono anche parole inutili non legate a nulla
+
+Risultati:  
+
+I partecipanti sono più veloci a processare (ovvero a distinguerli dalle non parole) i tratti stereotipici dei bianchi quando queste erano precedute dal priming semantico Bianco, lo stesso con i neri.  
+Questo è l'effetto dello stereotipo
+
+Inoltre col prime bianco sono più veloce a processare le parole positive in generale se il prime e bianco e viceversa dei neri  
+Questo è l'effetto del pregiudizio  
+
+Le persone esposte al prime white sono più veloci a processare le parole stereotipiche per i bianchi e quelle positive (dei bianchi), mentre dei neri quelle negative (dei neri)  
+Questo è l'effetto pregiudizio stereotipico
+
+
