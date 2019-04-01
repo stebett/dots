@@ -85,8 +85,8 @@ function! ReplSplit(cmd) abort
     " Go to previous split.
     " let buffer's REPL be the one we just entered.
     execute 'normal!' . "\<c-w>p"
+    stopinsert
     let b:slime_config = {'jobid': l:repl_job_id}
-    
 endfunction
 
 let g:slime_target = 'neovim'
@@ -269,7 +269,7 @@ inoremap `E <C-v>200
 
 
 " Go in normal mode from terminal
-tnoremap <Leader><Esc> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 
 
