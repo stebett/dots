@@ -4,6 +4,7 @@ filetype off
 call plug#begin()
 
 Plug 'junegunn/goyo.vim'
+Plug 'jpalardy/vim-slime'
 
 "Plug 'ryanoasis/vim-devicons'
 
@@ -70,6 +71,31 @@ call plug#end()
 
 "------------------------PLUG SETTINGS--------------------------
 set hidden
+
+" vim-slime 
+
+function! ReplSplit(cmd) abort
+    " Split window nicely and open a terminal.
+    vsplit
+    " Spawn shell.
+    " `terminal` will put you in insert mode, so don't use it.
+    execute 'normal!' . "\<c-w>p"
+    enew | call termopen(a:cmd)
+    let l:repl_job_id = b:terminal_job_id
+    " Go to previous split.
+    " let buffer's REPL be the one we just entered.
+    execute 'normal!' . "\<c-w>p"
+    let b:slime_config = {'jobid': l:repl_job_id}
+    
+endfunction
+
+let g:slime_target = 'neovim'
+let g:slime_python_ipython = 1
+let g:slime_paste_file = '~/.slime_paste'
+
+nmap <c-c><c-s> :call ReplSplit('ipython')<cr>
+
+nmap <c-c><c-f> <Plug>SlimeLineSend
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -182,12 +208,12 @@ tnoremap <Leader>- <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>- :sp<CR><C-w><C-w>:term<CR>
 
 " Create neovim in a vertical split with ranger
-tnoremap <Leader>\\ <C-\><C-n>:vsp new<CR>:Ranger<CR>
-nnoremap <Leader>\\ :vsp new<CR>:Ranger<CR>
+"tnoremap <Leader>\\ <C-\><C-n>:vsp new<CR>:Ranger<CR>
+"nnoremap <Leader>\\ :vsp new<CR>:Ranger<CR>
 
 " Create neovim in horizontal splits with ranger
-tnoremap <Leader>_ <C-\><C-n>:sp new<CR>:Ranger<CR>
-nnoremap <Leader>_ :sp new<CR>:Ranger<CR>
+"tnoremap <Leader>_ <C-\><C-n>:sp new<CR>:Ranger<CR>
+"nnoremap <Leader>_ :sp new<CR>:Ranger<CR>
 
 
 "disable highlight 
@@ -243,7 +269,15 @@ inoremap `E <C-v>200
 
 
 " Go in normal mode from terminal
-tnoremap <A-Esc> <C-\><C-n>
+tnoremap <Leader><Esc> <C-\><C-n>
+
+
+
+au TermOpen * setlocal listchars= nonumber norelativenumber
+au TermOpen * startinsert
+au TermOpen * let g:last_terminal_job_id = b:terminal_job_id
+au BufEnter,BufWinEnter,WinEnter term://* startinsert
+au BufLeave term://* stopinsert
 
 "make your md file pdf with his own name
 function ToPdf()
@@ -264,6 +298,8 @@ set grepprg=rg\ --vimgrep
 
 " Spellcheck
 set spelllang=en_us,it_it
+"let autoscroll  
+let g:neoterm_autoscroll = 1
 
 " Set to auto read when a file is changed from the outside
 set autoread
