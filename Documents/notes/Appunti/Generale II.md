@@ -1,5 +1,6 @@
 Generale II
 
+
 # Lezione 1
 
 **Programma**  
@@ -439,5 +440,61 @@ Secondo Gegerenzer non è che non abbiamo implementati degli algoritmi *byasiani
 La letteratura ha mostrato che le persone non considerano la probabilità primaria, i falsi positivi e non sono in grado di integrare le informazioni in modo bayesiano.  
 
 La questione per lui non è se abbiamo dei buoni sistemi statistici, ma quanto i nostri algoritmi sono adattati all'ambiente.  
+
+# Lezione 7
+
+**Gambler Fallacy**  
+*La legge dei piccoli numeri*  
+
+Ci si aspetta una compensazione probabilistica ma i campioni sperimentati sono sequenze piccole, che seguono leggi diverse dalle popolazioni più ampie  
+
+Secondo Tversky & Kahneman - 1982 - definiscono l'intuizione comune secondo cui la legge dei grandi numeri si applicherebbe anche a campioni piccoli  
+
+Alla base di questo processo c'è l'Euristica della Rappresentatività, poiché ripetizioni dello stesso evento sono molto rappresentative.  
+
+Nella nostra immaginazione il caso possiede *disordine* e *equità*  
+
+**In generale** le persone si aspettano che una sequenza di eventi generata da un processo casuale abbia le stesse caratteristiche di quel processo, anche quando la sequenza di eventi è più breve  
+
+**Il problema degli ospedali**  
+
+**Il problema delle tre scatole**  
+L'apertura della prima scatola non è un evento casuale ma condizionato.  
+L'evento di aprire la scatola B è 50% quando il premio è in A, mentre 100% quando il premio è in C.  
+La probabilità che il premio sia in A dopo aver aperto B è uguale a... (applica bayes)  
+
+## I processi decisionali  
+
+La decisione non è solo l'applicazione del campo di studio degli errori umani (come sostenevano T&K), ma c'è un grande campo di studio per la predizione del comportamento economico.  
+
+**La teoria Normativa**  
+Von Neuman e Morgenstren - 1947  
+
+Se le preferenze di un individuo soddisfano certi assiomi di base del comportamento razionale, allora le scelte di quell'individuo possono essere descritte come equivalenti alla massimizzazione dell'utilità attesa  
+
+**Assiomi**  
+
+- Principio della transitività delle preferenze: se un individuo preferisce A a B e B a C, per essere razionale deve necessariamente preferire A a C
+- Principio di indipendenza: se esiste un qualche stato del mondo che conduce allo stesso esito indipendentemente dalla scelta effettuata, allora la scelta dovrebbe essere del tutto indipendente da quell'esito
+- Principio di invarianza: rappresentazioni diverse dello stesso problema dovrebbero comportare sempre le stesse scelte  
+
+Il **valore atteso** si calcola *moltiplicando il guadagno per la probabilità di ottenerlo **meno** la perdita per la probabilità di essere persa*  
+
+Il **Paradosso di Allais** ti dà 2 opzioni:  
+
+1. 100% di guadagnare 1000$  
+2. 89% di guadagnare 1000$  
+    10% di guadagnare 5000$  
+    1% di guadagnare 0$
+
+e la maggior parte scelgono la 1, mentre se le opzioni sono 
+
+1. 11% di guadagnare 1000$  
+    89% di guadagnare 0$  
+2. 10% di guadagnare 5000$  
+    90% di guadagnare 0$
+
+e la maggior parte dei soggetti sceglie 2
+
 
 

@@ -847,5 +847,99 @@ Ovviamente ciò provoca bias all'interno dei gruppi minoritari
         Essendo che le minacce diverse provocano diverse risposte emotive diverse, queste vanno distinte  
 
 
+# Lezione 11
+
 - Aspetti psico-sociali  
-    1. Identità sociale
+    1. Identità sociale  
+        Sostiene che le fondamenta del pregiudizio siano da ricercarsi nella dimensione sociale delle dinamiche intergruppo.  
+        Esistono importanti differenze fra comportamento interpersonale ed intergruppo.  
+        Secondo Tajfel esiste un continuum di comportamenti tra interpersonale e intergruppo.  
+        Più la dimensione si avvicina a quella intergruppo, più i nostri comportamenti saranno esito della categorizzazione sociale, che farà si che i nostri comportamenti siano modificati dal principio di accentuazione.  
+          
+        Secondo Tajfel l'identità sociale è quella parte dell'immagine che uno ha di sé derivante dalla consapevolezza di appartenere a un gruppo sociale  
+
+        Questa consapevolezza si può dividere nelle componenti
+        1. Cognitiva
+        2. Emotiva
+        3. Valutativa
+
+        Secondo Tajfel l'identità sociale è fondamentale nella vita psicologica di un individuo, che fa sì che gli individui siano molto motivati a ricercare un'identità sociale positiva e distinta.  
+        **Quindi**  il pregiudizio sorge da un fattore motivazionale: dal bisogno di avere un'identità sociale positiva e distinta
+        
+        La teoria dell'identità sociale **NON È** una teoria cognitiva, nonostante si fonda sul processo cognitivo della categorizzazione, ***MA motivazionale***
+
+        L'obiettivo del su esperimento (dei gruppi minimi) è:  
+        1. Definire le condizioni minime in cui un individuo, col proprio comportamento, effettua delle distinzioni tra il proprio gruppo di appartenenza ed un altro gruppo.  
+        2. Isolare la categorizzazione sociale come variabile indipendente al fine di misurare la sua eventuale influenza sul comportamento intergruppo e sul favoritismo per l'ingroup  
+        
+        Il paradigma dei gruppi minimi è di **Tajfel, Flament, Billig, & Bundy, 1971**  
+        Preferenza Klee/Kandinskij, divisione in realtà casuale  
+        
+        Strategie:
+        1. Equità
+        2. Massimo profitto comune
+        3. Massimo profitto Ingroup
+        4. Massima differenza
+
+        Risultati:
+        1. Strategie più usate Massima differenza e Massimo profitto Ingroup se bisognava dividere le risorse tra Ingroup e Outgroup
+        2. Se i due membri appartenevano allo stesso gruppo non c'era preferenza strategica
+
+        La categorizzazione sociale genera Ingroup e Outgroup, la differenziazione genera identità sociale, e quindi alla necessità di essere resa positiva, e quindi alla motivazione alla massima differenziazione positiva.  
+
+        Si differenzia dalla teoria di Sherif perché secondo Sherif la categorizzazione è necessaria **ma non sufficiente**, perché serve anche il conflitto per risorse  
+
+        Tuttavia la teoria di Sherif è importante perché è innegabile che il conflitto *amplifichi* il pregiudizio.  
+
+        Tajfel parla di più di favoritismo Ingroup che di discriminazione dell'outgroup.  
+
+        Se dal confronto sociale emerge un'identità sociale positiva si cerca di mantenere o aumentare la superiorità relativa.  
+        Se invece emerge un'identità sociale negativa si cerca il cambiamento a livello sociale o di gruppo.  
+
+        La scelta della strategia dipende da:
+        1. Livello di identificazione nel gruppo
+        2. Da quanto il contesto sia percepito stabile o instabile
+        3. Da quanto percepisco legittima o illegittima la situazione
+
+        Si scelgono strategie individuali quando:
+        1. C'è scarso senso di appartenenza con il gruppo
+        2. Non ci sono alternative a livello intergruppo (stabilità e  legittimità)
+        3. Le frontiere tra gruppi sono permeabili
+
+        Strategie individuali:
+        1. Disidentificazione  
+            1. ci si considera individui
+            2. ci si considera eccezioni
+            3. si evita di rievocare le connessioni con il gruppo di appartenenza
+            4. si critica apertamente il gruppo di appartenenza  
+        2. Dissociazione  
+            Fuga dal gruppo, l'individuo cerca di passare ad un altro gruppo, (es. individui  immigrati che assumono condotte esclusive del luogo di arrivo)
+
+        
+        Si scelgono strategie di gruppo:
+        1. Quando c'è forte senso di appartenenza
+        2. Il contesto è instabile
+        3. Sono percepite alternative (illegittimità)
+
+        Strategie di gruppo:
+        1. Processi di ri-categorizzazione
+        2. Creatività sociale  
+            Provare a migliorare la propria identità sociale focalizzandosi su dimensioni alternative  
+        3. Sfida aperta  
+            Il gruppo svantaggiato lotta per cambiare l'ordine gerarchico all'interno della società e per rimuovere le condizioni che hanno portato allo status svantaggiato (movimenti femministi, lgbt)  
+            È l'unica strategia che porta ad un vero cambiamento.  
+
+La teoria dell'identità sociale si è poi sviluppata in altre 2 categorie  
+
+**La Social Categorization Theory**  - Turner
+
+Secondo la teoria della categorizzazione del sè esistono 3 livelli di categorizzazione del sé:  
+
+- livello sovraordinato: Sé come essere umano (identità umana)
+- livello intermedio: Sé come membro di un gruppo (identità sociale)
+- livello subordinato: Sé come individuo unico (identità personale)
+
+Il costrutto sovraordinato è molto rilevante nella procedura di riduzione del pregiudizio, e nello studio di forme estreme di pregiudizio  
+
+La differenza tra la SIT e la SCT è che secondo la SIT si debba per forza categorizzarsi in uno dei due gruppi, mentre secondo la SCT il sé si può collocare a 3 livelli contemporaneamente  
+

@@ -200,11 +200,11 @@ noremap <Leader>j <C-w>5+
 " inoremap <Leader>c <Esc>:tab new<CR>:term<CR>
 
 " Quickly create a new terminal in a vertical split
-tnoremap <Leader>\| <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
+"tnoremap <Leader>\| <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
 nnoremap <Leader>\| :vsp<CR><C-w><C-w>:term<CR>
 
 " Quickly create a new terminal in a horizontal split
-tnoremap <Leader>- <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
+"tnoremap <Leader>- <C-\><C-n>:sp<CR><C-w><C-w>:term<CR>
 noremap <Leader>- :sp<CR><C-w><C-w>:term<CR>
 
 " Create neovim in a vertical split with ranger
@@ -275,6 +275,7 @@ tnoremap <Esc> <C-\><C-n>
 
 au TermOpen * setlocal listchars= nonumber norelativenumber
 au TermOpen * startinsert
+au TermOpen * let g:neoterm_autoscroll = 1
 au TermOpen * let g:last_terminal_job_id = b:terminal_job_id
 au BufEnter,BufWinEnter,WinEnter term://* startinsert
 au BufLeave term://* stopinsert
@@ -298,8 +299,6 @@ set grepprg=rg\ --vimgrep
 
 " Spellcheck
 set spelllang=en_us,it_it
-"let autoscroll  
-let g:neoterm_autoscroll = 1
 
 " Set to auto read when a file is changed from the outside
 set autoread

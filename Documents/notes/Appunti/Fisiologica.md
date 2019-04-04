@@ -1034,3 +1034,25 @@ L'emisfero sinistro interpreta come vecchie immagini mai viste ma congruenti con
  
 
 
+# Lezione 11  
+
+È utile in caso di danno a un lato, e inoltre non sono esattamente uguali e ci permettono di elaborare le stesse cose in più modi
+
+Le motivazioni sono la posizione nel ventre della madre: l'orecchio destro è rivolto verso l'esterno, quindi si sviluppa ascoltando l'esterno (il linguaggio), mentre il sinistro all'interno, quindi propriocezione  
+
+Inoltre si osservano differenze citoarchitettoniche e neurochimiche tra i due emisferi  
+
+**La lateralizzazione del linguaggio**  
+Il linguaggio si trova a sinistra *nella maggior parte* della popolazione, ma ci sono differenze di genere, infatti le donne hanno più probabilità di avere rappresentazioni bilaterali del linguaggio.  
+
+Lo stesso vale per il mancinismo, che inoltre aumenta la probabilità di avere le zone del linguaggio nell'emisfero destro  
+
+Il linguaggio include
+
+- Analisi Fonologica
+- Analisi Sintattica
+- Analisi 
+
+Si misura con il questionario di preferenza laterale  
+
+

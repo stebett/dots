@@ -41,9 +41,7 @@ static const char *tags[] = { "", "", "", " ", "", "", "", 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,         0,        -1 },
-	{ "Figure 1",     NULL,       NULL,       0,            1,           0,         0,        -1 },
-	{ "st",       NULL,       NULL,       0,            0,           0,         1,        -1 },
-	{ "octave-gui", NULL,       NULL,       0,            0,           1,         1,        -1 },
+	{ "st",       NULL,       NULL,       0,            0,           1,         1,        -1 },
 };
 
 /* layout(s) */

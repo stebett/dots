@@ -52,6 +52,7 @@
 # Ranger
     [x] Colorscheme
     [ ] New tab
+    [ ] CD
 
 # Projects
-    [ ] Put notebooks in new folder and delete learningML
+    [x] Put notebooks in new folder and delete learningML
