@@ -36,12 +36,18 @@
     [x] best syntax
     [x] best errors
     [x] terminal pane, quickfix pane
+    [x] shortcuts for pandoc
+    [x] pdf conversion -- fix newline
+    [x] tagbar colors
     [ ] best folding
     [ ] easymotion/vim-sneak
     [ ] git, nerdtree git
-    [ ] nerdtree and tagbar colors
-    [x] shortcuts for pandoc
-    [x] pdf conversion -- fix newline
+    [ ] rename, gutentags
+    [ ] tagbar statusline
+    [ ] nerdtree colors
+    [ ] completion manual
+    [ ] pytest
+    [ ] async run
 
 
     
