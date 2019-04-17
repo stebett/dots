@@ -20,16 +20,14 @@ Plug 'jpalardy/vim-slime'
 
 Plug 'majutsushi/tagbar'
 
-" Plug 'neomake/neomake'
+Plug 'neomake/neomake'
 
 " Markdown
 
 Plug 'vim-pandoc/vim-pandoc' 
 
-Plug 'vim-pandoc/vim-pandoc-syntax' " change with next
-"Plug 'godlygeek/tabular' "Required for markdown
-"Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
-
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " General
 Plug 'tpope/vim-sensible'
 
@@ -101,7 +99,7 @@ let g:slime_target = 'neovim'
 let g:slime_python_ipython = 1
 let g:slime_paste_file = '~/.slime_paste'
 
-nmap <c-c><c-s> :call ReplSplit('ipython')<cr>
+nmap <c-c><c-s> :call ReplSplit('ipython --no-banner')<cr>
 
 nmap <c-c><c-f> <Plug>SlimeLineSend
 
@@ -177,6 +175,9 @@ set termguicolors
 
 "-------------------------LEADER PART-------------------------
 let mapleader = " "
+
+".def.h settings
+nnoremap <leader>sk :!sudo rm config.h && make && sudo make clean install<cr>
 
 nnoremap <leader>db oimport pdb; pdb.set_trace()<esc>
 
@@ -280,6 +281,7 @@ function ToPdf()
 endfunction
 
 nnoremap <F10> :call ToPdf()<cr><cr>
+
 
 "------------------------SETTINGS--------------------------
 "no swap

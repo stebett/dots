@@ -55,10 +55,11 @@
     [ ] Run cells
     [ ] Join cells
     
+
 # Ranger
     [x] Colorscheme
     [ ] New tab
-    [ ] CD
+    [x] CD
 
 # Projects
     [x] Put notebooks in new folder and delete learningML

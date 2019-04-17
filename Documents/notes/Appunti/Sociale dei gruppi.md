@@ -256,10 +256,10 @@ Le caratteristiche attorno alle quali ruotano i pregiudizi sono
 
 Modello 2x2 = 4 pregiudizi possibili
 
-- Ammirazione
-- Invidia
-- Paternalistico
-- Disprezzo
+- ammirazione
+- invidia
+- paternalistico
+- disprezzo
 
 
 # Lezione 3
@@ -942,4 +942,346 @@ Secondo la teoria della categorizzazione del sè esistono 3 livelli di categoriz
 Il costrutto sovraordinato è molto rilevante nella procedura di riduzione del pregiudizio, e nello studio di forme estreme di pregiudizio  
 
 La differenza tra la SIT e la SCT è che secondo la SIT si debba per forza categorizzarsi in uno dei due gruppi, mentre secondo la SCT il sé si può collocare a 3 livelli contemporaneamente  
+
+# Lezione 13 
+
+## Deumanizzazione esplicita  
+
+Negazione dell'umanità dell'altro.  
+
+- meccaniccizazione
+- demonizzazione
+- oggettivazione 
+- animalizzazione 
+
+Giustifica la violenza.  
+I gruppi deumanizzati vengono esclusi dai confini della comunità morale.  
+
+Non vengono riconosciuti i diritti base  
+
+Il sentimento correlato con la deumanizzazione è la ***minaccia***  
+
+Accanto alla deumanizzazione esiste una forma più sottile, che coinvolge quasi tutti i rapporti inter-gruppo.  
+
+**La deumanizzazione sottile** viene chiamata **infraumanizzazione***  
+
+- Coinvolge tutti i rapporti intergruppo
+- Non ha le conseguenze devastanti di quella esplicita
+
+Funziona considerando l'ingroup *un po'* più umano dell'outgroup o viceversa  
+
+Le emozioni sono connesse a questo processo.  
+Le emozioni primarie sono condivise con gli animali  
+Le emozioni secondarie sono proprie dell'essere umano  
+
+La primarietà o secondarietà è indipendente dalla sua valenza.  
+
+Secondo Leyens attribuiamo più emozioni secondarie all'ingroup, rendendolo così più umano.  
+
+Molti esperimenti sono stati fatti in Spagna.  
+Si chiedeva di attribuire emozioni a membri dell'ingroup vs dell'outgroup (penisola e isole canarie)  
+
+Disegno 2x2x2 (ingroup vs outgroup, emozione primaria vs secondaria, emozione positiva vs negativa)  
+
+Risultati:  
+Non c'è differenza nelle emozioni primarie, né negative né positive.  
+La differenza sta nelle emozioni secondarie, attribuite in misura maggiore ai membri dell'ingroup, a prescindere dalla valenza.  
+
+L'individuo nell'ingroup è considerato più umano sia nei suoi aspetti positivi che negativi.  
+
+(effetto di esposizione?)  
+
+**Esperimento sui neri-scimmie**  
+115 studenti bianchi  
+Animali presentati su un lato dello schermo  
+2 condizioni sperimentali (solo scimmie vs solo felini)  
+Veniva richiesto su quale lato fosse presentato  
+Poi presentazione pestaggio di uomo di colore.  
+Questionario sulla *giustizia* dell'atto.  
+Il sospettato poteva essere bianco vs nero  
+Quando il prime è felino non c'è differenza tra target bianco o nero.  
+C'è differenza con il prime scimmia  
+
+L'animalizzazione viene attivata da una metafora animale congrua con le caratteristiche stereotipiche del target  
+
+**Nour Kteily**  
+Esperimenti per dimostrare il ritorno della deumanizzazione esplicita  
+Provoca un pattern diverso comportamentale  
+
+Chiede di indicare l'immagine in una scala evolutiva che meglio rappresenta l'outgroup  
+Trova varianza -> La misura funziona ancora  
+
+**Antropomorfizzazione**  
+Implica l'attribuzione di caratteristiche tipicamente umane ad oggetti, animali, eventi naturali.  
+
+Effetti psicologici:  
+L'antropomorfizzazione del pianeta Terra provoca intenzioni comportamentali pro-ambiente.  
+
+Al contrario quando agli eventi naturali sono associati nomi di donne questi vengono percepiti più negativi.  
+Spiegazione clinica.  
+
+Antropomorfizzare la natura inoltre riduce il supporto per le vittime dei disastri naturali.  
+
+L'antropomorfizzazione degli animali invece è pervasiva.  
+Maggiore è questa tendenza maggiore l'atteggiamento sarà positvo.  
+Anche alla base di alcune scelte alimentari  
+
+
+# Lezione 14
+
+
+## Calore e Competenza  
+**Le dimensioni fondamentali della cognizione sociale**  
+
+
+Quando noi ci formiamo impressioni su oggetti sociali lavoriamo su **due dimensioni**  
+
+Sociale - competenza e calore 
+Macro dimensioni - Potere e benevolenza
+Genere - Agency e Communion
+Moralità e competenza
+
+**Calore**  
+Riguarda le relazioni sociali, la cooperazione e il formare connessioni con altri individui o gruppi  
+Definito da tratti sia positivi che negativi  
+
+**Competenza**  
+Riguarda il raggiungimento degli obiettivi  
+
+Sono così importanti perché connesse a tratti utili in dimensione evolutiva  
+Il calore è funzionale a capire se le intenzioni dell'individuo sono positive nei confronti del soggetto  
+La competenza è funzionale all'attuazione delle intenzioni  
+
+**Studi a livello Interpersonale**  
+
+**Asch** - 1946  
+Studio di formazione di impressioni  
+Partecipanti: Studenti Universitari  
+Procedura: Descrizione di un'ipotetica persona attraverso l'impiego di specifici tratti; Indicare poi la propria impressione sulla base della descrizione letta  
+Risultati: Tratti di calore e competenza veicolano informazioni molto diverse  
+
+**Rosenberg**  
+I tratti utilizzati per la formazioni di impressioni sono distribuibili in una matrice 2x2 (bad-good, social-intellectual)  
+
+**Wojciszke**  
+Ricordare e descrivere eventi passati che hanno portato ad una valutazione negativa vs positiva di sé e degli altri  
+Risultati: Tratti di calore e competenza sono i tratti maggiormente utilizzati nelle descrizioni e predicono la valutazione globale  
+
+**Studi a livello Intergruppi**  
+Si studia qui il ***contenuto*** e non il processo dello stereotipo, ovvero non si pensa più che l'unica dimensione importante nel contenuto sia la *valenza*, ma che lo sia anche il contenuto specifico veicolato dallo stereotipo
+
+Si è trovato che all'interno di gruppi nazionali e di genere vengono molto utilizzate le dimensioni di calore e competenza  
+
+**Susan Fiske**  
+Modello di contenuto dello stereotipo  
+Sostiene, argomenta e dimostra che quando parliamo di uno stereotipo associato ad un gruppo, indipendentemente dal gruppo le dimensioni a cui ci riferiamo per descriverlo sono quelle di calore e competenza  
+
+**Opzioni possibili:**  
+
+Si possono però avere categorie sovraordinate ben descritte da calore e competenza e sottocategorie in posizioni diverse  
+
+1. Quando penso alla categoria sovraordinata posso ricondurla ad un sottogruppo
+2. Quando penso alla categoria sovraordinata posso fare una 'media' delle sottocategorie nel caso in cui si possono attribuire valori da calore e competenza alle sottocategorie **ma non** della categoria sovraordinata
+
+Le emozioni suscitate sono  
+
+- ammirazione
+- invidia
+- paternalistico
+- disprezzo
+
+Consentono di discriminare senza apparire pregiudizievoli  
+
+**Primarietà di Calore** su competenza  
+
+- Si attiva prima (più accessibile)
+- Ha un peso maggiore rispetto a competenza nel determinare le risposte emotive e comportamentali  
+
+**Ybarra**  
+Le parole di calore vengono riconosciute *prima* come parole di senso compiuto rispetto a quelle di competenza  
+
+Esperimento riconfermato da Abele e Bruckmuller  
+
+**Wojciszke**  
+Chiede di pensare a conoscenti, e poi di descriverlo attraverso tratti di calore e competenza e di dare un valore alla positività overall  
+
+I tratti di calore predicono maggiormente l'impressione finale
+
+**Predittori di calore e competenza** - Fiske  
+
+Indicatori socio-culturali predicono c&c  
+
+- Lo status predice l'attribuzione di competenza
+- La competizione predice l'attribuzione di calore
+
+La relazione tra competizione e calore non sempre è significativa ed è più debole di quella tra status e competenza  
+Questo potrebbe essere spiegato dal fatto che la competizione studiata dai questionari è di tipo ***realistico*** e non simbolico, quindi è plausibile che manchi parte del dato.  
+
+L'esperimento viene corretto da **Kervyn** e funziona.  
+
+**Susan Fiske & Caprariello**  
+Manipolano la variabile indipendente di calore e competenza attraverso status e competitività chiedendo come vengono percepiti attraverso tratti di calore e competenza  
+Si osserva che status e competizione ***predicono*** tratti di calore e competenza  
+
+Status predice competenza e non predice calore indipendentemente dai livelli di competizione manipolati e viceversa
+
+# Lezione 15  
+
+La spiegazione di Fiske è evoluzionistica.  
+
+Secondo le ricerche più recenti *calore* è scomponibile in due dimensioni:  
+
+- **Socievolezza**, capacità di formare connessioni
+- **Moralità**, correttezza verso gli oggetti sociali
+
+La primarietà di calore da dove deriva tra le due?  
+
+- Hanno o non hanno peso uguale?
+
+**Ricerche Brambilla**  
+Hp: moralità ha maggiore importanza, identifica meglio la minaccia (teoria evoluzionistica)  
+
+Lavori di neuroscienze che osservano l'amigdala attivarsi quando processiamo moralità ma non socievolezza  
+
+**Brambilla - 2011**  
+
+Considera una fase specifica di formazione dell'impressione su un gruppo, *il momento di contatto con un outgroup, **Prima** di avere informazioni su quel gruppo*, **Information gathering**  
+
+**Cosa si vuole capire su quel gruppo?**  
+
+Disegno: gruppo in vs out, importanza maggiore di competenza vs moralità vs socievolezza, vs impressione globale, moralità, socievolezza, competenza.  
+
+Presentazione immagine, indicazione del contesto (globale, morale ecc), e domanda
+
+Risultati: Interessi congrui con il contesto, quando globale:  
+
+1. moralità
+2. socievolezza
+3. competenza
+
+**Brambilla 2**  
+
+Le persone tendono ad utilizzare domande di tipo asimmetrico quando cercano informazioni rilevanti  
+
+Hp: Quando le persone cercano tratti di moralità dovrebbero porre domande molto asimmetriche  
+Stesso paradigma sperimentale, alla fine il soggetto sceglie delle domande, ne erano disponibili 2 per ogni tipo di asimmetria  
+
+- asimmetrica confermante
+- asimmetrica disconfermante
+- simmetrica  
+
+Risultati:  
+Quando le persone si domandano sulla socievolezza o sulla competenza usano domande simmetriche, mentre ne usano di assimetriche quando domandano per la moralità usano principalmente domande asimmetriche disconfermanti  
+
+- Spiegazione motivazionale: è più importante sapere se una persona ha cattive intenzioni che buone.  
+- Spiegazione cognitiva: La distribuzione dei tratti: una persona immorale mette in atto anche comportamenti morali, mentre una persona morale può solo mettere in atto comportamenti morali, *quindi* il comportamento morale non discrimina tra moralità o immoralità della persona
+
+**Predizione delle impressioni**  
+Non è detto che la velocità nel processare l'informazione e la sua salienza cognitiva e motivazionale siano correlate.  
+
+Disegno: gruppo etnico arriva in italia nell'immediato futuro (ortandesi)  
+Manipolazione dei tratti (moralità vs socievolezza vs competenza) x (Forza del tratto, forte vs debole)  
+
+Hp: Se moralità ha un peso maggiore rispetto a socievolezza, sarà più utile a predire l'impressione globale.  
+
+Ipotesi confermata
+
+**Critiche**  
+La primarietà di Moralità potrebbe essere mediata dal costrutto di Minaccia  
+
+Effettivamente è così.
+
+**Brambilla - 2013**  
+È possibile che diverse tipologie di minaccia spieghino la rilevanza di moralità per ingroup e outgroup  
+In particolare quando un ingroup è fortemente immorale è sicuramente una minaccia in termini *realistici*, ma lo è anche in termini *non realistici*, perché fa 'sfigurare' il gruppo, mentre l'ougroup lo è solo in modo realistico, non può rappresentare una minaccia *simbolica*  
+
+- Primo studio:  
+    Moralità alta vs bassa x Ingroup vs outgroup between sub  
+    Non ci sono differenze  
+    Se viene introdotto l'elemento minaccia, l'impressione globale data dalla moralità viene mediato da elementi **simbolici se vengono dall'ingroup** mentre da minacce **realistiche se vengono dall'outgroup**  
+
+- Secondo studio:  
+    Si manipola nel precedente solo se il target è morale o no, quindi manca il controllo.  
+    Vengono quindi manipolate ora moralità **e** competenza  
+    disegno 2x2x2  
+    Validati i risultati del precedente, competenza non ha un effetto di mediazione  
+
+    Critica: va manipolata moralità e socievolezza, perché se danno lo stesso pattern si torna all'ipotesi di egualianza di Susan  
+
+- Terzo studio:  
+    Identico ma con socievolezza, stessi risultati del 2
+
+Quindi moralità è più importante di socievolezza nel definire la minaccia, il giudizio complessivo del target che sia ingroup o outgroup.  
+
+**Aggiornamento delle impressioni**  
+*Impression Updating*  
+
+La moralità predice di più la prima impressione, ma è anche più in grado di spostarla successivamente?  
+
+Inoltre, questo dipende dalla congruenza di valenza e dominio tra l'informazione precedente e successiva?  
+
+Disegno prima informazione (2 moralità vs socievolezza x 2 valenza pos vs neg) x seconda informazione (2 moralità vs socievolezza x 2 valenza pos vs neg)  
+
+Hp: L'impressione cambia di più quando la prima informazione è di socievolezza e la seconda informazione è morale e negativa  
+
+Accade, e anche quando si manipolano moralità e competenza  
+
+Nel terzo esperimento si osserva che l'impressione cambia sempre a causa del costrutto di minaccia  
+
+L'impressione morale sposta di più l'updating perché sono ritenuti più importanti perché mediati dalle intenzioni, e non dalla frequenza
+
+
+# Lezione 16
+
+Esperimenti attraverso la **sincronia**  
+
+79 studenti  
+
+2 partecipanti, 1 dei due è un ricercatore in realtà.  
+
+Il confederato scriveva su un foglio che aveva compiuto un comportamento immorale vs morale o sociale vs anti-sociale.  
+
+Estraggono chi deve imitare chi, in realtà chi imita è sempre il soggetto, e la variabile dipendente è la precisione nella sincronia.  
+
+Il punteggio di sincronia si calcola attraverso il *ritardo* nella sincronizzazione  
+
+Disegno 2x2
+
+Risultati:  Si imita peggio chi è immorale. La sincronia cambia esclusivamente quando il confederato è immorale.  
+
+L'effetto è mediato e spiegato dall'effetto di distanza.  
+
+## Percezione di volti  
+
+Siamo in grado di estrapolare dal volto una serie di caratteristiche molto velocemente.  
+
+Siamo ancora più veloci quando dobbiamo percepire informazioni riguardanti la moralità.  
+Questo è dato dal fatto che l'informazione morale è connessa con quella di minaccia, quindi è molto più importante ai fini della sopravvivenza.  
+Il processo di riconoscimento è legato all'amigdala.  
+
+**Conseguenze**  
+A parità di competenza pratica, le persone con un volto con caratteristiche più 'competenti', hanno più successo.  
+
+A parità di reato commesso, quando la persona che commette un reato ha un volto percepito come meno minaccioso, quella persona tenderà a ricevere una pena meno rigida.  
+
+
+**Importanza degli stimoli contestuali**  
+Esperimento 1  
+Volti onesti vs disonesti con contesto minacciosa vs neutra.  
+Il contesto sposta il tragitto del mouse, quando c'è incongruenza.  
+
+Manca la condizione di negatività non minacciosa, quindi va aggiunta la condizione di contesto negativo ma non minaccioso.  
+
+Esperimento 2  
+Viene fatto l'esperimento, si trova che:  
+Il contesto negativo non differisce dal contesto neutro.  
+
+Esperimento 3  
+Viene aggiunta realismo.  
+Non c'è differenza dal 2  
+
+
+
+
+
 

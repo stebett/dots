@@ -30,13 +30,13 @@ static const char col_orange2[]     = "#fe8019";
 static const char col_fg[]          = "#ebdbb2";
 static const char *colors[][3]      = {
     /*              fg          bg          border */
-    [SchemeNorm] = { col_bg,    col_orange1,    col_bg},
-    [SchemeSel]  = { col_fg,    col_bg,         col_gray2},
+    [SchemeNorm] = { col_bg,    col_fg,    col_bg},
+    [SchemeSel]  = { col_fg,    col_bg,    col_fg},
 };
 /* static const char normbordercolor[] = "#B8611F"; */
 
 /* tagging */
-static const char *tags[] = { "", "", "", " ", "", "", "", "", ""  };
+static const char *tags[] = { "", "", " ", " ", "", "", "", "", ""  };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
@@ -51,9 +51,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ " ",      tile },    /* first entry is default */
-	{ " ",      NULL },    /* no layout function means floating behavior */
-	{ " ",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 };
 
 /* key definitions */
@@ -69,23 +69,30 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]     =     { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_orange1, "-sf", col_fg, "-i", NULL };
-static const char *termcmd[]      =     { "st",  NULL };
-static const char *browsercmd[]   =     { "google-chrome-stable", NULL };
-static const char *rangercmd[]    =     { "st", "ranger", NULL };
-static const char *lightupcmd[]   =     { "xbacklight", "-inc", "2.5", NULL};     
-static const char *lightdowncmd[] =     { "xbacklight", "-dec", "2.5", NULL};     
-static const char *soundupcmd[]   =     { "amixer", "-c", "0", "set", "Master", "10%+", NULL};     
-static const char *sounddowncmd[] =     { "amixer", "-c", "0", "set", "Master", "10%-", NULL};     
+
+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_orange1, "-sf", col_fg, "-i", NULL };
+static const char *termcmd[]      = { "st",  NULL };
+static const char *browsercmd[]   = { "google-chrome-stable", NULL };
+static const char *rangercmd[]    = { "st", "ranger", NULL };
+static const char *lightupcmd[]   = { "xbacklight", "-inc", "2.5", NULL};
+static const char *lightdowncmd[] = { "xbacklight", "-dec", "2.5", NULL};
+static const char *lightmincmd[]  = { "xbacklight", "-set", ".15", NULL};
+static const char *soundupcmd[]   = { "amixer", "-c", "0", "set", "Master", "10%+", NULL};
+static const char *sounddowncmd[] = { "amixer", "-c", "0", "set", "Master", "10%-", NULL};
+static const char *soundmutecmd[] = { "amixer", "-c", "0", "set", "Master", "0%", NULL};
+static const char *wifi[]         = { "sudo /home/ginko/Documents/scripts/wifi/./scan.sh", NULL};
 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
     
-    { MODKEY,                       XK_Down,   spawn,          {.v = sounddowncmd } },
-    { MODKEY,                       XK_Up,     spawn,          {.v = soundupcmd } },
-    { MODKEY,                       XK_Left,   spawn,          {.v = lightdowncmd } },
-    { MODKEY,                       XK_Right,  spawn,          {.v = lightupcmd } },
+    { MODKEY,                       XK_F1,     spawn,          {.v = soundmutecmd } },
+    { MODKEY,                       XK_F2,     spawn,          {.v = sounddowncmd } },
+    { MODKEY,                       XK_F3,     spawn,          {.v = soundupcmd } },
+    { MODKEY,                       XK_F5,     spawn,          {.v = wifi } },
+    { MODKEY,                       XK_F8,     spawn,          {.v = lightmincmd } },
+    { MODKEY,                       XK_F9,     spawn,          {.v = lightdowncmd } },
+    { MODKEY,                       XK_F10,    spawn,          {.v = lightupcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = browsercmd } },
@@ -113,6 +120,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

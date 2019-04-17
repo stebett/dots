@@ -498,3 +498,247 @@ e la maggior parte dei soggetti sceglie 2
 
 
 
+# Lezione 8  
+
+# Lezione 9  
+
+# Lezione 10  
+
+# Lezione 11
+
+**I sillogismi categorici**  - **Mosconi**
+
+Fa coppia con il compito di selezione  
+
+**Esempio 1:**
+
+- Alcuni L sono K
+- Alcuni K sono M
+
+Perciò
+
+1. Nessun M è L
+2. Alcuni M sono L
+3. Alcuni M non sono L
+4. Tutti gli M sono L
+5. **Nessuna di queste**
+
+**Esempio 2:**
+
+- Tutti gli svedesi sono bevitori di birra,
+- Qualche svedese è marinaio.
+
+Perciò:
+
+Qualche marinaio beve birra.
+
+**Esempio 3:**
+
+- Tutti gli studenti di letteratura frequentano le biblioteche
+- Tutti gli studenti di letteratura sonon intellettualmente curiosi
+
+Allora:
+
+1. **Alcune persone intellettualmente curiose frequentano le biblioteche**
+2. Alcune persone che frequentano le biblioteche non sono intellettualmente curiose
+3. Tutti coloro che sono intellettualmente curiosi frequentano le biblioteche
+
+La soluzione è ciò che deriva ***necessariamente*** dalle premesse.  
+
+**Esempio 4:**
+
+- Tutti gli A sono B
+- Tutti gli A sono C
+
+Allora:
+
+1. **Alcuni C sono B**
+2. Alcuni B non sono C
+3. Tutti i C sono B
+
+**Esempio 5:**
+
+- Tutti i formanimaferi sono rhyzopodi
+- Tutti i formanimaferi sono protozoi
+
+Allora:
+
+1. **Alcuni protozoi sono rhyzopodi**
+2. Alcuni rhyzopodi non sono protooi
+3. Tutti i protozoi sono rhyzopodi
+
+**Risultati**  
+
+Il materiale simbolico è quello che genera più errori.  
+
+Le conclusioni logiche sono in percentuale inferiori a quelle determinate dall'influenza delle convinzioni personali  
+
+Quando i soggetti hanno a che fare con sillogismi non validi, cioè coppie di premesse dalle quali non si può far derivare alcuna conclusione necessaria, l'enorme maggiorana considera corretta una conclusione non valida  
+
+**Metodologie**  - **Sells**  
+
+180 sillogismi, 128 invalidi, 52 validi.  
+
+I soggetti devono valutarli  
+
+- Assolutamente vera
+- Probabilmente vera
+- Indeterminata
+- Assolutamente falsa
+
+Ci sono troppi sillogismi invalidi, i soggetti potrebbero perdere fiducia nei propri metodi e iniziare a ragionare in modo meno logico.  
+
+Inoltre gli elementi di dubbio "probabilmente vera" e "indeterminata" servono solo a fuorviare i soggetti.
+
+**Chapman & Chapman** rifanno l'esperimento
+
+42 sillogismi invalidi e 10 validi  
+
+Gli autori non esaminano i 10 validi, erano solo di copertura.  
+
+Il focus della ricerca è sui sillogismi **invalidi**
+
+Usano solo sillogismi in forma astratta  
+
+**20% di risposte corrette**  
+
+**Secondo Mosconi**  
+Per risolvere correttamente il compito era necessario che i soggetti assumessero un'impostazione logica, diversa da quella più abituale e che nella vita di tutti i giorni viene assunta solo in particolari circostanze  
+
+Nelle ricerche analizzati i soggetti non ebbero modo di rendersene conto e la situazione sperimentale era fatta in odo da ostacolarli
+
+Alcuni vocaboli vengono intesi nei sillogismi in modo diverso da quanto avviene nel linguaggio comune, nonostante l'accezione utilizzata venisse specificata all'inizio del questionario.  
+
+Tuttavia è facile che dopo 180 sillogismi reintervenga l'accezione comune  
+La prova di ragionamento si trasforma in prova di **apprendimento**  
+
+> **Problema dei 9 punti**  
+
+> Ricoprire con 4 segmenti, senza staccare la penna e senza passare più di una volta su un punto, tutti i 9 punti.  
+
+> x x x  
+x x x  
+x x x
+
+> Anche quando i ricercatori proponevano la possibilità di uscire dai punti i soggetti non riuscivano.  
+
+**Secondo Mosconi**  
+Bisognerebbe riformulare i sillogismi in modo che siano già comprensibili in linguaggio naturale.  
+
+- Al posto di *qualche* o *alcuni* lui dice ***almeno uno***
+- Al posto di "*tutti gli A sono B*" dice ***sono inclusi in***
+- I sillogismi sperimentali devono essere ***sia invalidi che validi***, con maggior percentuale di quelli validi, a meno che non venga specificato, per essere congruo alle aspettative psicologiche del soggetto. 
+- Anche il fatto che dalle premesse non discenda alcuna conclusione di per sé non è percepita come soluzione dal soggetto, ed è quindi destabilizzante.
+
+**Ipotesi di Mosconi**: Il pensiero comune procede non in contrasto con la logica classica:  
+
+- Quando esigenze logiche ed esigenze psicologiche coincidono (quando la conclusione è certa e positiva), pensiero comune e logica tendono alla concordanza
+- Quando non coincidono (nessuna conclusione è possibile), il pensiero comune tende a ricorrere ad una logica più ampia e permissiva.  
+
+**La forma di Mosconi quindi è questa** 
+Tutti i membri del gruppo B fanno parte del gruppo C  
+Almeno un membro del gruppo A fa parte del gruppo B  
+
+Con egual numero di sillogismi validi ed invalidi.  
+
+**Sillogismo**: concatenamento di proposizioni (due premesse e una conclusione) atto a stabilire con certezza che **la conclusione deriva necessariamente dalle premesse.**  
+
+- Universali affermative A
+- Universali negative E
+- Particolari affermative I
+- Particolari negative O
+
+La conclusione di un sillogismo è una proposizione categoria che contiene due dei tre termini del sillogismo secondo questo schema:  
+
+- Il termine **predicato** della conclusione è detto *termine maggiore*
+- Il termine **soggetto** della conclusione è detto *termine minore*
+- Il terzo termine del sillogismo, che non risulta presente nella conclusione ma compare in entrambe le premesse, è detto *termine medio*
+- I termini maggiore e minore devono sempre essere presenti in due premesse diverse. Pertanto, si dice **premessa maggiore** quella che ocntiene il termine maggiore, e **premessa minore** quella che contiene il termine minore. Nella forma normale del sillogismo, la premessa maggiore viene data per prima, la premessa minore per seconda, la conclusione per ultima.  
+
+**Le Figure del sillogismo** sono distinte in base alla posizione che occupa in ciascuna delle due premesse il ***termine medio***.
+
+- Prima figura: M (il termine medio) è Soggetto della premessa maggiore e Predicato della premessa minore.  
+    **Tutti gli esseri umani (M)** sono mortali - Premessa maggiore  
+    Tutti i filosofi **sono esseri umani (M)**  - Premessa minore  
+- Seconda figura: M è predicato di entrrambe le premesse.  
+    Nessun X **è Y**  
+    Tutti gli Z **sono Y**  
+    Nessun Z è X  
+- Terza figura: M è il soggetto di entrambe le premesse.  
+    **Tutti gli X** sono Y  
+    **Tutti gli X** sono Z  
+- Quarta figura: M è il predicato della prima e soggetto  della seconda premessa.  
+    Tutti gli X **sono Y**  
+    **Tutti gli Y** sono Z
+
+**Wilkins** studio dell'influenza del contenuto sulla valutazione della conclusione  
+
+**Woodworth e Sells**: effetto atmosfera  
+
+**Chapman &Chapman**: spiegarono gli errori con il principio dell'accettazione della conversa delle proposizioni A e O
+
+**L'effetto atmosfera**  
+
+Se le due premesse sono dello stesso tipo (AA, EE, II, OO), la conclusione sarà di quello stesso tipo 
+
+Se le premesse sono di tipo diverso (universale e particolare, affermativa e negativa):  
+
+- La presenza di una premessa negativa crea un effetto atmosfera negativo e la conclusione sarà negativa
+- La presenza di una premessa particolare crea un effetto atmosfera particolare e la conclusione sarà particolare
+
+Inoltre:
+Ambiguità della parola "qualche"  
+Inoltre il fattore cautela favorisce l'accettazione di conclusioni deboli e caute piuttosto che forti (particolare su universale)
+
+## Categorizzazione e formazione dei concetti  
+
+La funzione dei concetti è quella di favorire l'economia cognitiva, di favorire le inferenze.  
+
+**Gelman**  
+Secondo un tuo studio, l'appartenenza di due o più oggetti ad una stessa categoria ci consente di inferire che due oggetti hanno le stesse proprietà nascoste.  
+
+Bambini di età diverse  
+Tre illustrazioni:  
+Pipistrello - merlo - fenicottero  
+Mammifero - uccello - uccello  
+
+Il cuore del fenicottero ha una particolare forma (D), che differisce da quella del pipistrello (S). Quale tipo di cuore ha il merlo?
+
+90% dei bambini di 5 anni  
+70% dei bambini di 4 anni  
+considerano la forma del cuore del merlo più vicina a quella del fenicottero.  
+
+**Quindi le proprietà strutturali sono inferite dalle categorie di appartenenza**  
+
+**La Teoria Classica**  
+Un concetto è un insieme di proprietà singolarmente necessarie e globalmente sufficienti per l'appartenenza alla cateogira.  
+
+Il significato di un concetto può essere colto da un elenco congiunto di attributi. 
+Questi attributi sono elementi atomici che stanno alla base della costruzione del concetto.  
+
+Dalla condizione di necessità e sufficienza deriva che:  
+**I confini** fra una categoria e l'altra risultano essere ben delineati e che pertanto l'appartenenza di un esemplare ad una categoria piuttosto che ad un'altra è netta e precisa.  
+
+**Hull**  - **Teoria dell'elemento comune**  
+
+Vengono raggruppati in categorie gli esemplari che condividono un elemento comune.  
+Il punto è che sono esemplari sconosciuti (ideogrammi cinesi)  
+
+Lo sperimentatore mostra una carta, raffigurante un ideogramma cinese, denominandolo ogni volta (do, yer, ecc)  
+
+Compito dei soggetti:  
+
+- denominare gli ideogrammi appena fossero stati in grado di farlo.
+- Identificare ciò che caratterizza il concetto denominato, disegnandolo.  
+
+Risultati:
+
+La denominazione avviene prima della identificazione dell'elemento comune, quindi in modo non consapevole.  
+
+**Bruner, Goodnow & Austin**  
+
+(Mastermind)  
+
+Come le persona formano i concetti sulla base di attributi ben definiti
+
+

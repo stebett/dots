@@ -1056,3 +1056,51 @@ Il linguaggio include
 Si misura con il questionario di preferenza laterale  
 
 
+# Lezione X
+
+Quando si misura l'eeg in diverse sessioni con lo stesso stimolo si può fare la media dei punti con lo stesso attributo temporale per pulire il segnale  
+Si può determinare la provenienza in base alla polarità del segnale.  
+
+**Potenziali evocati uditivi**  
+
+Si osservano spesso nei bambini per controllare che non abbino problemi all'udito  
+
+Si osserva la 5a componente del potenziale evocato  
+Più il suono ha intensità alta (Db) più è spiccata la 5a componente del potenziale evocato.  
+inoltre diminuisce la latenza  
+
+nei potenziali evocati visivi
+
+## la percezione visiva  
+
+il parvo viene proiettato allo strato 4cbeta di v1, proiettato poi allo strato 2 e 3 (più superficiale), ad una regione *blob* metabolicamente più attiva e una intrablob  
+
+nel nucleo genicolato laterale del talamo destro arrivano segnali dalla retina nasale dell'occhio sinistro e dalla retina temporale dell'occhio destro  
+
+negli stati 2 e 3 si possono osservare aree più o meno attive attraverso la *citocromo ossidasi*.  
+queste aree vengono chiamate *blob*, e le aree tra loro vengono dette *interblob*  
+
+Lo stato 4 è dove vengono proiettati i segnali magno cellulari  
+
+Parvo: colore selettiva, lenta, sensibilità a bassi contrasti, alta risoluzione spaziale.  
+Magno: insensibile ai colori, veloce, molta sensibilità ai contrasti, bassa risoluzione spaziale.  
+
+V1 è diviso in regioni di dominanza ocupare, che rispondono a diversi orientamenti di fasci luminiso e con diversa frequenza spaziale.  
+
+I neuroni di v1 sparano solo quando rilevano stimoli congrui alla loro preferenza. Di fianco sono posti neuroni che sparano con preferenze simili  
+
+Salendo verso la corteccia superficiale si osserva che i neuroni aumentano la loro preferenza per la frequenza spaziale  
+
+Quanto mi devo allontanare in termini di frequenza spaziale e orientamento dalla preferenza di un gruppo di neuroni perché questi smettano di sparare?  
+
+- 10 gradi di orientamento
+- un'ottava per la frequenza spaziale
+
+**Il Campo recettivo**  
+
+La codifica avviene retinotopicamente  
+Le aree si distinguono individuando mappe complete a sé stanti.  
+V2 ha campi recettivi più grandi e preferenze per stimoli leggermente più compmlessi  
+V3 ha campi recettivi ancora più grandi e ancora preferenze per stimoli più complessi.  
+Lo stesso per v4, che aggiunge il colore, v5, che agiiunge il movimento, ecc.  
+sono una troia da quattro soldi e mi accontento di cazzi sporchi. 
