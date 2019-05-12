@@ -277,7 +277,7 @@ function ToPdf()
     let workfile = bufname('%')
     let workfile2 = substitute(workfile, 'md', 'pdf', '')
     exe 'w'
-    exe '!' . 'pandoc -V geometry:margin=.6in --pdf-engine=pdflatex $HOME/Documents/notes/metadata.yaml "%" -o ' . "$HOME/Documents/notes/Appunti/pdf/'" . workfile2 . "'"
+    exe '!' . 'pandoc -V geometry:margin=.6in --pdf-engine=pdflatex $HOME/Documents/Notes/metadata.yaml "%" -o ' . "$HOME/Books/pdf/'" . workfile2 . "'"
 endfunction
 
 nnoremap <F10> :call ToPdf()<cr><cr>
