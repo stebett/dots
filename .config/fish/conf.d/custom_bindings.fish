@@ -1,0 +1,1 @@
+bind \er 'ranger-cd '
