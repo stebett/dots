@@ -6,9 +6,6 @@ fish
 git
 htop
 neovim
-octave
-python3
-pandoc
 ranger
 ripgrep
 tlp

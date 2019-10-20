@@ -32,6 +32,7 @@ SETUVAR _fish_abbr_d:/home/ginko/Packs/dwm\x2dgit/src/dwm
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x3d/home/ginko/\x2edots/\x20\x2d\x2dwork\x2dtree\x3d/home/ginko
 SETUVAR _fish_abbr_gp:git\x20add\x20\x2e\x20\x26\x26\x20git\x20commit\x20\x2dm\x20\x27auto\x2dcommit\x27\x20\x26\x26\x20git\x20push\x20origin
 SETUVAR _fish_abbr_keycodes:xev\x20\x7c\x20awk\x20\x2dF\x22\x5b\x20\x29\x5d\x2b\x22\x20\x22/\x5eKeyPress/\x20\x7b\x20a\x5bNR\x2b2\x5d\x20\x7d\x20NR\x20in\x20a\x20\x7b\x20printf\x20\x25\x2d3s\x20\x25s\x0a\x2c\x20\x245\x2c\x20\x248\x20\x7d\x22
+SETUVAR _fish_abbr_mnenv:source\x20/home/ginko/\x2evirtualenvs/mne/bin/activate\x2efish
 SETUVAR _fish_abbr_n:nvim\x20/home/ginko/\x2econfig/nvim/init\x2evim
 SETUVAR _fish_abbr_p:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_pdf:pandoc\x20\x2dV\x20geometry\x3amargin\x3d\x2e5in\x20\x2dV\x20fontsize\x3d12pt\x20\x2d\x2dpdf\x2dengine\x3dpdflatex
@@ -42,6 +43,7 @@ SETUVAR _fish_abbr_sk:sudo\x20rm\x20config\x2eh\x20\x26\x26\x20make\x20\x26\x26\
 SETUVAR _fish_abbr_sl:cd\x20/home/ginko/Packs/slstatus/src/sl/
 SETUVAR _fish_abbr_sus:systemctl\x20suspend
 SETUVAR _fish_abbr_sv:sudo\x20nvim
+SETUVAR _fish_abbr_tesenv:source\x20/home/ginko/\x2evirtualenvs/tesi/bin/activate\x2efish
 SETUVAR _fish_abbr_v:nvim
 SETUVAR _fish_abbr_venv:source\x20/home/ginko/\x2evirtualenvs/env/bin/activate\x2efish
 SETUVAR _fish_abbr_wcell:source\x20/home/ginko/Documents/scripts/wifi/cell\x2esh
@@ -77,7 +79,7 @@ SETUVAR fish_pager_color_descrition:\x23689d6a
 SETUVAR fish_pager_color_prefix:\x23458588
 SETUVAR fish_pager_color_progress:\x2383a598
 SETUVAR fish_pager_color_secondary:\x23282828
-SETUVAR fish_user_paths:/home/ginko/\x2efzf/bin
+SETUVAR fish_user_paths:/home/ginko/bin/\x1e/home/ginko/\x2efzf/bin
 SETUVAR pure_color_mute:\x1b\x5b38\x3b2\x3b214\x3b93\x3b14m
 SETUVAR pure_color_primary:\x1b\x5b38\x3b2\x3b131\x3b165\x3b152m
 SETUVAR pure_color_success:\x1b\x5b38\x3b2\x3b189\x3b174\x3b147m
