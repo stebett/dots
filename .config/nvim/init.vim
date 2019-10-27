@@ -3,6 +3,10 @@ filetype off
  
 call plug#begin()
 
+" Latex
+
+Plug 'lervag/vimtex'
+
 " Python 
 Plug 'ncm2/ncm2'
 Plug 'ncm2/ncm2-jedi'
@@ -175,6 +179,7 @@ set termguicolors
 
 "-------------------------LEADER PART-------------------------
 let mapleader = " "
+let maplocalleader = " "
 
 ".def.h settings
 nnoremap <leader>sk :!sudo rm config.h && make && sudo make clean install<cr>
@@ -206,11 +211,11 @@ noremap <leader>sw :exe ':Rg ' . expand('<cword>')<CR>
 
 
 " find normal mappings
-" Resize
-noremap <Leader>h <C-w>5<
-noremap <Leader>l <C-w>5>
-noremap <Leader>k <C-w>5-
-noremap <Leader>j <C-w>5+
+" " Resize... I don't really use them, and leader-l is for vimtex
+" noremap <Leader>h <C-w>5<
+" noremap <Leader>l <C-w>5>
+" noremap <Leader>k <C-w>5-
+" noremap <Leader>j <C-w>5+
 
 " Copy to clipboard
 nnoremap  <leader>y  "+y
