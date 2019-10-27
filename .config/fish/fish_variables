@@ -28,6 +28,7 @@ SETUVAR VISUAL:nvim
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR _fish_abbr_batmod:/home/ginko/Documents/Scripts/battery_saver\x2esh
 SETUVAR _fish_abbr_d:/home/ginko/Packs/dwm\x2dgit/src/dwm
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x3d/home/ginko/\x2edots/\x20\x2d\x2dwork\x2dtree\x3d/home/ginko
 SETUVAR _fish_abbr_gp:git\x20add\x20\x2e\x20\x26\x26\x20git\x20commit\x20\x2dm\x20\x27auto\x2dcommit\x27\x20\x26\x26\x20git\x20push\x20origin

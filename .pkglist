@@ -10,6 +10,7 @@ bluez-libs 5.51-2
 bluez-utils 5.51-2
 bzip2 1.0.8-2
 coreutils 8.31-2
+cpupower 5.3-1
 cryptsetup 2.2.1-1
 device-mapper 2.02.186-2
 dhcpcd 8.0.6-1
