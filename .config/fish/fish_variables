@@ -36,6 +36,7 @@ SETUVAR _fish_abbr_mnenv:source\x20/home/ginko/\x2evirtualenvs/mne/bin/activate\
 SETUVAR _fish_abbr_n:nvim\x20/home/ginko/\x2econfig/nvim/init\x2evim
 SETUVAR _fish_abbr_p:sudo\x20pacman\x20\x2dS
 SETUVAR _fish_abbr_pdf:pandoc\x20\x2dV\x20geometry\x3amargin\x3d\x2e5in\x20\x2dV\x20fontsize\x3d12pt\x20\x2d\x2dpdf\x2dengine\x3dpdflatex
+SETUVAR _fish_abbr_pipupgrade:pip\x20list\x20\x2d\x2doutdated\x20\x2d\x2dformat\x3dfreeze\x20\x7c\x20grep\x20\x2dv\x20\x27\x5e\x5c\x2de\x27\x20\x7c\x20cut\x20\x2dd\x20\x3d\x20\x2df\x201\x20\x20\x7c\x20xargs\x20\x2dn1\x20pip\x20install\x20\x2dU
 SETUVAR _fish_abbr_r:ranger\x2dcd
 SETUVAR _fish_abbr_s:cd\x20/home/ginko/Packs/st\x2dgit/src/st
 SETUVAR _fish_abbr_shut:systemctl\x20poweroff
