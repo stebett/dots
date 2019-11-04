@@ -146,11 +146,10 @@ set shortmess+=c
 " inoremap <c-c> <ESC> Perché ho questa opzione?
 "
 let g:ncm2#auto_popup = 0
-" inoremap <silent> <tab> <c-r>=ncm2#manual_trigger()<cr>
 let g:ncm2#total_popup_limit = 10
 
 
-function! Complete() 
+function! Complete()  "da fare in modo che si attivi solo in python
     let n = matchstr(getline('.'), '.\%'.col('.').'c')
     if n == ' '
         return ("\<tab>")
@@ -164,6 +163,8 @@ function! Complete()
 endfunction
 
 inoremap <silent><expr> <tab> Complete()
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<cr>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 
 "Ale 
