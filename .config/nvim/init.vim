@@ -3,6 +3,11 @@ filetype off
  
 call plug#begin()
 
+" Snippets
+
+" Plug 'ervandew/supertab'
+" Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " Latex
 
 Plug 'lervag/vimtex'
@@ -45,7 +50,6 @@ Plug 'tpope/vim-repeat'
 
 Plug 'tpope/vim-unimpaired'
 
-"Plug 'ervandew/supertab'
 
 " Manipulation
 
@@ -81,6 +85,9 @@ syntax enable
 " Enable filetype plugins
 filetype plugin on 
 filetype indent on 
+
+" Vimtex
+
 
 " vim-slime 
 
@@ -136,13 +143,28 @@ autocmd BufRead,BufNewFile,BufEnter *.py call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 
-inoremap <c-c> <ESC>
-
+" inoremap <c-c> <ESC> Perché ho questa opzione?
+"
 let g:ncm2#auto_popup = 0
-inoremap <silent> <S-tab> <c-r>=ncm2#manual_trigger()<cr>
+" inoremap <silent> <tab> <c-r>=ncm2#manual_trigger()<cr>
 let g:ncm2#total_popup_limit = 10
-inoremap <expr><A-n> pumvisible() ? "\<C-n>" : "\<A-n>"
-inoremap <expr><A-p> pumvisible() ? "\<C-p>" : "\<A-p>"
+
+
+function! Complete() 
+    let n = matchstr(getline('.'), '.\%'.col('.').'c')
+    if n == ' '
+        return ("\<tab>")
+    elseif n == ''
+        return ("\<tab>")
+    elseif col('.') == 1
+        return ("\<tab>")
+    elseif type(n) == 1
+        return ("\<c-r>=ncm2#manual_trigger()\<cr>")
+    endif
+endfunction
+
+inoremap <silent><expr> <tab> Complete()
+
 
 "Ale 
 

@@ -50,7 +50,7 @@ SETUVAR _fish_abbr_v:nvim
 SETUVAR _fish_abbr_venv:source\x20/home/ginko/\x2evirtualenvs/env/bin/activate\x2efish
 SETUVAR _fish_abbr_wcell:source\x20/home/ginko/Documents/scripts/wifi/cell\x2esh
 SETUVAR _fish_abbr_weolo:source\x20/home/ginko/Documents/scripts/wifi/home\x2esh
-SETUVAR _fish_abbr_woff:sudo\x20/home/ginko/Documents/scripts/wifi/\x2e/plane\x2dmode\x2esh
+SETUVAR _fish_abbr_woff:/home/ginko/Documents/Scripts/wifi/\x2e/plane\x2dmode\x2esh
 SETUVAR _fish_abbr_won:/home/ginko/Documents/Scripts/wifi/\x2e/scan\x2esh
 SETUVAR fish_color_autosuggestion:\x23b8bb26
 SETUVAR fish_color_cancel:\x23689d6a
