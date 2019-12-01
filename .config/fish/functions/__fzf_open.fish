@@ -10,6 +10,8 @@ function __fzf_open -d "Open files and directories."
     set -l commandline (__fzf_parse_commandline)
     set -l dir $commandline[1]
     set -l fzf_query $commandline[2]
+    set _flag_hidden "yes"
+    set -l options "h/hidden"
 
     if not type -q argparse
         set created_argparse
@@ -18,9 +20,13 @@ function __fzf_open -d "Open files and directories."
         end
         if contains -- --editor $argv; or contains -- -e $argv
             set _flag_editor "yes"
+            set _flag_hidden "yes"
+            set -l options "h/hidden"
         end
         if contains -- --preview $argv; or contains -- -p $argv
             set _flag_preview "yes"
+            set _flag_hidden "yes"
+            set -l options "h/hidden"
         end
     end
 

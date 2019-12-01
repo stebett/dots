@@ -1,4 +1,9 @@
-#!/usr/sh
+#!/usr/fish
+
+# preactivate venv
+if status --is-interactive
+    source "$HOME/.virtualenvs/env/bin/activate.fish"
+end
 
 # prompt colours
 if status --is-interactive
@@ -21,5 +26,3 @@ end
 if status --is-interactive
     eval sh "$HOME/.config/fish/custom_files/base16-gruvbox-dark-medium.sh"
 end
-
-

@@ -20,4 +20,3 @@ set -l color0F '#d65d0e'
 
 set -x FZF_DEFAULT_OPTS "--height 60% --reverse --color bg+:$color01,bg:$color00,spinner:$color09,hl:$color09 --color fg:$color04,header:$color0D,info:$color0A,pointer:$color09 --color marker:$color0F,fg+:$color06,prompt:$color0A,hl+:$color09 "
 
-# set -x FZF_DEFAULT_COMMAND "rg --files --no-ignore --hidden --follow"

@@ -67,6 +67,7 @@ npm 6.12.0-1
 octave 5.1.0-5
 os-prober 1.77-1
 pacman 5.2.0-2
+pandoc 2.7.3-64
 patch 2.7.6-7
 pciutils 3.6.2-1
 perl 5.30.0-3
@@ -116,7 +117,6 @@ unzip 6.0-13
 usbutils 012-1
 util-linux 2.34-3
 vi 1:070224-3
-vim 8.1.2102-1
 virtualbox-host-modules-arch 6.0.14-2
 vsftpd 3.0.3-6
 w3m 0.5.3.git20190105-1
