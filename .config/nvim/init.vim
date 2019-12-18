@@ -75,6 +75,7 @@ autocmd FileType tex inoremap == <esc>o\item
 
 " Ultisnips
 
+let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
 let g:tex_flavor = 'latex'
 let g:UltiSnipsEditSplit = 'vertical'

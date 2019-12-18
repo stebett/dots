@@ -2,7 +2,7 @@
 
 # preactivate venv
 if status --is-interactive
-    source "$HOME/.virtualenvs/env/bin/activate.fish"
+    source "$HOME/.virtualenvs/env2/bin/activate.fish"
 end
 
 # prompt colours

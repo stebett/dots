@@ -5,6 +5,7 @@ automake 1.16.1-1
 bash 5.0.011-1
 binutils 2.32-3
 bison 3.4.2-1
+bitwarden-bin 1.16.6-1
 bluez 5.51-2
 bluez-libs 5.51-2
 bluez-utils 5.51-2
@@ -112,6 +113,7 @@ tk 8.6.9.1-2
 transmission-gtk 2.94-2
 ttf-anonymous-pro 1.003-4
 ttf-font-awesome 5.11.2-1
+uefi-shell-git 27012.edk2.stable201903.1275.gbfb141cf19-1
 universal-ctags-git 0.r6594.1208e454-1
 unzip 6.0-13
 usbutils 012-1
@@ -136,8 +138,10 @@ xorg-xbacklight 1.2.3-1
 xorg-xev 1.2.3-1
 xorg-xinit 1.4.1-1
 xorg-xinput 1.6.3-1
+xorg-xprop 1.2.4-1
 xorg-xrandr 1.5.1-1
 xorg-xsetroot 1.1.2-1
+xorg-xwininfo 1.1.5-1
 yajl 2.1.0-2
 yarn 1.19.1-1
 zathura 0.4.4-1
