@@ -2,9 +2,9 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 10;       /* gap pixel between windows */
 static const unsigned int snap      = 31;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
+static const unsigned int gappx     = 10;       /* gap pixel between windows */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style:bold" };
 
@@ -39,15 +39,14 @@ static const char *colors[][3]      = {
 static const char *tags[] = { "", "", " ", " ", "", "", "", "", ""  };
 
 static const Rule rules[] = {
-	/* class      instance    title       tags mask     isfloating   isterminal noswallow monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           0,         0,        -1 },
-	{ "st",       NULL,       "st",       0,            0,           0,         1,        -1 },
-	{ "ipython",  NULL,       NULL,       0,            1,           0,         1,        -1 },
+	/* class      instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",     NULL,       NULL,       0,            1,           0         },
+	{ "st",       NULL,       "st",       0,            0,           0         }
 };
 
 /* layout(s) */
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 2;    /* number of clients in master area */
+static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
@@ -74,7 +73,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_orange1, "-sf", col_fg, "-i", NULL };
 static const char *termcmd[]      = { "st",  NULL };
 static const char *browsercmd[]   = { "google-chrome-stable", NULL };
-static const char *rangercmd[]    = { "st", "ranger", NULL };
+static const char *rangercmd[]    = { "st", "lf", NULL };
 static const char *lightupcmd[]   = { "xbacklight", "-inc", "2.5", NULL};
 static const char *lightdowncmd[] = { "xbacklight", "-dec", "2.5", NULL};
 static const char *lightmincmd[]  = { "xbacklight", "-set", ".15", NULL};
