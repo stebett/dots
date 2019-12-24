@@ -28,7 +28,7 @@ Plug 'tpope/vim-sensible' "cos'è?
 
 Plug 'junegunn/goyo.vim'
 
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 
 Plug 'morhetz/gruvbox'
 
@@ -144,19 +144,22 @@ colo gruvbox
 
 set background=dark
 
-let g:lightline = {
-    \ 'colorscheme': 'gruvbox',
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'filename'] ],
-    \   'right': [ [ 'lineinfo' ] ]
-    \   },
-    \ }
+" let g:lightline = {
+"     \ 'colorscheme': 'gruvbox',
+"     \ 'active': {
+"     \   'left': [ [ 'mode', 'paste' ],
+"     \             [ 'filename'] ],
+"     \   'right': [ [ 'lineinfo' ] ]
+"     \   },
+"     \ }
 
 let g:gruvbox_contrast_dark = 'medium'
 
 set termguicolors
-
+" autocmd VimEnter * hi! Normal guibg=NONE
+" " set Vim-specific sequences for RGB colors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 "-------------------------LEADER PART-------------------------
@@ -227,8 +230,9 @@ inoremap `E <C-v>200
 
 " terminal settings 
 " Go in normal mode from terminal
+let g:ipythonname = "IPython"
 tnoremap <Esc> <C-\><C-n>
-
+au TermOpen * setlocal statusline=\ \ %{g:ipythonname}
 au TermOpen * setlocal listchars= nonumber norelativenumber
 au TermOpen * startinsert
 au TermOpen * let g:neoterm_autoscroll = 1
@@ -305,3 +309,5 @@ set si "smart indent
 set wrap "wrap lines
 
 set noshowmode
+
+source $HOME/.config/nvim/statusline.vim

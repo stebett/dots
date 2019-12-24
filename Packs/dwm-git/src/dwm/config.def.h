@@ -1,5 +1,4 @@
 
-
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 31;       /* snap pixel */
@@ -10,7 +9,6 @@ static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style:bold" 
 
 static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style:bold";
 
-static const char col_bg[]          = "#282828";
 static const char col_red1[]        = "#cc241d";
 static const char col_red2[]        = "#fb4934";
 static const char col_green1[]      = "#98971a";
@@ -28,10 +26,14 @@ static const char col_aqua2[]       = "#8ec07c";
 static const char col_orange1[]     = "#d65d0e";
 static const char col_orange2[]     = "#fe8019";
 static const char col_fg[]          = "#ebdbb2";
+static const char col_bg[]          = "#282828";
+static const char col_bg1[]         = "#3c3836";
+static const char col_bg2[]         = "#504945";
+static const char col_bg3[]         = "#665c54";
 static const char *colors[][3]      = {
     /*              fg          bg          border */
-    [SchemeNorm] = { col_bg,    col_fg,    col_bg},
-    [SchemeSel]  = { col_fg,    col_bg,    col_fg},
+    [SchemeNorm] = { col_yellow1,    col_bg2,    col_bg},
+    [SchemeSel]  = { col_orange1,    col_bg1,    col_fg},
 };
 /* static const char normbordercolor[] = "#B8611F"; */
 
@@ -41,7 +43,11 @@ static const char *tags[] = { "", "", " ", " ", "", "", "",
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0         },
-	{ "st",       NULL,       "st",       0,            0,           0         }
+    { "st",       NULL,       "st",       0,            0,           0         },
+	{ "matplotlib",       NULL,       "matplotlib",       1,            0,           0         },
+	{ "ipython",       NULL,       "ipython",       1,            0,           0         },
+	{ "python",       NULL,       "python",       1,            0,           0         },
+	{ "/home/ginko/.virtualenvs/env/bin/python /home/ginko/.virtualenvs/env/bin/ipython",  NULL,       "/home/ginko/.virtualenvs/env/bin/python /home/ginko/.virtualenvs/env/bin/ipython",  0,            1,           0         }
 };
 
 /* layout(s) */
