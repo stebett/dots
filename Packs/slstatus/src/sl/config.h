@@ -1,17 +1,17 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 3000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "n/a";
+static const char unknown_str[] = "No Signal";
 
 /* maximum output string length */
 #define MAXLEN 2048
 
 /*
  * function            description                     argument (example)
- *
+ 
  * battery_perc        battery percentage              battery name (BAT0)
  *                                                     NULL on OpenBSD/FreeBSD
  * battery_state       battery charging state          battery name (BAT0)
@@ -63,9 +63,9 @@ static const char unknown_str[] = "n/a";
  */
 
 static const struct arg args[] = {
-	/* function format          argument */
+	/* function          format          argument */
 
-    { wifi_essid,        " %s  ",    "wlp1s0"},
-	{ battery_perc,      " %s%%  ", "BAT0" },
-    { datetime,          " %s",     "%H:%M "},
+    { wifi_essid,        "  %s   ",    "wlp1s0"},
+	{ battery_perc,      "  %s%%   ", "BAT0" },
+    { datetime,          "  %s 神",     "%H:%M"},
 };

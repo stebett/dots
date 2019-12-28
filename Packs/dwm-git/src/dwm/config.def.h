@@ -25,20 +25,28 @@ static const char col_aqua1[]       = "#689d6a";
 static const char col_aqua2[]       = "#8ec07c";
 static const char col_orange1[]     = "#d65d0e";
 static const char col_orange2[]     = "#fe8019";
-static const char col_fg[]          = "#ebdbb2";
+static const char col_fg[]          = "#fbf1c7";
+static const char col_fg1[]         = "#ebdbb2";
+static const char col_fg2[]         = "#d5c4a1";
+static const char col_fg3[]         = "#bdae93";
+static const char col_fg4[]         = "#a89984";
 static const char col_bg[]          = "#282828";
 static const char col_bg1[]         = "#3c3836";
 static const char col_bg2[]         = "#504945";
 static const char col_bg3[]         = "#665c54";
 static const char *colors[][3]      = {
     /*              fg          bg          border */
-    [SchemeNorm] = { col_yellow1,    col_bg2,    col_bg},
-    [SchemeSel]  = { col_orange1,    col_bg1,    col_fg},
+    [SchemeNorm]   = { col_fg4,     col_bg2,    col_bg},
+    [SchemeSel]    = { col_orange2, col_bg1,    col_fg2},
+ 	[SchemeWarn]   = { col_bg,      col_green2, col_fg },
+ 	[SchemeUrgent] = { col_bg,      col_yellow2, col_fg },
+ 	[SchemeFive]   = { col_bg,      col_orange2, col_fg },
 };
 /* static const char normbordercolor[] = "#B8611F"; */
 
 /* tagging */
-static const char *tags[] = { "", "", " ", " ", "", "", "", "", ""  };
+/* static const char *tags[] = { "", "", " ", " ", "", "", "", "", ""  }; */
+static const char *tags[] = { "  ", "  ", "  ", "  ", " 硫 ", "  ", " ﭜ " };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -57,9 +65,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "",      tile },    /* first entry is default */
-	{ "",      NULL },    /* no layout function means floating behavior */
-	{ "",      monocle },
+	{ "  ",      tile },    /* first entry is default */
+	{ "  ",      NULL },    /* no layout function means floating behavior */
+	{ "  ",      monocle },
 };
 
 /* key definitions */
@@ -76,9 +84,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 
-static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_orange1, "-sf", col_fg, "-i", NULL };
+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg1, "-sb", col_orange2, "-sf", col_fg2, "-i", NULL };
 static const char *termcmd[]      = { "st",  NULL };
-static const char *browsercmd[]   = { "google-chrome-stable", NULL };
+static const char *browsercmd[]   = { "brave", NULL };
 static const char *rangercmd[]    = { "st", "lf", NULL };
 static const char *lightupcmd[]   = { "xbacklight", "-inc", "2.5", NULL};
 static const char *lightdowncmd[] = { "xbacklight", "-dec", "2.5", NULL};

@@ -6,12 +6,13 @@
 # Aliases
 
 alias ls='ls --color=always'
-alias lowpow='source $HOME/Documents/Scripts/Batteria/battery_saver.sh'
+alias mm='rm config.h && make && sudo make clean install'
+alias lowpow='source $HOME/Documents/scripts/battery/battery_saver.sh'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias gp="git add . && git commit -m 'auto-commit' && git push origin master"
 alias venv='source $HOME/.virtualenvs/env/bin/activate'
-alias won='$HOME/Documents/Scripts/wifi/./scan.sh'
-alias woff='$HOME/Documents/Scripts/wifi/./plane-mode.sh'
+alias won='$HOME/Documents/scripts/wifi/./scan.sh'
+alias woff='$HOME/Documents/scripts/wifi/./plane-mode.sh'
 alias shut='systemctl poweroff'
 alias v='nvim'
 alias n='nvim $HOME/.config/nvim/init.vim'
@@ -146,6 +147,6 @@ put_template 21 $color21
 # source $HOME/Packs/nest-simulator/install_dict/bin/nest_vars.sh
 
 VENV="$(virtualenv_info)" # Maybe the color is better on 1
-PS1='\n\[\033[01;38;5;142m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
+# PS1='\n\[\033[01;38;5;142m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
 
-# PS1='\n\[\033[01;38;5;30m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
+PS1='\n\[\033[01;38;5;66m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '

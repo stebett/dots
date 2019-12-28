@@ -64,9 +64,6 @@ filetype plugin on
 filetype indent on 
 
 
-if filereadable('/usr/local/bin/python3')
-  let g:python3_host_prog='/home/ginko/.virtualenvs/env/bin/python3'
-endif
 
 " Vimtex
 
@@ -243,7 +240,9 @@ au BufLeave term://* stopinsert
 
 "------------------------SETTINGS--------------------------
 
+let g:python3_host_prog='/home/ginko/.virtualenvs/env/bin/python3'
 let g:init = "/home/ginko/.config/nvim/init.vim"
+" let g:c_syntax_for_h = 1
 
 "no swap
 set noswapfile
