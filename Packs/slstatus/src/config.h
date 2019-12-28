@@ -1,1 +1,0 @@
-/home/ginko/packs/slstatus-git/config.h
