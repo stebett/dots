@@ -10,8 +10,9 @@ fi
 xrdb -merge ~/.Xresources
 feh --bg-center ~/Pictures/mywallpaper.png
 
-setxkbmap -option ctrl:nocaps
+setxkbmap -option ctrl:swapcaps
 exec slstatus &
+exec dunst &
 exec dwm
 
 

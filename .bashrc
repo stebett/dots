@@ -11,8 +11,8 @@ alias lowpow='source $HOME/Documents/scripts/battery/battery_saver.sh'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias gp="git add . && git commit -m 'auto-commit' && git push origin master"
 alias venv='source $HOME/.virtualenvs/env/bin/activate'
-alias won='$HOME/Documents/scripts/wifi/./scan.sh'
-alias woff='$HOME/Documents/scripts/wifi/./plane-mode.sh'
+alias won='sudo $HOME/Documents/scripts/wifi/./scan'
+alias woff='sudo $HOME/Documents/scripts/wifi/./plane-mode'
 alias shut='systemctl poweroff'
 alias v='nvim'
 alias n='nvim $HOME/.config/nvim/init.vim'
@@ -30,7 +30,7 @@ bind '"\er":"lfcd\C-m"'
 
 # Variables
 
-export EDITOR='nvim'
+export EDITOR='nvim' 
 export VISUAL='less'
 export OPENER='xdg-open'
 
