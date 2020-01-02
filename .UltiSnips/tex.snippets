@@ -1,0 +1,113 @@
+global !p
+from snippet_helpers import *
+endglobal
+
+snippet -> "arrow" A
+$\rightarrow$ 
+endsnippet 
+
+snippet * "emphatize" 
+\emph{$1} $0
+endsnippet
+
+snippet ** "bold" 
+\textbf{$1} $0
+endsnippet
+
+
+snippet skip "medskip" bA
+\medskip\\\ $0
+endsnippet
+
+snippet cit "citation" b
+\begin{quote}
+	\emph{$1}
+	\begin{flushright}
+		$2
+	\end{flushright}
+\end{quote}
+endsnippet
+
+snippet sbp "subparagraph" bA
+\subparagraph{$1} $0
+endsnippet
+
+snippet sbs "subsection" bA
+\subsection{$1} 
+
+$0
+endsnippet
+
+snippet enum "enumerate" b
+\begin{enumerate}
+	\item
+\end{enumerate}
+endsnippet
+
+snippet par "paragraph" b
+\paragraph{$1}  $0
+endsnippet
+		
+snippet sec "section" b
+\section{$1}
+
+$0
+endsnippet
+
+snippet item "itemize" b
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet beg "beign" b
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet mini "minipage" b
+\begin{minipage}{.45\textwidth}
+	$1
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+	$2
+\end{minipage}
+endsnippet
+
+
+snippet head "Header" b
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx}
+
+\date{`!p snip.rv = get_date()`}
+\title{`!p snip.rv = get_tex_name()`}
+\author{`!p snip.rv = get_lesson_dir()`}
+
+\begin{document}
+
+\maketitle
+
+\section{$4}
+
+$0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+endsnippet
+
+

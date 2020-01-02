@@ -68,6 +68,8 @@ filetype indent on
 " Vimtex
 
 autocmd FileType tex inoremap == <esc>o\item 
+autocmd FileType tex setlocal spell
+
 
 
 " Ultisnips
@@ -136,6 +138,29 @@ let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['autopep8']}
 nnoremap <F2> :ALEFix<cr>
 
+
+" Scrot
+
+function! TakeScreenshot()
+    call system('mkdir -p images')
+    let l:num_files = substitute(system('ls images | wc -l'), '\_s*$', '', '')  
+    let l:image_name = 'image' . l:num_files
+    execute "!scrot -s" . ' images/' . l:image_name . '.png'
+    execute "normal i\\medskip\\\\\n\\includegraphics[width=\\linewidth]{./images/" . l:image_name . "}\n\\medskip\\\\"
+endfunction
+
+nnoremap <F10> :call TakeScreenshot()<cr><cr>
+
+
+
+
+
+
+
+
+
+
+
 "-------------------------COLORS PART-------------------------
 colo gruvbox
 
@@ -189,13 +214,16 @@ vnoremap <leader>P "+P
 
 "------------------------CUSTOM MAPPINGS--------------------------
 
+" to correct nicely mistakes
+
+inoremap <C-k> <c-g>u<esc>[s1z=`]a<c-g>u
+
 " to have help opening nicely
 command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
 
 nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
 nnoremap <F4> :Pytest file<cr>
 nnoremap <F6> :Pytest file --pdb<cr>
-nnoremap <F7> :
 
 "Navigation
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -254,7 +282,7 @@ hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 set grepprg=rg\ --vimgrep
 
 " Spellcheck
-set spelllang=en_us,it_it
+set spelllang=en_us,it
 
 " Lemme use dat scroll man
 set mouse=a
