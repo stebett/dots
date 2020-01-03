@@ -1,22 +1,13 @@
-#set default-fg "#ebdbb2"
-#set default-bg "#282828"
-#set statusbar-bg "#282828"
-#set statusbar-fg "#ebdbb2"
-#set inputbar-bg "#282828"
-#set inputbar-fg "#ebdbb2"
-#set notification-error-bg "#9d0006" 
-map <A-s> toggle_statusbar toggle_inputbar
-
-
-# Base16 Gruvbox dark, medium
-# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
-# nicodebo/base16-zathura
+set font                        "Anonymous Pro 12"
 
 set default-bg                  "#282828"
 set default-fg                  "#3c3836"
 
-set statusbar-fg                "#bdae93"
-set statusbar-bg                "#504945"
+# set statusbar-fg              "#bdae93"
+# set statusbar-bg              "#504945"
+set statusbar-fg                "black"
+set statusbar-bg                "white"
+set statusbar-basename          "true"
 
 set inputbar-bg                 "#282828"
 set inputbar-fg                 "#fbf1c7"

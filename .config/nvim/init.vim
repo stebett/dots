@@ -216,7 +216,7 @@ vnoremap <leader>P "+P
 
 " to correct nicely mistakes
 
-inoremap <C-k> <c-g>u<esc>[s1z=`]a<c-g>u
+inoremap <C-l> <c-g>u<esc>[s1z=`]a<c-g>u
 
 " to have help opening nicely
 command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
@@ -269,7 +269,6 @@ au BufLeave term://* stopinsert
 "------------------------SETTINGS--------------------------
 
 let g:python3_host_prog='/home/ginko/.virtualenvs/env/bin/python3'
-let g:init = "/home/ginko/.config/nvim/init.vim"
 " let g:c_syntax_for_h = 1
 
 "no swap

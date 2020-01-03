@@ -1,8 +1,8 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..8bec2f7 100644
+index 1c0b587..890cfb8 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -1,50 +1,77 @@
+@@ -1,50 +1,74 @@
 -/* See LICENSE file for copyright and license details. */
  
  /* appearance */
@@ -77,10 +77,7 @@ index 1c0b587..8bec2f7 100644
 -	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 +	{ "Gimp",     NULL,       NULL,       0,            1,           0         },
 +    { "st",       NULL,       "st",       0,            0,           0         },
-+	{ "matplotlib",       NULL,       "matplotlib",       1,            0,           0         },
-+	{ "ipython",       NULL,       "ipython",       1,            0,           0         },
-+	{ "python",       NULL,       "python",       1,            0,           0         },
-+	{ "/home/ginko/.virtualenvs/env/bin/python /home/ginko/.virtualenvs/env/bin/ipython",  NULL,       "/home/ginko/.virtualenvs/env/bin/python /home/ginko/.virtualenvs/env/bin/ipython",  0,            1,           0         }
++    { "brave",    NULL,       "brave",    4 << 6,       0,           0         },
  };
  
  /* layout(s) */
@@ -105,14 +102,14 @@ index 1c0b587..8bec2f7 100644
  #define TAGKEYS(KEY,TAG) \
  	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
  	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-@@ -56,23 +83,46 @@ static const Layout layouts[] = {
+@@ -56,23 +80,46 @@ static const Layout layouts[] = {
  
  /* commands */
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 -static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 -static const char *termcmd[]  = { "st", NULL };
 +
-+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg1, "-sb", col_orange2, "-sf", col_fg2, "-i", NULL };
++static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL };
 +static const char *termcmd[]      = { "st",  NULL };
 +static const char *browsercmd[]   = { "brave", NULL };
 +static const char *rangercmd[]    = { "st", "lf", NULL };
@@ -163,7 +160,7 @@ index 1c0b587..8bec2f7 100644
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
  	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-@@ -84,6 +134,7 @@ static Key keys[] = {
+@@ -84,6 +131,7 @@ static Key keys[] = {
  	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
  	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
@@ -171,7 +168,7 @@ index 1c0b587..8bec2f7 100644
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
-@@ -94,6 +145,7 @@ static Key keys[] = {
+@@ -94,6 +142,7 @@ static Key keys[] = {
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },

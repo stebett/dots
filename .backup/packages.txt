@@ -80,6 +80,7 @@ pciutils 3.6.2-2
 perl 5.30.1-1
 perl-file-mimeinfo 0.29-2
 pkgconf 1.6.3-3
+powertop 2.11-1
 procps-ng 3.3.15-2
 psmisc 23.3-2
 pulseaudio-alsa 2-5
@@ -117,6 +118,7 @@ texlive-pstricks 2019.52550-1
 texlive-publishers 2019.52538-1
 texlive-science 2019.52582-1
 tk 8.6.10-1
+tlp 1.2.2-1
 transmission-gtk 2.94-2
 ttf-anonymous-pro 1.003-4
 ttf-font-awesome 5.12.0-1
