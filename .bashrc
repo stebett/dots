@@ -34,8 +34,9 @@ export EDITOR='nvim'
 export INIT='/home/ginko/.config/nvim/init.vim'
 export VISUAL='less'
 export OPENER='xdg-open'
-export MAIL=ginkobab@gmail.com
-
+export MAIL='ginkobab@gmail.com'
+export BROWSER='brave'
+export TERMINAL='st'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 

@@ -1,0 +1,61 @@
+# To specify a key, you can use 'xbindkeys --key' or
+# 'xbindkeys --multikey' and put one of the two lines in this file.
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h
+# The XK_ is not needed.
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+
+# The release modifier is not a standard X modifier, but you can
+# use it if you want to catch release events instead of press events
+
+# By defaults, xbindkeys does not pay attention with the modifiers
+# NumLock, CapsLock and ScrollLock.
+# Uncomment the lines above if you want to pay attention to them.
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+# Examples of commands:
+
+"sudo /home/ginko/Documents/scripts/wifi/./scan_bash"
+    XF86Search
+
+# Set this rule to make this work
+# /etc/udev/rules.d/backlight.rules
+# ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight per esempio", RUN+="/bin/chgrp ginko /sys/class/backlight/%k/brightness"
+# ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
+"/home/ginko/Documents/scripts/brightness/./bright_up down"
+    XF86MonBrightnessDown
+
+"/home/ginko/Documents/scripts/brightness/./bright_up up"
+    XF86MonBrightnessUp
+
+"amixer -c 0 set Master 0%"
+    XF86AudioMute
+
+"amixer -c 0 set Master 10%-"
+    XF86AudioLowerVolume
+
+"amixer -c 0 set Master 10%+"
+    XF86AudioRaiseVolume
+
+"$TERMINAL"
+    Mod4 + w
+
+"$BROWSER"
+    Mod4 + e
+
+
+
+# remember xbindkeys --poll-rc

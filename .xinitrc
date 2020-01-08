@@ -11,6 +11,7 @@ systemctl --user import-environment DISPLAY # dunst
 xrdb -merge ~/.Xresources
 feh --bg-center ~/Pictures/mywallpaper.png
 setxkbmap -option ctrl:swapcaps
+xbindkeys --poll-rc
 
 exec slstatus &
 exec dunst &

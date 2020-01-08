@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..890cfb8 100644
+index 1c0b587..c63167a 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,50 +1,74 @@
@@ -20,9 +20,9 @@ index 1c0b587..890cfb8 100644
 -static const char col_gray3[]       = "#bbbbbb";
 -static const char col_gray4[]       = "#eeeeee";
 -static const char col_cyan[]        = "#005577";
-+static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style:bold" };
++static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style=bold" };
 +
-+static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style:bold";
++static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style=bold";
 +
 +static const char col_red1[]        = "#cc241d";
 +static const char col_red2[]        = "#fb4934";
@@ -64,7 +64,6 @@ index 1c0b587..890cfb8 100644
  
  /* tagging */
 -static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-+/* static const char *tags[] = { "", "", " ", " ", "", "", "", "", ""  }; */
 +static const char *tags[] = { "  ", "  ", "  ", "  ", " 硫 ", "  ", " ﭜ " };
  
  static const Rule rules[] = {
@@ -72,12 +71,14 @@ index 1c0b587..890cfb8 100644
 -	 *	WM_CLASS(STRING) = instance, class
 -	 *	WM_NAME(STRING) = title
 -	 */
- 	/* class      instance    title       tags mask     isfloating   monitor */
+-	/* class      instance    title       tags mask     isfloating   monitor */
 -	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 -	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-+	{ "Gimp",     NULL,       NULL,       0,            1,           0         },
-+    { "st",       NULL,       "st",       0,            0,           0         },
-+    { "brave",    NULL,       "brave",    4 << 6,       0,           0         },
++	/* class              instance    title       tags mask       isfloating   monitor */
++	{ "Gimp",             NULL,       NULL,       0,              0,           0         },
++    { "st",               NULL,       "st",       0,              0,           0         },
++    { "Brave-browser",    NULL,       NULL,       1 << 3,         0,           0         },
++    { "Matplotlib",       NULL,       NULL,       0,              1,           0         },
  };
  
  /* layout(s) */
@@ -102,7 +103,7 @@ index 1c0b587..890cfb8 100644
  #define TAGKEYS(KEY,TAG) \
  	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
  	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-@@ -56,23 +80,46 @@ static const Layout layouts[] = {
+@@ -56,23 +80,26 @@ static const Layout layouts[] = {
  
  /* commands */
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -110,33 +111,14 @@ index 1c0b587..890cfb8 100644
 -static const char *termcmd[]  = { "st", NULL };
 +
 +static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL };
-+static const char *termcmd[]      = { "st",  NULL };
-+static const char *browsercmd[]   = { "brave", NULL };
-+static const char *rangercmd[]    = { "st", "lf", NULL };
-+static const char *lightupcmd[]   = { "xbacklight", "-inc", "2.5", NULL};
-+static const char *lightdowncmd[] = { "xbacklight", "-dec", "2.5", NULL};
-+static const char *lightmincmd[]  = { "xbacklight", "-set", ".15", NULL};
-+static const char *soundupcmd[]   = { "amixer", "-c", "0", "set", "Master", "10%+", NULL};
-+static const char *sounddowncmd[] = { "amixer", "-c", "0", "set", "Master", "10%-", NULL};
-+static const char *soundmutecmd[] = { "amixer", "-c", "0", "set", "Master", "0%", NULL};
-+static const char *wifi[]         = { "sudo /home/ginko/Documents/scripts/wifi/./scan.sh", NULL};
 +
  
  static Key keys[] = {
  	/* modifier                     key        function        argument */
-+    
-+    { MODKEY,                       XK_F1,     spawn,          {.v = soundmutecmd } },
-+    { MODKEY,                       XK_F2,     spawn,          {.v = sounddowncmd } },
-+    { MODKEY,                       XK_F3,     spawn,          {.v = soundupcmd } },
-+    { MODKEY,                       XK_F5,     spawn,          {.v = wifi } },
-+    { MODKEY,                       XK_F8,     spawn,          {.v = lightmincmd } },
-+    { MODKEY,                       XK_F9,     spawn,          {.v = lightdowncmd } },
-+    { MODKEY,                       XK_F10,    spawn,          {.v = lightupcmd } },
- 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 -	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-+	{ MODKEY,                       XK_w,      spawn,          {.v = termcmd } },
-+	{ MODKEY,                       XK_e,      spawn,          {.v = browsercmd } },
-+	{ MODKEY,                       XK_r,      spawn,          {.v = rangercmd } },
++    
++	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd} },
  	{ MODKEY,                       XK_b,      togglebar,      {0} },
 -	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 -	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -160,7 +142,7 @@ index 1c0b587..890cfb8 100644
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
  	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-@@ -84,6 +131,7 @@ static Key keys[] = {
+@@ -84,6 +111,7 @@ static Key keys[] = {
  	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
  	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
@@ -168,7 +150,7 @@ index 1c0b587..890cfb8 100644
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
-@@ -94,6 +142,7 @@ static Key keys[] = {
+@@ -94,6 +122,7 @@ static Key keys[] = {
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
@@ -176,8 +158,16 @@ index 1c0b587..890cfb8 100644
  };
  
  /* button definitions */
+@@ -103,7 +132,6 @@ static Button buttons[] = {
+ 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+ 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+ 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+ 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
+ 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
+ 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
 diff --git a/dwm.c b/dwm.c
-index 4465af1..b457f24 100644
+index 4465af1..5c2e237 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -59,7 +59,7 @@
@@ -300,7 +290,21 @@ index 4465af1..b457f24 100644
  	attachstack(c);
  	XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32, PropModeAppend,
  		(unsigned char *) &(c->win), 1);
-@@ -1417,7 +1448,7 @@ sendmon(Client *c, Monitor *m)
+@@ -1282,6 +1313,13 @@ resizeclient(Client *c, int x, int y, int w, int h)
+ 	c->oldw = c->w; c->w = wc.width = w;
+ 	c->oldh = c->h; c->h = wc.height = h;
+ 	wc.border_width = c->bw;
++    if (((nexttiled(c->mon->clients) == c && !nexttiled(c->next))
++        || &monocle == c->mon->lt[c->mon->sellt]->arrange)
++        && !c->isfullscreen && !c->isfloating) {
++            c->w = wc.width += c->bw * 2;
++            c->h = wc.height += c->bw * 2;
++            wc.border_width = 0;
++    }
+ 	XConfigureWindow(dpy, c->win, CWX|CWY|CWWidth|CWHeight|CWBorderWidth, &wc);
+ 	configure(c);
+ 	XSync(dpy, False);
+@@ -1417,7 +1455,7 @@ sendmon(Client *c, Monitor *m)
  	detachstack(c);
  	c->mon = m;
  	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
@@ -309,7 +313,7 @@ index 4465af1..b457f24 100644
  	attachstack(c);
  	focus(NULL);
  	arrange(NULL);
-@@ -1673,26 +1704,29 @@ tagmon(const Arg *arg)
+@@ -1673,26 +1711,29 @@ tagmon(const Arg *arg)
  void
  tile(Monitor *m)
  {
@@ -349,7 +353,7 @@ index 4465af1..b457f24 100644
  		}
  }
  
-@@ -1897,7 +1931,7 @@ updategeom(void)
+@@ -1897,7 +1938,7 @@ updategeom(void)
  					m->clients = c->next;
  					detachstack(c);
  					c->mon = mons;

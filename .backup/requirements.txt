@@ -2,6 +2,7 @@ attrs==19.3.0
 autopep8==1.4.4
 backcall==0.1.0
 bleach==3.1.0
+ConnPlotter==0.7a0
 cycler==0.10.0
 decorator==4.4.1
 defusedxml==0.6.0
@@ -45,11 +46,13 @@ ptyprocess==0.6.0
 pycodestyle==2.5.0
 pyflakes==2.1.1
 Pygments==2.5.2
+PyNEST===master-00e0d3cc8
 pynvim==0.4.0
 pyparsing==2.4.5
 pyrsistent==0.15.6
 python-dateutil==2.8.1
 pytz==2019.3
+PyYAML==5.2
 pyzmq==18.1.1
 qtconsole==4.6.0
 scikit-learn==0.22
@@ -60,6 +63,7 @@ simplejson==3.17.0
 six==1.13.0
 terminado==0.8.3
 testpath==0.4.4
+Topology===master-00e0d3cc8
 tornado==6.0.3
 traitlets==4.3.3
 wcwidth==0.1.7
