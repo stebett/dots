@@ -1,8 +1,8 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..c63167a 100644
+index 1c0b587..c28f6cc 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -1,50 +1,74 @@
+@@ -1,50 +1,78 @@
 -/* See LICENSE file for copyright and license details. */
  
  /* appearance */
@@ -20,48 +20,53 @@ index 1c0b587..c63167a 100644
 -static const char col_gray3[]       = "#bbbbbb";
 -static const char col_gray4[]       = "#eeeeee";
 -static const char col_cyan[]        = "#005577";
+-static const char *colors[][3]      = {
+-	/*               fg         bg         border   */
+-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 +static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style=bold" };
 +
 +static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style=bold";
 +
-+static const char col_red1[]        = "#cc241d";
-+static const char col_red2[]        = "#fb4934";
-+static const char col_green1[]      = "#98971a";
-+static const char col_green2[]      = "#b8bb36";
-+static const char col_yellow1[]     = "#d79921";
-+static const char col_yellow2[]     = "#fabd3f";
-+static const char col_blue1[]       = "#458588";
-+static const char col_blue2[]       = "#83a598";
-+static const char col_purple1[]     = "#b16286";
-+static const char col_purple2[]     = "#d3869b";
-+static const char col_gray1[]       = "#928374";
-+static const char col_gray2[]       = "#a89984";
-+static const char col_aqua1[]       = "#689d6a";
-+static const char col_aqua2[]       = "#8ec07c";
-+static const char col_orange1[]     = "#d65d0e";
-+static const char col_orange2[]     = "#fe8019";
-+static const char col_fg[]          = "#fbf1c7";
-+static const char col_fg1[]         = "#ebdbb2";
-+static const char col_fg2[]         = "#d5c4a1";
-+static const char col_fg3[]         = "#bdae93";
-+static const char col_fg4[]         = "#a89984";
-+static const char col_bg[]          = "#282828";
-+static const char col_bg1[]         = "#3c3836";
-+static const char col_bg2[]         = "#504945";
-+static const char col_bg3[]         = "#665c54";
- static const char *colors[][3]      = {
--	/*               fg         bg         border   */
--	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
--	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-+    /*              fg          bg          border */
-+    [SchemeNorm]   = { col_fg4,     col_bg2,    col_bg},
-+    [SchemeSel]    = { col_orange2, col_bg1,    col_fg2},
-+ 	[SchemeWarn]   = { col_bg,      col_green2, col_fg },
-+ 	[SchemeUrgent] = { col_bg,      col_yellow2, col_fg },
-+ 	[SchemeFive]   = { col_bg,      col_orange2, col_fg },
++/* static const char *colors[][3]      = { */
++/*     /1*              fg          bg          border *1/ */
++/*     [SchemeNorm]   = { col_fg4,     col_bg2,     col_bg}, */
++/*     [SchemeSel]    = { col_orange2, col_bg1,     col_fg2}, */
++/*  	[SchemeWarn]   = { col_bg,      col_green2,  col_fg }, */
++/*  	[SchemeUrgent] = { col_bg,      col_yellow2, col_fg }, */
++/*  	[SchemeFive]   = { col_bg,      col_orange2, col_fg }, */
++/*  	[SchemeTitle]  = { col_fg1,     col_bg1,     col_green2  }, */
++/* }; */
++
++static char base00[] = "#282828";   /* ---- */
++static char base01[] = "#3c3836";   /* --- */
++static char base02[] = "#504945";   /* -- */
++static char base03[] = "#665c54";   /* - */
++static char base04[] = "#bdae93";   /* + */
++static char base05[] = "#d5c4a1";   /* ++ */
++static char base06[] = "#ebdbb2";   /* +++ */
++static char base07[] = "#fbf1c7";   /* ++++ */
++static char base08[] = "#fb4934";   /* red */
++static char base09[] = "#fe8019";   /* orange */
++static char base0A[] = "#fabd2f";   /* yellow */
++static char base0B[] = "#b8bb26";   /* green */
++static char base0C[] = "#8ec07c";   /* aqua/cyan */
++static char base0D[] = "#83a598";   /* blue */
++static char base0E[] = "#d3869b";   /* purple */
++static char base0F[] = "#d65d0e";   /* brown */
++static char *colors[][3] = {
++       /*               fg           bg           border   */
++       [SchemeNorm]   = {base04,    base02,     base00},
++       [SchemeSel]    = {base09,    base01,     base05},
++       [SchemeWarn]   = {base00,    base0B,     base07},
++       [SchemeUrgent] = {base00,    base0A,     base07},
++       [SchemeFive]   = {base00,    base09,     base07},
++       [SchemeTitle]  = {base06,    base01,     base00},
  };
-+/* static const char normbordercolor[] = "#B8611F"; */
  
++
++/* static const char normbordercolor[] = "#B8611F"; */
++
  /* tagging */
 -static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 +static const char *tags[] = { "  ", "  ", "  ", "  ", " 硫 ", "  ", " ﭜ " };
@@ -103,14 +108,15 @@ index 1c0b587..c63167a 100644
  #define TAGKEYS(KEY,TAG) \
  	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
  	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-@@ -56,23 +80,26 @@ static const Layout layouts[] = {
+@@ -56,23 +84,27 @@ static const Layout layouts[] = {
  
  /* commands */
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 -static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 -static const char *termcmd[]  = { "st", NULL };
++static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", base01, "-nf", base06, "-sb", base09, "-sf", base00, NULL };
 +
-+static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL };
++/* static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL }; */
 +
  
  static Key keys[] = {
@@ -142,15 +148,16 @@ index 1c0b587..c63167a 100644
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
  	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-@@ -84,6 +111,7 @@ static Key keys[] = {
+@@ -84,6 +116,8 @@ static Key keys[] = {
  	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
  	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
++	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
 +
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
-@@ -94,6 +122,7 @@ static Key keys[] = {
+@@ -94,6 +128,7 @@ static Key keys[] = {
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
  	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
@@ -158,7 +165,7 @@ index 1c0b587..c63167a 100644
  };
  
  /* button definitions */
-@@ -103,7 +132,6 @@ static Button buttons[] = {
+@@ -103,7 +138,6 @@ static Button buttons[] = {
  	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
  	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
  	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
@@ -166,20 +173,72 @@ index 1c0b587..c63167a 100644
  	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
  	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
  	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+diff --git a/drw.c b/drw.c
+index 8fd1ca4..e4968a0 100644
+--- a/drw.c
++++ b/drw.c
+@@ -207,7 +207,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
+ /* Wrapper to create color schemes. The caller has to call free(3) on the
+  * returned color scheme when done using it. */
+ Clr *
+-drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
++drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount)
+ {
+ 	size_t i;
+ 	Clr *ret;
+diff --git a/drw.h b/drw.h
+index 4bcd5ad..42b04ce 100644
+--- a/drw.h
++++ b/drw.h
+@@ -39,7 +39,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned in
+ 
+ /* Colorscheme abstraction */
+ void drw_clr_create(Drw *drw, Clr *dest, const char *clrname);
+-Clr *drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount);
++Clr *drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount);
+ 
+ /* Cursor abstraction */
+ Cur *drw_cur_create(Drw *drw, int shape);
 diff --git a/dwm.c b/dwm.c
-index 4465af1..5c2e237 100644
+index 4465af1..6496e6f 100644
 --- a/dwm.c
 +++ b/dwm.c
-@@ -59,7 +59,7 @@
+@@ -35,6 +35,7 @@
+ #include <X11/Xatom.h>
+ #include <X11/Xlib.h>
+ #include <X11/Xproto.h>
++#include <X11/Xresource.h>
+ #include <X11/Xutil.h>
+ #ifdef XINERAMA
+ #include <X11/extensions/Xinerama.h>
+@@ -56,10 +57,25 @@
+ #define HEIGHT(X)               ((X)->h + 2 * (X)->bw)
+ #define TAGMASK                 ((1 << LENGTH(tags)) - 1)
+ #define TEXTW(X)                (drw_fontset_getwidth(drw, (X)) + lrpad)
++#define XRDB_LOAD_COLOR(R,V)    if (XrmGetResource(xrdb, R, NULL, &type, &value) == True) { \
++                                  if (value.addr != NULL && strnlen(value.addr, 8) == 7 && value.addr[0] == '#') { \
++                                    int i = 1; \
++                                    for (; i <= 6; i++) { \
++                                      if (value.addr[i] < 48) break; \
++                                      if (value.addr[i] > 57 && value.addr[i] < 65) break; \
++                                      if (value.addr[i] > 70 && value.addr[i] < 97) break; \
++                                      if (value.addr[i] > 102) break; \
++                                    } \
++                                    if (i == 7) { \
++                                      strncpy(V, value.addr, 7); \
++                                      V[7] = '\0'; \
++                                    } \
++                                  } \
++                                }
  
  /* enums */
  enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
 -enum { SchemeNorm, SchemeSel }; /* color schemes */
-+enum { SchemeNorm, SchemeSel, SchemeWarn, SchemeUrgent, SchemeFive}; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeWarn, SchemeUrgent, SchemeFive, SchemeTitle}; /* color schemes */
  enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
         NetWMFullscreen, NetActiveWindow, NetWMWindowType,
         NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
-@@ -147,6 +147,7 @@ static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interac
+@@ -147,6 +163,7 @@ static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interac
  static void arrange(Monitor *m);
  static void arrangemon(Monitor *m);
  static void attach(Client *c);
@@ -187,7 +246,23 @@ index 4465af1..5c2e237 100644
  static void attachstack(Client *c);
  static void buttonpress(XEvent *e);
  static void checkotherwm(void);
-@@ -406,6 +407,17 @@ attach(Client *c)
+@@ -177,6 +194,7 @@ static void grabkeys(void);
+ static void incnmaster(const Arg *arg);
+ static void keypress(XEvent *e);
+ static void killclient(const Arg *arg);
++static void loadxrdb(void);
+ static void manage(Window w, XWindowAttributes *wa);
+ static void mappingnotify(XEvent *e);
+ static void maprequest(XEvent *e);
+@@ -232,6 +250,7 @@ static Monitor *wintomon(Window w);
+ static int xerror(Display *dpy, XErrorEvent *ee);
+ static int xerrordummy(Display *dpy, XErrorEvent *ee);
+ static int xerrorstart(Display *dpy, XErrorEvent *ee);
++static void xrdb(const Arg *arg);
+ static void zoom(const Arg *arg);
+ 
+ /* variables */
+@@ -406,6 +425,17 @@ attach(Client *c)
  	c->mon->clients = c;
  }
  
@@ -205,7 +280,7 @@ index 4465af1..5c2e237 100644
  void
  attachstack(Client *c)
  {
-@@ -416,7 +428,7 @@ attachstack(Client *c)
+@@ -416,7 +446,7 @@ attachstack(Client *c)
  void
  buttonpress(XEvent *e)
  {
@@ -214,7 +289,7 @@ index 4465af1..5c2e237 100644
  	Arg arg = {0};
  	Client *c;
  	Monitor *m;
-@@ -431,9 +443,14 @@ buttonpress(XEvent *e)
+@@ -431,9 +461,14 @@ buttonpress(XEvent *e)
  	}
  	if (ev->window == selmon->barwin) {
  		i = x = 0;
@@ -231,7 +306,7 @@ index 4465af1..5c2e237 100644
  		if (i < LENGTH(tags)) {
  			click = ClkTagBar;
  			arg.ui = 1 << i;
-@@ -699,29 +716,43 @@ drawbar(Monitor *m)
+@@ -699,29 +734,43 @@ drawbar(Monitor *m)
  	int boxs = drw->fonts->h / 9;
  	int boxw = drw->fonts->h / 6 + 2;
  	unsigned int i, occ = 0, urg = 0;
@@ -281,7 +356,64 @@ index 4465af1..5c2e237 100644
  		x += w;
  	}
  	w = blw = TEXTW(m->ltsymbol);
-@@ -1062,7 +1093,7 @@ manage(Window w, XWindowAttributes *wa)
+@@ -730,7 +779,7 @@ drawbar(Monitor *m)
+ 
+ 	if ((w = m->ww - sw - x) > bh) {
+ 		if (m->sel) {
+-			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
++			drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
+ 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
+ 			if (m->sel->isfloating)
+ 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
+@@ -1014,6 +1063,47 @@ killclient(const Arg *arg)
+ 	}
+ }
+ 
++void
++loadxrdb()
++{
++  Display *display;
++  char * resm;
++  XrmDatabase xrdb;
++  char *type;
++  XrmValue value;
++
++  display = XOpenDisplay(NULL);
++
++  if (display != NULL) {
++    resm = XResourceManagerString(display);
++
++    if (resm != NULL) {
++      xrdb = XrmGetStringDatabase(resm);
++
++      if (xrdb != NULL) {
++        XRDB_LOAD_COLOR("dwm.base00", base00)
++        XRDB_LOAD_COLOR("dwm.base01", base01)
++        XRDB_LOAD_COLOR("dwm.base02", base02)
++        XRDB_LOAD_COLOR("dwm.base03", base03)
++        XRDB_LOAD_COLOR("dwm.base04", base04)
++        XRDB_LOAD_COLOR("dwm.base05", base05)
++        XRDB_LOAD_COLOR("dwm.base06", base06)
++        XRDB_LOAD_COLOR("dwm.base07", base07)
++        XRDB_LOAD_COLOR("dwm.base08", base08)
++        XRDB_LOAD_COLOR("dwm.base09", base09)
++        XRDB_LOAD_COLOR("dwm.base0A", base0A)
++        XRDB_LOAD_COLOR("dwm.base0B", base0B)
++        XRDB_LOAD_COLOR("dwm.base0C", base0C)
++        XRDB_LOAD_COLOR("dwm.base0D", base0D)
++        XRDB_LOAD_COLOR("dwm.base0E", base0E)
++        XRDB_LOAD_COLOR("dwm.base0F", base0F)
++      }
++    }
++  }
++
++  XCloseDisplay(display);
++}
++
+ void
+ manage(Window w, XWindowAttributes *wa)
+ {
+@@ -1062,7 +1152,7 @@ manage(Window w, XWindowAttributes *wa)
  		c->isfloating = c->oldstate = trans != None || c->isfixed;
  	if (c->isfloating)
  		XRaiseWindow(dpy, c->win);
@@ -290,7 +422,7 @@ index 4465af1..5c2e237 100644
  	attachstack(c);
  	XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32, PropModeAppend,
  		(unsigned char *) &(c->win), 1);
-@@ -1282,6 +1313,13 @@ resizeclient(Client *c, int x, int y, int w, int h)
+@@ -1282,6 +1372,13 @@ resizeclient(Client *c, int x, int y, int w, int h)
  	c->oldw = c->w; c->w = wc.width = w;
  	c->oldh = c->h; c->h = wc.height = h;
  	wc.border_width = c->bw;
@@ -304,7 +436,7 @@ index 4465af1..5c2e237 100644
  	XConfigureWindow(dpy, c->win, CWX|CWY|CWWidth|CWHeight|CWBorderWidth, &wc);
  	configure(c);
  	XSync(dpy, False);
-@@ -1417,7 +1455,7 @@ sendmon(Client *c, Monitor *m)
+@@ -1417,7 +1514,7 @@ sendmon(Client *c, Monitor *m)
  	detachstack(c);
  	c->mon = m;
  	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
@@ -313,7 +445,7 @@ index 4465af1..5c2e237 100644
  	attachstack(c);
  	focus(NULL);
  	arrange(NULL);
-@@ -1673,26 +1711,29 @@ tagmon(const Arg *arg)
+@@ -1673,26 +1770,29 @@ tagmon(const Arg *arg)
  void
  tile(Monitor *m)
  {
@@ -353,7 +485,7 @@ index 4465af1..5c2e237 100644
  		}
  }
  
-@@ -1897,7 +1938,7 @@ updategeom(void)
+@@ -1897,7 +1997,7 @@ updategeom(void)
  					m->clients = c->next;
  					detachstack(c);
  					c->mon = mons;
@@ -362,3 +494,30 @@ index 4465af1..5c2e237 100644
  					attachstack(c);
  				}
  				if (m == selmon)
+@@ -2110,6 +2210,17 @@ xerrorstart(Display *dpy, XErrorEvent *ee)
+ 	return -1;
+ }
+ 
++void
++xrdb(const Arg *arg)
++{
++  loadxrdb();
++  int i;
++  for (i = 0; i < LENGTH(colors); i++)
++                scheme[i] = drw_scm_create(drw, colors[i], 3);
++  focus(NULL);
++  arrange(NULL);
++}
++
+ void
+ zoom(const Arg *arg)
+ {
+@@ -2136,6 +2247,8 @@ main(int argc, char *argv[])
+ 	if (!(dpy = XOpenDisplay(NULL)))
+ 		die("dwm: cannot open display");
+ 	checkotherwm();
++        XrmInitialize();
++        loadxrdb();
+ 	setup();
+ #ifdef __OpenBSD__
+ 	if (pledge("stdio rpath proc exec", NULL) == -1)

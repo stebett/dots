@@ -30,7 +30,7 @@ Plug 'junegunn/goyo.vim'
 
 " Plug 'itchyny/lightline.vim'
 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 
 Plug 'tpope/vim-repeat' "per cosa lo uso?
 
@@ -69,7 +69,7 @@ filetype indent on
 
 autocmd FileType tex inoremap == <esc>o\item 
 autocmd FileType tex setlocal spell
-
+autocmd FileType tex VimtexCompile
 
 
 " Ultisnips
@@ -153,7 +153,10 @@ nnoremap <F10> :call TakeScreenshot()<cr><cr>
 
 
 
+" Log the key usage for statistics
 
+au VimEnter * execute('!sudo logkeys --start --output /home/ginko/.vimkeys.log') 
+au VimLeave * execute('!sudo logkeys --kill')
 
 
 
@@ -162,9 +165,8 @@ nnoremap <F10> :call TakeScreenshot()<cr><cr>
 
 
 "-------------------------COLORS PART-------------------------
-colo gruvbox
+colo custom
 
-set background=dark
 
 " let g:lightline = {
 "     \ 'colorscheme': 'gruvbox',
@@ -175,13 +177,8 @@ set background=dark
 "     \   },
 "     \ }
 
-let g:gruvbox_contrast_dark = 'medium'
 
 set termguicolors
-" autocmd VimEnter * hi! Normal guibg=NONE
-" " set Vim-specific sequences for RGB colors
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 
 "-------------------------LEADER PART-------------------------
@@ -216,7 +213,7 @@ vnoremap <leader>P "+P
 
 " to correct nicely mistakes
 
-inoremap <C-l> <c-g>u<esc>[s1z=`]a<c-g>u
+inoremap <C-k> <c-g>u<esc>[s1z=`]a<c-g>u
 
 " to have help opening nicely
 command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>

@@ -10,6 +10,7 @@ bluez-libs 5.52-1
 bluez-utils 5.52-1
 boost 1.71.0-4
 brave-bin 1:1.1.22-1
+buku 4.2.2-4
 bzip2 1.0.8-3
 coreutils 8.31-3
 cpupower 5.4-3
@@ -40,6 +41,7 @@ gimp 2.10.14-1
 git 2.24.1-2
 glibc 2.30-3
 google-chrome 72.0.3626.121-1
+gotop 3.0.0-4
 gptfdisk 1.0.4-1
 grep 3.3-3
 gzip 1.10-3
@@ -135,6 +137,7 @@ wget 1.20.3-2
 which 2.21-5
 wpa_supplicant 2:2.9-3
 xautolock 2.2-5
+xbindkeys 1.8.6-3
 xclip 0.13-2
 xdotool 3.20160805.1-2
 xf86-input-evdev 2.10.6-1

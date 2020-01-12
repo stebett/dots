@@ -34,7 +34,6 @@ export EDITOR='nvim'
 export INIT='/home/ginko/.config/nvim/init.vim'
 export VISUAL='less'
 export OPENER='xdg-open'
-export MAIL='ginkobab@gmail.com'
 export BROWSER='brave'
 export TERMINAL='st'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -76,73 +75,72 @@ virtualenv_info(){
 
 
 # Colors
-# Color for manpages in less makes manpages a little easier to read
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
 
-export color00="28/28/28" # Base 00 - Black
-export color01="fb/49/34" # Base 08 - Red
-export color02="b8/bb/26" # Base 0B - Green
-export color03="fa/bd/2f" # Base 0A - Yellow
-export color04="83/a5/98" # Base 0D - Blue
-export color05="d3/86/9b" # Base 0E - Magenta
-export color06="8e/c0/7c" # Base 0C - Cyan
-export color07="d5/c4/a1" # Base 05 - White
-export color08="66/5c/54" # Base 03 - Bright Black
-export color09=$color01 # Base 08 - Bright Red
-export color10=$color02 # Base 0B - Bright Green
-export color11=$color03 # Base 0A - Bright Yellow
-export color12=$color04 # Base 0D - Bright Blue
-export color13=$color05 # Base 0E - Bright Magenta
-export color14=$color06 # Base 0C - Bright Cyan
-export color15="fb/f1/c7" # Base 07 - Bright White
-export color16="fe/80/19" # Base 09
-export color17="d6/5d/0e" # Base 0F
-export color18="3c/38/36" # Base 01
-export color19="50/49/45" # Base 02
-export color20="bd/ae/93" # Base 04
-export color21="eb/db/b2" # Base 06
-export color_foreground="d5/c4/a1" # Base 05
-export color_background="28/28/28" # Base 00
+# put_template explained:
+# \033]4; is the command to set an ansi color number to a string (man console_codes
+# %d;rgb:%s takes the ansi colore codes and the color string and replace the first with the second
+# \033\\ escapes
 
+put_template() { printf '\033]4;%d;rgb:%s\033\\' $@; } 
 
-put_template() { printf '\033]4;%d;rgb:%s\033\\' $@; }
-put_template_var() { printf '\033]%d;rgb:%s\033\\' $@; }
-put_template_custom() { printf '\033]%s%s\033\\' $@; }
+base00="28/28/28" # ----
+base01="3c/38/36" # ---
+base02="50/49/45" # --
+base03="66/5c/54" # -
+base04="bd/ae/93" # +
+base05="d5/c4/a1" # ++
+base06="eb/db/b2" # +++
+base07="fb/f1/c7" # ++++
+base08="fb/49/34" # red
+base09="fe/80/19" # orange
+base0A="fa/bd/2f" # yellow
+base0B="b8/bb/26" # green
+base0C="8e/c0/7c" # aqua/cyan
+base0D="83/a5/98" # blue
+base0E="d3/86/9b" # purple
+base0F="d6/5d/0e" # brown
 
 # 16 color space
-put_template 0  $color00
-put_template 1  $color01
-put_template 2  $color02
-put_template 3  $color03
-put_template 4  $color04
-put_template 5  $color05
-put_template 6  $color06
-put_template 7  $color07
-put_template 8  $color08
-put_template 9  $color09
-put_template 10 $color10
-put_template 11 $color11
-put_template 12 $color12
-put_template 13 $color21
-put_template 14 $color14
-put_template 15 $color15
-
-# 256 color space
-put_template 16 $color16
-put_template 17 $color17
-put_template 18 $color18
-put_template 19 $color19
-put_template 20 $color20
-put_template 21 $color21
+put_template 0  $base00
+put_template 1  $base08
+put_template 2  $base0B
+put_template 3  $base0A
+put_template 4  $base0D
+put_template 5  $base0E
+put_template 6  $base0C
+put_template 7  $base05
+put_template 8  $base06
+put_template 9  $base08
+put_template 10 $base0B
+put_template 11 $base0A
+put_template 12 $base0D
+put_template 13 $base05
+put_template 14 $base0C
+put_template 15 $base07
 
 
 
+formatColor(){ 
+    echo $1 | sed -e 's/\///g' -e 's/^/#/'; 
+}
+
+
+export base00=$(formatColor $base00) # ----
+export base01=$(formatColor $base01) # ---
+export base02=$(formatColor $base02) # --
+export base03=$(formatColor $base03) # -
+export base04=$(formatColor $base04) # +
+export base05=$(formatColor $base05) # ++
+export base06=$(formatColor $base06) # +++
+export base07=$(formatColor $base07) # ++++
+export base08=$(formatColor $base08) # red
+export base09=$(formatColor $base09) # orange
+export base0A=$(formatColor $base0A) # yellow
+export base0B=$(formatColor $base0B) # green
+export base0C=$(formatColor $base0C) # aqua/cyan
+export base0D=$(formatColor $base0D) # blue
+export base0E=$(formatColor $base0E) # purple
+export base0F=$(formatColor $base0F) # brown
 
 # Sourced files
 
