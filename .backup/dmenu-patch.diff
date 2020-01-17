@@ -1,15 +1,36 @@
 diff --git a/config.def.h b/config.def.h
-index 1edb647..51612b9 100644
+index 1edb647..622bf72 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -2,6 +2,7 @@
+@@ -2,19 +2,22 @@
  /* Default settings; can be overriden by command line. */
  
  static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
++static int centered = 1;                    /* -c option; centers dmenu on screen */
 +static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
  /* -fn option overrides fonts[0]; default X11 font or font set */
  static const char *fonts[] = {
- 	"monospace:size=10"
+-	"monospace:size=10"
++	"Anonymous Pro:size=16:style=bold"
+ };
+ static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
+ static const char *colors[SchemeLast][2] = {
+-	/*     fg         bg       */
+-	[SchemeNorm] = { "#bbbbbb", "#222222" },
+-	[SchemeSel] = { "#eeeeee", "#005577" },
+-	[SchemeOut] = { "#000000", "#00ffff" },
++	            /*     fg         bg       */
++	[SchemeNorm] =  { "#83a598", "#3c3836" },
++	[SchemeSel] =   { "#fb4934", "#3c3836" },
++	[SchemeMid] =   { "#d3869b", "#3c3836" },
++	[SchemeOut] =   { "#fe8019", "#3c3836" },
+ };
+ /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
+-static unsigned int lines      = 0;
++static unsigned int lines      = 3;
+ 
+ /*
+  * Characters not considered part of a word while deleting words
 diff --git a/config.mk b/config.mk
 index 0929b4a..d14309a 100644
 --- a/config.mk
@@ -23,8 +44,22 @@ index 0929b4a..d14309a 100644
  
  # flags
  CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS)
+diff --git a/dmenu.1 b/dmenu.1
+index 323f93c..c036baa 100644
+--- a/dmenu.1
++++ b/dmenu.1
+@@ -40,6 +40,9 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
+ .B \-b
+ dmenu appears at the bottom of the screen.
+ .TP
++.B \-c
++dmenu appears centered on the screen.
++.TP
+ .B \-f
+ dmenu grabs the keyboard before reading stdin if not reading from a tty. This
+ is faster, but will lock up X until stdin reaches end\-of\-file.
 diff --git a/dmenu.c b/dmenu.c
-index 65f25ce..08702b7 100644
+index 65f25ce..0096e80 100644
 --- a/dmenu.c
 +++ b/dmenu.c
 @@ -1,6 +1,7 @@
@@ -35,7 +70,14 @@ index 65f25ce..08702b7 100644
  #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
-@@ -32,6 +33,7 @@ struct item {
+@@ -26,12 +27,13 @@
+ #define TEXTW(X)              (drw_fontset_getwidth(drw, (X)) + lrpad)
+ 
+ /* enums */
+-enum { SchemeNorm, SchemeSel, SchemeOut, SchemeLast }; /* color schemes */
++enum { SchemeNorm, SchemeSel, SchemeOut, SchemeMid, SchemeLast }; /* color schemes */
+ 
+ struct item {
  	char *text;
  	struct item *left, *right;
  	int out;
@@ -43,7 +85,32 @@ index 65f25ce..08702b7 100644
  };
  
  static char text[BUFSIZ] = "";
-@@ -210,9 +212,94 @@ grabkeyboard(void)
+@@ -89,6 +91,15 @@ calcoffsets(void)
+ 			break;
+ }
+ 
++static int
++max_textw(void)
++{
++	int len = 0;
++	for (struct item *item = items; item && item->text; item++)
++		len = MAX(TEXTW(item->text), len);
++	return len;
++}
++
+ static void
+ cleanup(void)
+ {
+@@ -118,6 +129,8 @@ drawitem(struct item *item, int x, int y, int w)
+ {
+ 	if (item == sel)
+ 		drw_setscheme(drw, scheme[SchemeSel]);
++	else if (item->left == sel || item->right == sel)
++		drw_setscheme(drw, scheme[SchemeMid]);
+ 	else if (item->out)
+ 		drw_setscheme(drw, scheme[SchemeOut]);
+ 	else
+@@ -210,9 +223,94 @@ grabkeyboard(void)
  	die("cannot grab keyboard");
  }
  
@@ -138,10 +205,62 @@ index 65f25ce..08702b7 100644
  	static char **tokv = NULL;
  	static int tokn = 0;
  
-@@ -709,6 +796,8 @@ main(int argc, char *argv[])
+@@ -611,6 +709,7 @@ setup(void)
+ 	bh = drw->fonts->h + 2;
+ 	lines = MAX(lines, 0);
+ 	mh = (lines + 1) * bh;
++	promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;
+ #ifdef XINERAMA
+ 	i = 0;
+ 	if (parentwin == root && (info = XineramaQueryScreens(dpy, &n))) {
+@@ -637,9 +736,16 @@ setup(void)
+ 				if (INTERSECT(x, y, 1, 1, info[i]))
+ 					break;
+ 
+-		x = info[i].x_org;
+-		y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
+-		mw = info[i].width;
++		if (centered) {
++			mw = MIN(MAX(max_textw() + promptw, 100), info[i].width);
++			x = info[i].x_org + ((info[i].width  - mw) / 2);
++			y = info[i].y_org + ((info[i].height - mh) / 2);
++		} else {
++			x = info[i].x_org;
++			y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
++			mw = info[i].width;
++		}
++
+ 		XFree(info);
+ 	} else
+ #endif
+@@ -647,11 +753,17 @@ setup(void)
+ 		if (!XGetWindowAttributes(dpy, parentwin, &wa))
+ 			die("could not get embedding window attributes: 0x%lx",
+ 			    parentwin);
+-		x = 0;
+-		y = topbar ? 0 : wa.height - mh;
+-		mw = wa.width;
++
++		if (centered) {
++			mw = MIN(MAX(max_textw() + promptw, 100), wa.width);
++			x = (wa.width  - mw) / 2;
++			y = (wa.height - mh) / 2;
++		} else {
++			x = 0;
++			y = topbar ? 0 : wa.height - mh;
++			mw = wa.width;
++		}
+ 	}
+-	promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;
+ 	inputw = MIN(inputw, mw/3);
+ 	match();
+ 
+@@ -709,6 +821,10 @@ main(int argc, char *argv[])
  			topbar = 0;
  		else if (!strcmp(argv[i], "-f"))   /* grabs keyboard before reading stdin */
  			fast = 1;
++ 		else if (!strcmp(argv[i], "-c"))   /* centers dmenu on screen */
++ 			centered = 1;
 +		else if (!strcmp(argv[i], "-F"))   /* grabs keyboard before reading stdin */
 +			fuzzy = 0;
  		else if (!strcmp(argv[i], "-i")) { /* case-insensitive item matching */

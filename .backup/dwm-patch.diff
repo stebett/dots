@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 1c0b587..c28f6cc 100644
+index 1c0b587..6d791d9 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -1,50 +1,78 @@
@@ -56,11 +56,11 @@ index 1c0b587..c28f6cc 100644
 +static char base0F[] = "#d65d0e";   /* brown */
 +static char *colors[][3] = {
 +       /*               fg           bg           border   */
-+       [SchemeNorm]   = {base04,    base02,     base00},
-+       [SchemeSel]    = {base09,    base01,     base05},
-+       [SchemeWarn]   = {base00,    base0B,     base07},
-+       [SchemeUrgent] = {base00,    base0A,     base07},
-+       [SchemeFive]   = {base00,    base09,     base07},
++       [SchemeNorm]   = {base04,    base03,     base00},
++       [SchemeSel]    = {base0E,    base02,     base05},
++       [SchemeWarn]   = {base00,    base0C,     base00},
++       [SchemeUrgent] = {base00,    base0D,     base00},
++       [SchemeFive]   = {base00,    base0E,     base00},
 +       [SchemeTitle]  = {base06,    base01,     base00},
  };
  
@@ -114,7 +114,7 @@ index 1c0b587..c28f6cc 100644
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 -static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 -static const char *termcmd[]  = { "st", NULL };
-+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", base01, "-nf", base06, "-sb", base09, "-sf", base00, NULL };
++static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 +
 +/* static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL }; */
 +

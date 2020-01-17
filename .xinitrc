@@ -9,7 +9,7 @@ fi
 
 systemctl --user import-environment DISPLAY # dunst
 xrdb -merge ~/.Xresources
-feh --bg-center ~/Pictures/mywallpaper.png
+feh --bg-center ~/Pictures/redhouse.png
 setxkbmap -option ctrl:swapcaps
 xbindkeys --poll-rc
 

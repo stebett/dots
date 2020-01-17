@@ -56,6 +56,8 @@
 "$BROWSER"
     Mod4 + e
 
+"bitwarden-dmenu --clear-clipboard 40 --session-timeout 10000 --sync-vault-after 3600 --on-error 'xargs notify-send --urgency=low'"
+    Mod4 + v # Vault
 
 
 # remember xbindkeys --poll-rc
