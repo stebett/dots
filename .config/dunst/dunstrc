@@ -31,7 +31,7 @@
     # screen width minus the width defined in within the geometry option.
     # geometry = "300x20-810+23"
     # geometry = "344x200-1576+23"
-    geometry = "344x200-4+30"
+    geometry = "344x200-5+30"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = no
