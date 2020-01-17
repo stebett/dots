@@ -13,8 +13,8 @@ feh --bg-center ~/Pictures/redhouse.png
 setxkbmap -option ctrl:swapcaps
 xbindkeys --poll-rc
 
-exec slstatus &
-exec dunst &
+slstatus &
+dunst &
 exec dwm
 
 
