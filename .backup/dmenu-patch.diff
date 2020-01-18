@@ -1,8 +1,8 @@
 diff --git a/config.def.h b/config.def.h
-index 1edb647..622bf72 100644
+index 1edb647..d83f984 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -2,19 +2,22 @@
+@@ -2,22 +2,28 @@
  /* Default settings; can be overriden by command line. */
  
  static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
@@ -21,9 +21,9 @@ index 1edb647..622bf72 100644
 -	[SchemeOut] = { "#000000", "#00ffff" },
 +	            /*     fg         bg       */
 +	[SchemeNorm] =  { "#83a598", "#3c3836" },
-+	[SchemeSel] =   { "#fb4934", "#3c3836" },
++	[SchemeSel] =   { "#fe8019", "#3c3836" },
 +	[SchemeMid] =   { "#d3869b", "#3c3836" },
-+	[SchemeOut] =   { "#fe8019", "#3c3836" },
++	[SchemeOut] =   { "#000000", "#d3869b" },
  };
  /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 -static unsigned int lines      = 0;
@@ -31,6 +31,12 @@ index 1edb647..622bf72 100644
  
  /*
   * Characters not considered part of a word while deleting words
+  * for example: " /?\"&[]"
+  */
+ static const char worddelimiters[] = " ";
++
++/* Size of the window border */
++static const unsigned int border_width = 3;
 diff --git a/config.mk b/config.mk
 index 0929b4a..d14309a 100644
 --- a/config.mk
@@ -59,7 +65,7 @@ index 323f93c..c036baa 100644
  dmenu grabs the keyboard before reading stdin if not reading from a tty. This
  is faster, but will lock up X until stdin reaches end\-of\-file.
 diff --git a/dmenu.c b/dmenu.c
-index 65f25ce..0096e80 100644
+index 65f25ce..45a979c 100644
 --- a/dmenu.c
 +++ b/dmenu.c
 @@ -1,6 +1,7 @@
@@ -255,7 +261,19 @@ index 65f25ce..0096e80 100644
  	inputw = MIN(inputw, mw/3);
  	match();
  
-@@ -709,6 +821,10 @@ main(int argc, char *argv[])
+@@ -659,9 +771,10 @@ setup(void)
+ 	swa.override_redirect = True;
+ 	swa.background_pixel = scheme[SchemeNorm][ColBg].pixel;
+ 	swa.event_mask = ExposureMask | KeyPressMask | VisibilityChangeMask;
+-	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, 0,
++	win = XCreateWindow(dpy, parentwin, x, y, mw, mh, border_width,
+ 	                    CopyFromParent, CopyFromParent, CopyFromParent,
+ 	                    CWOverrideRedirect | CWBackPixel | CWEventMask, &swa);
++ 	XSetWindowBorder(dpy, win, scheme[SchemeOut][ColBg].pixel);
+ 	XSetClassHint(dpy, win, &ch);
+ 
+ 
+@@ -709,6 +822,10 @@ main(int argc, char *argv[])
  			topbar = 0;
  		else if (!strcmp(argv[i], "-f"))   /* grabs keyboard before reading stdin */
  			fast = 1;
