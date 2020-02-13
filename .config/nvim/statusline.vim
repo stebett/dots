@@ -16,8 +16,8 @@ function! RedrawModeColors(mode) " {{{
   " Normal mode
   if a:mode == 'n'
     hi MyStatuslineAccent  guifg=#3c3836 gui=bold
-    hi MyStatuslineFilename guifg=#928374 guibg=#3c3836    
-    hi MyStatuslineAccentBody guifg=#928374  guibg=#3c3836     
+    hi MyStatuslineFilename guifg=#bdae93 guibg=#3c3836    
+    hi MyStatuslineAccentBody guifg=#bdae93  guibg=#3c3836     
   " Insert mode
   elseif a:mode == 'i'
     hi MyStatuslineAccent  guifg=#3c3836 
@@ -26,8 +26,8 @@ function! RedrawModeColors(mode) " {{{
   " Replace mode
   elseif a:mode == 'R'
     hi MyStatuslineAccent guifg=#3c3836 
-    hi MyStatuslineFilename guifg=#689d6a guibg=#3c3836    
-    hi MyStatuslineAccentBody guifg=#689d6a  guibg=#3c3836    
+    hi MyStatuslineFilename guifg=#fb4934 guibg=#3c3836    
+    hi MyStatuslineAccentBody guifg=#fb4934  guibg=#3c3836    
   " Visual mode
   elseif a:mode == 'v' || a:mode == 'V' || a:mode == '^V'
     hi MyStatuslineAccent guifg=#3c3836 
@@ -76,7 +76,7 @@ set statusline=%{RedrawModeColors(mode())}
 " Left side items
 " =======================
 set statusline+=%#MyStatuslineAccent#\ 
-set statusline+=%#MyStatuslineAccentBody#碌\ 
+set statusline+=%#MyStatuslineAccentBody#●\ 
 " Filename
 set statusline+=%#MyStatuslineFilename#%f
 set statusline+=%#MyStatuslineSeparator#\ 

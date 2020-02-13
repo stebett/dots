@@ -1,7 +1,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
+# Unlimited history
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # Aliases
 
@@ -149,5 +151,5 @@ export base0F=$(formatColor $base0F) # brown
 VENV="$(virtualenv_info)" # Maybe the color is better on 1
 # PS1='\n\[\033[01;38;5;142m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
 
-PS1='\n\[\033[01;38;5;66m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
+PS1='\n\[\033[01;38;5;66m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯ \[\033[0m\]'
 

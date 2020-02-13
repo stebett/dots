@@ -16,5 +16,6 @@ xbindkeys --poll-rc
 slstatus &
 dunst &
 exec dwm
+# exec awesome
 
 

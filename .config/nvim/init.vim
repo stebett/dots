@@ -28,9 +28,13 @@ Plug 'tpope/vim-sensible' "cos'è?
 
 Plug 'junegunn/goyo.vim'
 
+Plug 'preservim/nerdtree'
 " Plug 'itchyny/lightline.vim'
 
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
+
+" Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
 
 Plug 'tpope/vim-repeat' "per cosa lo uso?
 
@@ -63,7 +67,24 @@ syntax enable
 filetype plugin on 
 filetype indent on 
 
+" Nerdtree
 
+let NERDTreeIgnore=['.*pycache.*', '\~$']
+let NERDTreeQuitOnOpen = 1
+let NERDTreeStatusline=" "
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+nnoremap <silent> <A-n> :NERDTreeFind<cr>
+
+augroup nerdtreehidecwd
+	autocmd!
+	autocmd FileType nerdtree syntax match NERDTreeHideCWD #^[</].*$# conceal
+augroup end
 
 " Vimtex
 
@@ -71,12 +92,12 @@ autocmd FileType tex inoremap == <esc>o\item
 autocmd FileType tex setlocal spell
 autocmd FileType tex VimtexCompile
 
+let g:tex_flavor = 'latex'
 
 " Ultisnips
 
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
-let g:tex_flavor = 'latex'
 let g:UltiSnipsEditSplit = 'vertical'
 
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -151,12 +172,15 @@ endfunction
 
 nnoremap <F10> :call TakeScreenshot()<cr><cr>
 
-
+" Inkscape
+"
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 " Log the key usage for statistics
 
-au VimEnter * execute('!sudo logkeys --start --output /home/ginko/.vimkeys.log') 
-au VimLeave * execute('!sudo logkeys --kill')
+" au VimEnter * execute('!sudo logkeys --start --output /home/ginko/.vimkeys.log') 
+" au VimLeave * execute('!sudo logkeys --kill')
 
 
 
@@ -165,7 +189,13 @@ au VimLeave * execute('!sudo logkeys --kill')
 
 
 "-------------------------COLORS PART-------------------------
-colo custom
+set termguicolors
+set background=dark
+colo gruvbox
+source $HOME/.config/nvim/statusline.vim
+"
+
+" colo gruvbox-material
 
 
 " let g:lightline = {
@@ -178,18 +208,15 @@ colo custom
 "     \ }
 
 
-set termguicolors
-
 
 "-------------------------LEADER PART-------------------------
 let mapleader = " "
+
 
 ".def.h settings
 nnoremap <leader>sk :!sudo rm config.h && make && sudo make clean install<cr>
 
 nnoremap <leader>db oimport pdb; pdb.set_trace()<esc>
-
-map <leader><leader> :Ranger<CR>
 
 noremap <leader>g :Goyo<cr>
 
@@ -308,7 +335,7 @@ set mat=2
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
+set tm=500 " timeout lenght, how much to wait
 
 " Set utf8 as standard encoding
 set encoding=utf8
@@ -325,12 +352,11 @@ set shiftwidth=4
 set tabstop=4
 
 "Linebreak on 500 characters
-set lbr
-set tw=500
+set linebreak
+set textwidth=0
 
-set si "smart indent
+set smartindent
 set wrap "wrap lines
 
 set noshowmode
 
-source $HOME/.config/nvim/statusline.vim
