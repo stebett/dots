@@ -12,13 +12,14 @@ alias mm='rm config.h && make && sudo make clean install'
 alias lowpow='source $HOME/Documents/scripts/battery/battery_saver.sh'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias gp="git add . && git commit -m 'auto-commit' && git push origin master"
-alias venv='source $HOME/.virtualenvs/env/bin/activate'
+alias venv='source $HOME/Documents/scripts/various/venv'
 alias won='sudo $HOME/Documents/scripts/wifi/./scan'
 alias woff='sudo $HOME/Documents/scripts/wifi/./plane-mode'
 alias shut='systemctl poweroff'
 alias v='nvim'
 alias n='nvim $HOME/.config/nvim/init.vim'
 alias r=lfcd 
+alias ipython="ipython --no-banner"
 
 
 
@@ -32,6 +33,7 @@ bind '"\er":"lfcd\C-m"'
 
 # Variables
 
+export sal='ginkobab@192.168.178.222'
 export EDITOR='nvim' 
 export INIT='/home/ginko/.config/nvim/init.vim'
 export VISUAL='less'
@@ -39,7 +41,7 @@ export OPENER='xdg-open'
 export BROWSER='brave'
 export TERMINAL='st'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
+export TESSDATA_PREFIX=/usr/local/share/tessdata/
 
 
 # Functions
@@ -151,5 +153,5 @@ export base0F=$(formatColor $base0F) # brown
 VENV="$(virtualenv_info)" # Maybe the color is better on 1
 # PS1='\n\[\033[01;38;5;142m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '
 
-PS1='\n\[\033[01;38;5;66m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯ \[\033[0m\]'
+PS1='\[\033[01;38;5;66m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯ \[\033[0m\]'
 

@@ -28,36 +28,29 @@
 
 # Examples of commands:
 
+
+"sudo /home/ginko/Documents/scripts/wifi/./plane_mode"
+    XF86WLAN
+
 "sudo /home/ginko/Documents/scripts/wifi/./scan_bash"
     XF86Search
 
-# Set this rule to make this work
-# /etc/udev/rules.d/backlight.rules
-# ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="intel_backlight per esempio", RUN+="/bin/chgrp ginko /sys/class/backlight/%k/brightness"
-# ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="acpi_video0", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
-"/home/ginko/Documents/scripts/brightness/./bright_up down"
+"xbacklight -dec 10"
     XF86MonBrightnessDown
 
-"/home/ginko/Documents/scripts/brightness/./bright_up up"
+"xbacklight -inc 10"
     XF86MonBrightnessUp
 
-"amixer -c 0 set Master 0%"
+"pamixer -t"
     XF86AudioMute
 
-"amixer -c 0 set Master 10%-"
+"pamixer -d 10"
     XF86AudioLowerVolume
 
-"amixer -c 0 set Master 10%+"
+"pamixer -i 10 --allow-boost"
     XF86AudioRaiseVolume
 
-"$TERMINAL"
-    Mod4 + w
-
-"$BROWSER"
-    Mod4 + e
-
-"bitwarden-dmenu --clear-clipboard 40 --session-timeout 10000 --sync-vault-after 3600 --on-error 'xargs notify-send --urgency=low'"
-    Mod4 + v # Vault
-
+"/home/ginko/Documents/scripts/various/./shot"
+	XF86Tools
 
 # remember xbindkeys --poll-rc

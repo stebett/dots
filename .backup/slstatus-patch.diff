@@ -1,39 +1,155 @@
-diff --git a/config.def.h b/config.def.h
-index e06be66..c93abe1 100644
---- a/config.def.h
-+++ b/config.def.h
-@@ -1,17 +1,17 @@
- /* See LICENSE file for copyright and license details. */
+diff --git a/maintenance/bootsetter b/maintenance/bootsetter
+index 8598a4d..38c44b6 100755
+--- a/maintenance/bootsetter
++++ b/maintenance/bootsetter
+@@ -2,10 +2,11 @@
  
- /* interval between updates (in ms) */
--const unsigned int interval = 1000;
-+const unsigned int interval = 3000;
- 
- /* text to show if no value can be retrieved */
--static const char unknown_str[] = "n/a";
-+static const char unknown_str[] = "No Signal";
- 
- /* maximum output string length */
- #define MAXLEN 2048
- 
- /*
-  * function            description                     argument (example)
-- *
-+ 
-  * battery_perc        battery percentage              battery name (BAT0)
-  *                                                     NULL on OpenBSD/FreeBSD
-  * battery_state       battery charging state          battery name (BAT0)
-@@ -61,7 +61,11 @@ static const char unknown_str[] = "n/a";
-  * wifi_perc           WiFi signal in percent          interface name (wlan0)
-  * wifi_essid          WiFi ESSID                      interface name (wlan0)
-  */
+ case $1 in
+     Clean)
+-        efibootmgr --disk /dev/mmcblk1 --part 1 --create --label "Clean boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=8c7ca56b-08d0-4227-9c31-7cb51f330fcd rw initrd=\initramfs-linux.img quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vga=current i915.fastboot=1' --verbose
++        efibootmgr --disk /dev/sda --part 1 --create --label "Clean boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=4171b8d2-6dc8-47ff-bce7-14d79e7a89e5 rw initrd=\initramfs-linux.img quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vga=current i915.fastboot=1 vt.global_cursor_default=0' --verbose
+     ;;
+     Verbose)
+-        efibootmgr --disk /dev/mmcblk1 --part 1 --create --label "Verbose boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=8c7ca56b-08d0-4227-9c31-7cb51f330fcd rw initrd=\initramfs-linux.img' --verbose
++        efibootmgr --disk /dev/sda --part 1 --create --label "Verbose boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=4171b8d2-6dc8-47ff-bce7-14d79e7a89e5
++ rw initrd=\initramfs-linux.img' --verbose
+     ;;
+     Experimental)
+         exit 0
+diff --git a/rofi/battery1 b/rofi/battery1
+new file mode 100755
+index 0000000..bd60231
+--- /dev/null
++++ b/rofi/battery1
+@@ -0,0 +1,12 @@
++#!/bin/bash
 +
- static const struct arg args[] = {
--	/* function format          argument */
--	{ datetime, "%s",           "%F %T" },
-+	/* function          format          argument */
++rofi -no-lazy-grab \
++-e $1 \
++-width 3 \
++-bw 0 \
++-xoffset -164 \
++-yoffset 30 \
++-location 3 \
++-color-window $base02 \
++-color-normal "$base02, $base06" \
++-font "monofur Nerd Font 14"
+diff --git a/rofi/run b/rofi/run
+new file mode 100755
+index 0000000..f81cdae
+--- /dev/null
++++ b/rofi/run
+@@ -0,0 +1,3 @@
++#!/bin/bash
 +
-+    { wifi_essid,        "  %s   ",    "wlp1s0"},
-+	{ battery_perc,      "  %s%%   ",  "BAT0"  },
-+    { datetime,          "  %s 神",     "%H:%M" },
- };
++rofi -show drun
+diff --git a/rofi/wifi b/rofi/wifi
+new file mode 100755
+index 0000000..60bfa9c
+--- /dev/null
++++ b/rofi/wifi
+@@ -0,0 +1,12 @@
++#!/bin/bash
++
++rofi -no-lazy-grab \
++-e $1 \
++-width 3 \
++-bw 0 \
++-xoffset -5 \
++-yoffset 30 \
++-location 3 \
++-color-window $base02 \
++-color-normal "$base02, $base06" \
++-font "monofur Nerd Font 14"
+diff --git a/various/venv b/various/venv
+new file mode 100755
+index 0000000..b34c8bb
+--- /dev/null
++++ b/various/venv
+@@ -0,0 +1,9 @@
++#!/bin/bash
++
++envs="$(ls ~/.virtualenvs)"
++
++echo "Pick your environment"
++echo "$envs"
++read -p "-> "
++
++source ~/.virtualenvs/$REPLY/bin/activate
+diff --git a/wifi/plane-mode b/wifi/plane-mode
+index ada9cd6..f542028 100755
+--- a/wifi/plane-mode
++++ b/wifi/plane-mode
+@@ -5,6 +5,6 @@ killall -quiet pulseaudio
+ killall -quiet bluetoothd
+ killall -quiet wpa_supplicant 
+ killall -quiet dhcpcd 
+-ip link set wlp1s0 down
++ip link set wlp3s0 down
+ 
+ echo "All network is down!"
+diff --git a/wifi/scan_bash b/wifi/scan_bash
+index 77dfa9c..9436994 100755
+--- a/wifi/scan_bash
++++ b/wifi/scan_bash
+@@ -2,18 +2,21 @@
+ 
+ rfkill unblock wifi
+ killall -quiet wpa_supplicant
+-ip link set wlp1s0 down
+-ip link set wlp1s0 up
++ip link set wlp3s0 down
++ip link set wlp3s0 up
+ 
+-names=$(iw dev wlp1s0 scan | grep SSID)
++names=$(iw dev wlp3s0 scan | grep SSID)
+ 
+     
+ case "$names" in
+     *Ginko*)
+        target=Phone
+-       ;;
++	   ;;
++   *UpCycle*)
++	   target=upcycle
++	   ;;
+    *EOLO*)
+-       target=eolo
++	   target=eolo
+        ;;
+    "*EOLO extender*")
+        target=eolo-extender
+@@ -24,15 +27,6 @@ case "$names" in
+    "*WOW FI - FASTWEB")
+        target=wowfi
+        ;;
+-   *Klodi*)
+-       target=klodi
+-       ;;
+-   *Mary*)
+-       target=mary
+-       ;;
+-   *TIM*)
+-       target=chiara
+-       ;;
+    *eduroam*)
+        target=eduroam
+        ;;
+@@ -51,7 +45,7 @@ case $target in
+         ;;
+ esac
+ 
+-connectionOutput=$(wpa_supplicant -B -i wlp1s0 -c /etc/wpa_supplicant/$target.conf)
++connectionOutput=$(wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/$target.conf)
+ 
+ case $connectionOutput in 
+     *p2p)
+@@ -66,7 +60,7 @@ case $connectionOutput in
+         exit 1
+ esac
+ 
+-dhcpcd wlp1s0  > /dev/null 2>&1
++dhcpcd wlp3s0  > /dev/null 2>&1
+ pid=$!
+ wait $pid
+ 

@@ -1,63 +1,40 @@
-"------------------------VIM PLUG--------------------------
+"============================================================
+"===================== Vim Plug =============================
+"============================================================
+
 filetype off
- 
 call plug#begin()
 
 " Snippets
-
-Plug 'SirVer/ultisnips'
-
+Plug 'SirVer/ultisnips', {'for': ['tex']}
 
 " Latex
-
-Plug 'lervag/vimtex'
-
+Plug 'lervag/vimtex', {'for': ['tex']}
+Plug 'KeitaNakamura/tex-conceal.vim'
 
 " Python 
-
-Plug 'alfredodeza/pytest.vim'
-
-Plug 'w0rp/ale' "da impostare
-
-Plug 'jpalardy/vim-slime' "da vedere se hanno aggiunto roba
-
+Plug 'alfredodeza/pytest.vim', {'for': ['python']}
+Plug 'w0rp/ale', {'for': ['python']}
+Plug 'jpalardy/vim-slime', {'for': ['python']}
 
 " General
-
-Plug 'tpope/vim-sensible' "cos'è?
-
+Plug 'tpope/vim-sensible'
 Plug 'junegunn/goyo.vim'
-
 Plug 'preservim/nerdtree'
-" Plug 'itchyny/lightline.vim'
-
 Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-
-" Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
-
-Plug 'tpope/vim-repeat' "per cosa lo uso?
-
-Plug 'tpope/vim-unimpaired' "come si usa?
-
+Plug 'tpope/vim-repeat' 
+Plug 'tpope/vim-unimpaired' 
 
 " Manipulation
-
 Plug 'junegunn/vim-easy-align'
-
-Plug 'tpope/vim-surround' "come si usa?
-
-Plug 'tpope/vim-commentary' "comandi
-
+Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-commentary' 
 
 " Git
-
-Plug 'tpope/vim-fugitive' "da imparare
+Plug 'tpope/vim-fugitive' 
 
 
 call plug#end()
-
-"------------------------PLUG SETTINGS--------------------------
 set hidden
 
 syntax on
@@ -67,7 +44,18 @@ syntax enable
 filetype plugin on 
 filetype indent on 
 
-" Nerdtree
+"============================================================
+""===================== Leader ==============================
+"============================================================
+let mapleader=' '
+
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>p "+p
+
+"============================================================
+"===================== Nerdtree =============================
+"============================================================
 
 let NERDTreeIgnore=['.*pycache.*', '\~$']
 let NERDTreeQuitOnOpen = 1
@@ -86,25 +74,39 @@ augroup nerdtreehidecwd
 	autocmd FileType nerdtree syntax match NERDTreeHideCWD #^[</].*$# conceal
 augroup end
 
-" Vimtex
+"============================================================
+"===================== Vimtex ===============================
+"============================================================
 
 autocmd FileType tex inoremap == <esc>o\item 
+
+" Spellcheck
+set spelllang=en_us,it
+
 autocmd FileType tex setlocal spell
-autocmd FileType tex VimtexCompile
+autocmd FileType tex setlocal statusline=\ 
+autocmd FileType tex set nonumber
 
 let g:tex_flavor = 'latex'
+set conceallevel=2
+let g:tex_conceal ='abdmg'
+hi Conceal ctermbg=none
 
-" Ultisnips
+"============================================================
+"===================== Ulitisnip ============================
+"============================================================
 
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
 let g:UltiSnipsEditSplit = 'vertical'
 
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = "<c-space>"
+" let g:UltiSnipsJumpForwardTrigger = "<c-space>"
+" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
-" Vim-slime 
+"============================================================
+"===================== Vim Slime ============================
+"============================================================
 
 function! ReplSplit(cmd) abort
     " Split window nicely and open a terminal.
@@ -134,22 +136,42 @@ function! SendCodeBlock()
 endfunction
 
 
-nmap <c-c><c-s> :call ReplSplit('ipython --no-banner')<cr>
-nmap <c-c><c-f> <Plug>SlimeLineSend
-nmap <silent> <c-M> :call SendCodeBlock()<cr>
+augroup vimslime
+	au!
+	au filetype python nnoremap <c-c><c-s> :call ReplSplit('ipython --no-banner')<cr> 	
+	au filetype python nnoremap <c-c><c-f> <Plug>SlimeLineSend                        	
+	au filetype python nnoremap <silent> <c-M> :call SendCodeBlock()<cr>              	
+	au filetype python inoremap jk # <begin code>
+	au filetype python inoremap kj # <end code>
+augroup end
 
-" Easy align
+
+
+
+
+
+"============================================================
+"===================== Easy Align ===========================
+"============================================================
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" Goyo
+"============================================================
+"===================== Goyo =================================
+"============================================================
+
+nnoremap <leader>g :Goyo<cr>
 
 let g:goyo_width = 900
 let g:goyo_height = 400
 
 
-" Ale 
+"============================================================
+"===================== Ale ==================================
+"============================================================
+
+nnoremap <F2> :ALEFix<cr>
 
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
@@ -157,93 +179,90 @@ let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['autopep8']}
-nnoremap <F2> :ALEFix<cr>
 
-
-" Scrot
-
-function! TakeScreenshot()
-    call system('mkdir -p images')
-    let l:num_files = substitute(system('ls images | wc -l'), '\_s*$', '', '')  
-    let l:image_name = 'image' . l:num_files
-    execute "!scrot -s" . ' images/' . l:image_name . '.png'
-    execute "normal i\\medskip\\\\\n\\includegraphics[width=\\linewidth]{./images/" . l:image_name . "}\n\\medskip\\\\"
-endfunction
+"============================================================
+"===================== Scrot ================================
+"============================================================
 
 nnoremap <F10> :call TakeScreenshot()<cr><cr>
 
-" Inkscape
-"
-inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
-nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+function! TakeScreenshot()
+    call system('mkdir -p ~/current_course/images')
+    let l:num_files = substitute(system('ls /home/ginko/current_course/images | wc -l'), '\_s*$', '', '')  
+    let l:image_name = 'image' . l:num_files
+    execute "!scrot -s" . ' ~/current_course/images/' . l:image_name . '.png'
+    execute "normal i\\medskip\\\\\n\\includegraphics[width=\\linewidth]{./images/" . l:image_name . "}\n\\medskip\\\\"
+endfunction
 
-" Log the key usage for statistics
+"============================================================
+"===================== Floating Term ========================
+"============================================================
 
-" au VimEnter * execute('!sudo logkeys --start --output /home/ginko/.vimkeys.log') 
-" au VimLeave * execute('!sudo logkeys --kill')
+nnoremap <silent> <leader><cr> :call FloatTerm()<cr>
 
+let s:float_term_border_win = 0
+let s:float_term_win = 0
+function! FloatTerm(...)
+  " Configuration
+  let height = float2nr((&lines - 2) * 0.6)
+  let row = float2nr((&lines - height) / 2)
+  let width = float2nr(&columns * 0.6)
+  let col = float2nr((&columns - width) / 2)
+  " Border Window
+  let border_opts = {
+        \ 'relative': 'editor',
+        \ 'row': row - 1,
+        \ 'col': col - 2,
+        \ 'width': width + 4,
+        \ 'height': height + 2,
+        \ 'style': 'minimal'
+        \ }
+  " Terminal Window
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': row,
+        \ 'col': col,
+        \ 'width': width,
+        \ 'height': height,
+        \ 'style': 'minimal'
+        \ }
+  let top = "╭" . repeat("─", width + 2) . "╮"
+  let mid = "│" . repeat(" ", width + 2) . "│"
+  let bot = "╰" . repeat("─", width + 2) . "╯"
+  let lines = [top] + repeat([mid], height) + [bot]
+  let bbuf = nvim_create_buf(v:false, v:true)
+  call nvim_buf_set_lines(bbuf, 0, -1, v:true, lines)
+  let s:float_term_border_win = nvim_open_win(bbuf, v:true, border_opts)
+  let buf = nvim_create_buf(v:false, v:true)
+  let s:float_term_win = nvim_open_win(buf, v:true, opts)
+  " Styling
+  call setwinvar(s:float_term_border_win, '&winhl', 'Normal:Normal')
+  call setwinvar(s:float_term_win, '&winhl', 'Normal:Normal')
+  if a:0 == 0
+    terminal
+  else
+    call termopen(a:1)
+  endif
+  startinsert
+  " Close border window when terminal window close
+  autocmd TermClose * ++once :bd! | call nvim_win_close(s:float_term_border_win, v:true)
+endfunction
 
+"============================================================
+"===================== Colors ===============================
+"============================================================
 
-
-
-
-
-"-------------------------COLORS PART-------------------------
 set termguicolors
 set background=dark
 colo gruvbox
 source $HOME/.config/nvim/statusline.vim
-"
 
-" colo gruvbox-material
-
-
-" let g:lightline = {
-"     \ 'colorscheme': 'gruvbox',
-"     \ 'active': {
-"     \   'left': [ [ 'mode', 'paste' ],
-"     \             [ 'filename'] ],
-"     \   'right': [ [ 'lineinfo' ] ]
-"     \   },
-"     \ }
-
-
-
-"-------------------------LEADER PART-------------------------
-let mapleader = " "
-
-
-".def.h settings
-nnoremap <leader>sk :!sudo rm config.h && make && sudo make clean install<cr>
-
-nnoremap <leader>db oimport pdb; pdb.set_trace()<esc>
-
-noremap <leader>g :Goyo<cr>
-
-"Fast saving
-nmap <leader>w :w!<cr>
-
-"Fast go out from open panes
-nmap <leader>q :q<cr>
-
-
-" Copy to clipboard
-nnoremap  <leader>y  "+y
-
-" Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
-
-"------------------------CUSTOM MAPPINGS--------------------------
+"============================================================
+"===================== Mappings =============================
+"============================================================
 
 " to correct nicely mistakes
-
 inoremap <C-k> <c-g>u<esc>[s1z=`]a<c-g>u
-
-" to have help opening nicely
-command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
 
 nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
 nnoremap <F4> :Pytest file<cr>
@@ -274,11 +293,15 @@ inoremap `o <C-v>242
 inoremap ,o <C-v>243
 inoremap `u <C-v>249
 inoremap ,u <C-v>250
-
 inoremap `E <C-v>200
 
-" terminal settings 
-" Go in normal mode from terminal
+" to have help opening nicely
+command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
+
+"============================================================
+"===================== Terminal =============================
+"============================================================
+
 let g:ipythonname = "IPython"
 tnoremap <Esc> <C-\><C-n>
 au TermOpen * setlocal statusline=\ \ %{g:ipythonname}
@@ -289,23 +312,18 @@ au TermOpen * let g:last_terminal_job_id = b:terminal_job_id
 au BufEnter,BufWinEnter,WinEnter term://* startinsert
 au BufLeave term://* stopinsert
 
+"============================================================
+"===================== Settings =============================
+"============================================================
 
-"------------------------SETTINGS--------------------------
-
-let g:python3_host_prog='/home/ginko/.virtualenvs/env/bin/python3'
-" let g:c_syntax_for_h = 1
+" clipboard support
+set clipboard+=unnamedplus
 
 "no swap
 set noswapfile
 
-" no tilde in blank lines
-hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
-
 "grep
 set grepprg=rg\ --vimgrep
-
-" Spellcheck
-set spelllang=en_us,it
 
 " Lemme use dat scroll man
 set mouse=a
@@ -342,21 +360,21 @@ set encoding=utf8
 
 "Set Unix as the standard file type
 set ffs=unix,dos,mac
-
 set nobackup
 set nowb
 
 " Use spaces instead of tabs
-set expandtab
 set shiftwidth=4
 set tabstop=4
 
 "Linebreak on 500 characters
 set linebreak
 set textwidth=0
-
 set smartindent
-set wrap "wrap lines
 
+"wrap lines
+set wrap 
 set noshowmode
 
+" no tilde in blank lines
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg

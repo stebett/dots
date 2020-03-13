@@ -1,0 +1,255 @@
+[colors]
+
+base00 = #FF282828 
+base01 = #FF3c3836 
+base02 = #FF504945 
+base03 = #FF665c54 
+base04 = #FFbdae93 
+base05 = #FFd5c4a1 
+base06 = #FFebdbb2 
+base07 = #FFfbf1c7 
+base08 = #FFfb4934 
+base09 = #FFfe8019 
+base0A = #FFfabd2f 
+base0B = #FFb8bb26 
+base0C = #FF8ec07c 
+base0D = #FF83a598 
+base0E = #FFd3869b 
+base0F = #FFd65d0e 
+
+; background = #00000000
+background = ${self.base00}
+foreground = ${self.base05}
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+tray-transparent = true
+tray-background = #00000000
+
+[bar/top]
+monitor = eDP1
+width = 100%
+height = 34
+
+bottom = false
+
+fixed-center =true
+
+; background = ${colors.base00}
+; foreground = ${colors.base07}
+background = ${colors.background}
+foreground = ${colors.background}
+
+border-top-size = 5
+border-top-color = ${colors.background}
+
+border-bottom-size = 5
+border-bottom-color = ${colors.background}
+
+border-left-size = 5
+border-left-color = ${colors.background}
+border-right-size = 5
+border-right-color = ${colors.background}
+
+font-0 = monofur Nerd Font:size=23:bold;3"
+font-1 = "Iosevka Nerd Font:size=15;3"
+font-2 = "RobotoMono Nerd Font:size=18:;3"
+font-3 = "RobotoMono Nerd Font:size=20:;3"
+
+modules-left = powermenu bspwm
+modules-center = date
+modules-right =   battery network apps
+
+module-margin-left = 1
+module-margin-right = 0
+
+
+[module/bspwm]
+type = internal/bspwm
+
+enable-scroll = false
+
+label-focused = 
+label-focused-padding = 1
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-font = 3
+
+label-occupied = ⭘
+label-occupied-padding = 1
+label-occupied-background = ${colors.background}
+label-occupied-foreground = ${colors.foreground}
+label-occupied-font = 2
+
+label-urgent = %index%
+label-urgent-padding = 1
+
+label-empty = %index%
+label-empty-padding = 1
+
+label-separator = |
+label-separator-padding = 0.5
+label-separator-foreground = ${colors.background}
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+label-charging = 
+label-charging-padding = 1
+label-charging-font = 4
+label-charging-background = ${colors.background}
+label-charging-foreground = ${colors.foreground}
+
+format-discharging = %{A1:~/.config/rofi/scripts/./battery.sh &:}<ramp-capacity>%{A}
+format-discharging-background = ${colors.background}
+format-discharging-foreground = ${colors.foreground}
+format-discharging-padding = 1
+format-discharging-font = 3
+
+format-charging = %{A1:~/.config/rofi/scripts/./battery.sh &:}<animation-charging><label-charging>%{A}
+format-charging-background = ${colors.background}
+format-charging-foreground = ${colors.foreground}
+format-charging-padding = 1
+format-charging-font = 3
+
+full-at = 79
+format-full = %{A1:~/.config/rofi/scripts/./battery.sh &:}%{A}
+format-full-background = ${colors.background}
+format-full-foreground = ${colors.foreground}
+format-full-padding = 1
+format-full-font = 3
+
+label-discharging =
+label-discharging-background = ${colors.background}
+label-discharging-foreground = ${colors.foreground}
+label-discharging-font = 3
+
+poll-interval = 10
+
+ramp-capacity-12 = 
+ramp-capacity-11 = 
+ramp-capacity-10 = 
+ramp-capacity-9 = 
+ramp-capacity-8 = 
+ramp-capacity-7 =    
+ramp-capacity-6 = 
+ramp-capacity-5 = 
+ramp-capacity-4 = 
+ramp-capacity-3 = 
+ramp-capacity-2 =    
+ramp-capacity-1 = 
+ramp-capacity-0 = 
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+
+animation-charging-framerate = 750
+
+[module/battery1]
+type = internal/battery
+
+battery = BAT1
+adapter = AC
+
+label-charging = <animation-charging>
+label-charging-padding = 1
+label-charging-font = 3
+label-charging-background = ${colors.background}
+label-charging-foreground = ${colors.foreground}
+
+format-discharging = %{A1:~/.config/rofi/scripts/./battery.sh &:}<ramp-capacity>%{A}
+format-discharging-background = ${colors.background}
+format-discharging-foreground = ${colors.foreground}
+format-discharging-padding = 0
+format-discharging-font = 3
+
+label-discharging = 
+label-discharging-padding = 0
+label-discharging-background = ${colors.background}
+label-discharging-foreground = ${colors.foreground}
+label-discharging-font = 3
+
+poll-interval = 10
+
+ramp-capacity-12 = x
+ramp-capacity-11 = x
+ramp-capacity-10 = 
+ramp-capacity-9 = 
+ramp-capacity-8 = 
+ramp-capacity-7 =    
+ramp-capacity-6 = 
+ramp-capacity-5 = 
+ramp-capacity-4 = 
+ramp-capacity-3 = 
+ramp-capacity-2 =    
+ramp-capacity-1 = 
+ramp-capacity-0 = 
+
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
+
+animation-charging-framerate = 750
+
+[module/network]
+type = internal/network
+interface = wlp3s0
+
+
+label-connected = %{A1:~/.config/rofi/scripts/./network.sh &:}直%{A}
+label-connected-background = ${colors.background}
+label-connected-foreground = ${colors.foreground}
+label-connected-padding = 1
+label-connected-font = 3
+
+label-disconnected = %{A1:~/.config/rofi/scripts/./network.sh &:}睊%{A}
+label-disconnected-font = 3
+label-disconnected-padding = 1
+label-disconnected-background = ${colors.background}
+label-disconnected-foreground = ${colors.foreground}
+
+interval = 3.0 
+
+
+[module/date]
+type = internal/date
+interval = 5
+
+time= "%H:%M"
+label = %{A1:~/.config/rofi/scripts/./time.sh &:}%time%%{A}    
+label-padding = 0
+label-font = 1
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
+
+[module/apps]
+type = custom/text
+
+content = "  "
+click-left = /home/ginko/.config/rofi/scripts/./apps.sh &
+content-background = ${colors.base0D}
+content-foreground = ${colors.background}
+content-font = 3
+
+[module/powermenu]
+type = custom/text
+
+content = 
+click-left = /home/ginko/.config/rofi/scripts/./powermenu.sh &
+content-padding = 1
+content-background = ${colors.base0D}
+content-foreground = ${colors.background}
+content-font = 3
+
+; vim:ft=dosini

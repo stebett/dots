@@ -7,15 +7,13 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-systemctl --user import-environment DISPLAY # dunst
+xsetroot -cursor_name left_ptr
+~/./.fehbg
 xrdb -merge ~/.Xresources
-feh --bg-center ~/Pictures/redhouse.png
 setxkbmap -option ctrl:swapcaps
 xbindkeys --poll-rc
+picom -b
 
-slstatus &
-dunst &
-exec dwm
-# exec awesome
+exec bspwm
 
 

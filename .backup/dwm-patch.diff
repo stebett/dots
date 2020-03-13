@@ -1,523 +1,155 @@
-diff --git a/config.def.h b/config.def.h
-index 1c0b587..6d791d9 100644
---- a/config.def.h
-+++ b/config.def.h
-@@ -1,50 +1,78 @@
--/* See LICENSE file for copyright and license details. */
+diff --git a/maintenance/bootsetter b/maintenance/bootsetter
+index 8598a4d..38c44b6 100755
+--- a/maintenance/bootsetter
++++ b/maintenance/bootsetter
+@@ -2,10 +2,11 @@
  
- /* appearance */
--static const unsigned int borderpx  = 1;        /* border pixel of windows */
--static const unsigned int snap      = 32;       /* snap pixel */
-+static const unsigned int borderpx  = 2;        /* border pixel of windows */
-+static const unsigned int snap      = 31;       /* snap pixel */
- static const int showbar            = 1;        /* 0 means no bar */
-+static const unsigned int gappx     = 10;       /* gap pixel between windows */
- static const int topbar             = 1;        /* 0 means bottom bar */
--static const char *fonts[]          = { "monospace:size=10" };
--static const char dmenufont[]       = "monospace:size=10";
--static const char col_gray1[]       = "#222222";
--static const char col_gray2[]       = "#444444";
--static const char col_gray3[]       = "#bbbbbb";
--static const char col_gray4[]       = "#eeeeee";
--static const char col_cyan[]        = "#005577";
--static const char *colors[][3]      = {
--	/*               fg         bg         border   */
--	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
--	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-+static const char *fonts[]          = { "Anonymous Pro:pixelsize=22:style=bold" };
+ case $1 in
+     Clean)
+-        efibootmgr --disk /dev/mmcblk1 --part 1 --create --label "Clean boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=8c7ca56b-08d0-4227-9c31-7cb51f330fcd rw initrd=\initramfs-linux.img quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vga=current i915.fastboot=1' --verbose
++        efibootmgr --disk /dev/sda --part 1 --create --label "Clean boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=4171b8d2-6dc8-47ff-bce7-14d79e7a89e5 rw initrd=\initramfs-linux.img quiet loglevel=3 rd.systemd.show_status=auto rd.udev.log_priority=3 vga=current i915.fastboot=1 vt.global_cursor_default=0' --verbose
+     ;;
+     Verbose)
+-        efibootmgr --disk /dev/mmcblk1 --part 1 --create --label "Verbose boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=8c7ca56b-08d0-4227-9c31-7cb51f330fcd rw initrd=\initramfs-linux.img' --verbose
++        efibootmgr --disk /dev/sda --part 1 --create --label "Verbose boot" --loader /vmlinuz-linux --unicode 'root=PARTUUID=4171b8d2-6dc8-47ff-bce7-14d79e7a89e5
++ rw initrd=\initramfs-linux.img' --verbose
+     ;;
+     Experimental)
+         exit 0
+diff --git a/rofi/battery1 b/rofi/battery1
+new file mode 100755
+index 0000000..bd60231
+--- /dev/null
++++ b/rofi/battery1
+@@ -0,0 +1,12 @@
++#!/bin/bash
 +
-+static const char dmenufont[]       = "Anonymous Pro:pixelsize=22:style=bold";
++rofi -no-lazy-grab \
++-e $1 \
++-width 3 \
++-bw 0 \
++-xoffset -164 \
++-yoffset 30 \
++-location 3 \
++-color-window $base02 \
++-color-normal "$base02, $base06" \
++-font "monofur Nerd Font 14"
+diff --git a/rofi/run b/rofi/run
+new file mode 100755
+index 0000000..f81cdae
+--- /dev/null
++++ b/rofi/run
+@@ -0,0 +1,3 @@
++#!/bin/bash
 +
-+/* static const char *colors[][3]      = { */
-+/*     /1*              fg          bg          border *1/ */
-+/*     [SchemeNorm]   = { col_fg4,     col_bg2,     col_bg}, */
-+/*     [SchemeSel]    = { col_orange2, col_bg1,     col_fg2}, */
-+/*  	[SchemeWarn]   = { col_bg,      col_green2,  col_fg }, */
-+/*  	[SchemeUrgent] = { col_bg,      col_yellow2, col_fg }, */
-+/*  	[SchemeFive]   = { col_bg,      col_orange2, col_fg }, */
-+/*  	[SchemeTitle]  = { col_fg1,     col_bg1,     col_green2  }, */
-+/* }; */
++rofi -show drun
+diff --git a/rofi/wifi b/rofi/wifi
+new file mode 100755
+index 0000000..60bfa9c
+--- /dev/null
++++ b/rofi/wifi
+@@ -0,0 +1,12 @@
++#!/bin/bash
 +
-+static char base00[] = "#282828";   /* ---- */
-+static char base01[] = "#3c3836";   /* --- */
-+static char base02[] = "#504945";   /* -- */
-+static char base03[] = "#665c54";   /* - */
-+static char base04[] = "#bdae93";   /* + */
-+static char base05[] = "#d5c4a1";   /* ++ */
-+static char base06[] = "#ebdbb2";   /* +++ */
-+static char base07[] = "#fbf1c7";   /* ++++ */
-+static char base08[] = "#fb4934";   /* red */
-+static char base09[] = "#fe8019";   /* orange */
-+static char base0A[] = "#fabd2f";   /* yellow */
-+static char base0B[] = "#b8bb26";   /* green */
-+static char base0C[] = "#8ec07c";   /* aqua/cyan */
-+static char base0D[] = "#83a598";   /* blue */
-+static char base0E[] = "#d3869b";   /* purple */
-+static char base0F[] = "#d65d0e";   /* brown */
-+static char *colors[][3] = {
-+       /*               fg           bg           border   */
-+       [SchemeNorm]   = {base04,    base03,     base00},
-+       [SchemeSel]    = {base0E,    base02,     base05},
-+       [SchemeWarn]   = {base00,    base0C,     base00},
-+       [SchemeUrgent] = {base00,    base0D,     base00},
-+       [SchemeFive]   = {base00,    base0E,     base00},
-+       [SchemeTitle]  = {base06,    base01,     base00},
- };
- 
++rofi -no-lazy-grab \
++-e $1 \
++-width 3 \
++-bw 0 \
++-xoffset -5 \
++-yoffset 30 \
++-location 3 \
++-color-window $base02 \
++-color-normal "$base02, $base06" \
++-font "monofur Nerd Font 14"
+diff --git a/various/venv b/various/venv
+new file mode 100755
+index 0000000..b34c8bb
+--- /dev/null
++++ b/various/venv
+@@ -0,0 +1,9 @@
++#!/bin/bash
 +
-+/* static const char normbordercolor[] = "#B8611F"; */
++envs="$(ls ~/.virtualenvs)"
 +
- /* tagging */
--static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-+static const char *tags[] = { "  ", "  ", "  ", "  ", " 硫 ", "  ", " ﭜ " };
- 
- static const Rule rules[] = {
--	/* xprop(1):
--	 *	WM_CLASS(STRING) = instance, class
--	 *	WM_NAME(STRING) = title
--	 */
--	/* class      instance    title       tags mask     isfloating   monitor */
--	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
--	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-+	/* class              instance    title       tags mask       isfloating   monitor */
-+	{ "Gimp",             NULL,       NULL,       0,              0,           0         },
-+    { "st",               NULL,       "st",       0,              0,           0         },
-+    { "Brave-browser",    NULL,       NULL,       1 << 3,         0,           0         },
-+    { "Matplotlib",       NULL,       NULL,       0,              1,           0         },
- };
- 
- /* layout(s) */
--static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-+static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
- static const int nmaster     = 1;    /* number of clients in master area */
- static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
- 
- static const Layout layouts[] = {
- 	/* symbol     arrange function */
--	{ "[]=",      tile },    /* first entry is default */
--	{ "><>",      NULL },    /* no layout function means floating behavior */
--	{ "[M]",      monocle },
-+	{ "  ",      tile },    /* first entry is default */
-+	{ "  ",      NULL },    /* no layout function means floating behavior */
-+	{ "  ",      monocle },
- };
- 
- /* key definitions */
--#define MODKEY Mod1Mask
-+#define MODKEY Mod4Mask
- #define TAGKEYS(KEY,TAG) \
- 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
- 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-@@ -56,23 +84,27 @@ static const Layout layouts[] = {
- 
- /* commands */
- static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
--static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
--static const char *termcmd[]  = { "st", NULL };
-+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
++echo "Pick your environment"
++echo "$envs"
++read -p "-> "
 +
-+/* static const char *dmenucmd[]     = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg2, "-sb", col_orange2, "-sf", col_bg, "-i", NULL }; */
-+
++source ~/.virtualenvs/$REPLY/bin/activate
+diff --git a/wifi/plane-mode b/wifi/plane-mode
+index ada9cd6..f542028 100755
+--- a/wifi/plane-mode
++++ b/wifi/plane-mode
+@@ -5,6 +5,6 @@ killall -quiet pulseaudio
+ killall -quiet bluetoothd
+ killall -quiet wpa_supplicant 
+ killall -quiet dhcpcd 
+-ip link set wlp1s0 down
++ip link set wlp3s0 down
  
- static Key keys[] = {
- 	/* modifier                     key        function        argument */
--	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
--	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-+    
-+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd} },
- 	{ MODKEY,                       XK_b,      togglebar,      {0} },
--	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
--	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
--	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
--	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
--	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
--	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
--	{ MODKEY,                       XK_Return, zoom,           {0} },
-+	{ MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
-+	{ MODKEY,                       XK_k,      focusstack,     {.i = +1 } },
-+	{ MODKEY,                       XK_h,      focusstack,     {.i = -1 } },
-+	{ MODKEY,                       XK_l,      focusstack,     {.i = +1 } },
-+	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
-+	{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = -1 } },
-+	{ MODKEY,                       XK_i,      setmfact,       {.f = -0.05} },
-+	{ MODKEY,                       XK_o,      setmfact,       {.f = +0.05} },
-+	{ MODKEY,                       XK_u,      zoom,           {0} },
- 	{ MODKEY,                       XK_Tab,    view,           {0} },
--	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-+	{ MODKEY,                       XK_x,      killclient,     {0} },
- 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
- 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
- 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-@@ -84,6 +116,8 @@ static Key keys[] = {
- 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
- 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
- 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-+	{ MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
-+
- 	TAGKEYS(                        XK_1,                      0)
- 	TAGKEYS(                        XK_2,                      1)
- 	TAGKEYS(                        XK_3,                      2)
-@@ -94,6 +128,7 @@ static Key keys[] = {
- 	TAGKEYS(                        XK_8,                      7)
- 	TAGKEYS(                        XK_9,                      8)
- 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-+	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} }, 
- };
+ echo "All network is down!"
+diff --git a/wifi/scan_bash b/wifi/scan_bash
+index 77dfa9c..9436994 100755
+--- a/wifi/scan_bash
++++ b/wifi/scan_bash
+@@ -2,18 +2,21 @@
  
- /* button definitions */
-@@ -103,7 +138,6 @@ static Button buttons[] = {
- 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
- 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
- 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
--	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
- 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
- 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
- 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-diff --git a/drw.c b/drw.c
-index 8fd1ca4..e4968a0 100644
---- a/drw.c
-+++ b/drw.c
-@@ -207,7 +207,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname)
- /* Wrapper to create color schemes. The caller has to call free(3) on the
-  * returned color scheme when done using it. */
- Clr *
--drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount)
-+drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount)
- {
- 	size_t i;
- 	Clr *ret;
-diff --git a/drw.h b/drw.h
-index 4bcd5ad..42b04ce 100644
---- a/drw.h
-+++ b/drw.h
-@@ -39,7 +39,7 @@ void drw_font_getexts(Fnt *font, const char *text, unsigned int len, unsigned in
+ rfkill unblock wifi
+ killall -quiet wpa_supplicant
+-ip link set wlp1s0 down
+-ip link set wlp1s0 up
++ip link set wlp3s0 down
++ip link set wlp3s0 up
  
- /* Colorscheme abstraction */
- void drw_clr_create(Drw *drw, Clr *dest, const char *clrname);
--Clr *drw_scm_create(Drw *drw, const char *clrnames[], size_t clrcount);
-+Clr *drw_scm_create(Drw *drw, char *clrnames[], size_t clrcount);
+-names=$(iw dev wlp1s0 scan | grep SSID)
++names=$(iw dev wlp3s0 scan | grep SSID)
  
- /* Cursor abstraction */
- Cur *drw_cur_create(Drw *drw, int shape);
-diff --git a/dwm.c b/dwm.c
-index 4465af1..6496e6f 100644
---- a/dwm.c
-+++ b/dwm.c
-@@ -35,6 +35,7 @@
- #include <X11/Xatom.h>
- #include <X11/Xlib.h>
- #include <X11/Xproto.h>
-+#include <X11/Xresource.h>
- #include <X11/Xutil.h>
- #ifdef XINERAMA
- #include <X11/extensions/Xinerama.h>
-@@ -56,10 +57,25 @@
- #define HEIGHT(X)               ((X)->h + 2 * (X)->bw)
- #define TAGMASK                 ((1 << LENGTH(tags)) - 1)
- #define TEXTW(X)                (drw_fontset_getwidth(drw, (X)) + lrpad)
-+#define XRDB_LOAD_COLOR(R,V)    if (XrmGetResource(xrdb, R, NULL, &type, &value) == True) { \
-+                                  if (value.addr != NULL && strnlen(value.addr, 8) == 7 && value.addr[0] == '#') { \
-+                                    int i = 1; \
-+                                    for (; i <= 6; i++) { \
-+                                      if (value.addr[i] < 48) break; \
-+                                      if (value.addr[i] > 57 && value.addr[i] < 65) break; \
-+                                      if (value.addr[i] > 70 && value.addr[i] < 97) break; \
-+                                      if (value.addr[i] > 102) break; \
-+                                    } \
-+                                    if (i == 7) { \
-+                                      strncpy(V, value.addr, 7); \
-+                                      V[7] = '\0'; \
-+                                    } \
-+                                  } \
-+                                }
+     
+ case "$names" in
+     *Ginko*)
+        target=Phone
+-       ;;
++	   ;;
++   *UpCycle*)
++	   target=upcycle
++	   ;;
+    *EOLO*)
+-       target=eolo
++	   target=eolo
+        ;;
+    "*EOLO extender*")
+        target=eolo-extender
+@@ -24,15 +27,6 @@ case "$names" in
+    "*WOW FI - FASTWEB")
+        target=wowfi
+        ;;
+-   *Klodi*)
+-       target=klodi
+-       ;;
+-   *Mary*)
+-       target=mary
+-       ;;
+-   *TIM*)
+-       target=chiara
+-       ;;
+    *eduroam*)
+        target=eduroam
+        ;;
+@@ -51,7 +45,7 @@ case $target in
+         ;;
+ esac
  
- /* enums */
- enum { CurNormal, CurResize, CurMove, CurLast }; /* cursor */
--enum { SchemeNorm, SchemeSel }; /* color schemes */
-+enum { SchemeNorm, SchemeSel, SchemeWarn, SchemeUrgent, SchemeFive, SchemeTitle}; /* color schemes */
- enum { NetSupported, NetWMName, NetWMState, NetWMCheck,
-        NetWMFullscreen, NetActiveWindow, NetWMWindowType,
-        NetWMWindowTypeDialog, NetClientList, NetLast }; /* EWMH atoms */
-@@ -147,6 +163,7 @@ static int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interac
- static void arrange(Monitor *m);
- static void arrangemon(Monitor *m);
- static void attach(Client *c);
-+static void attachbelow(Client *c);
- static void attachstack(Client *c);
- static void buttonpress(XEvent *e);
- static void checkotherwm(void);
-@@ -177,6 +194,7 @@ static void grabkeys(void);
- static void incnmaster(const Arg *arg);
- static void keypress(XEvent *e);
- static void killclient(const Arg *arg);
-+static void loadxrdb(void);
- static void manage(Window w, XWindowAttributes *wa);
- static void mappingnotify(XEvent *e);
- static void maprequest(XEvent *e);
-@@ -232,6 +250,7 @@ static Monitor *wintomon(Window w);
- static int xerror(Display *dpy, XErrorEvent *ee);
- static int xerrordummy(Display *dpy, XErrorEvent *ee);
- static int xerrorstart(Display *dpy, XErrorEvent *ee);
-+static void xrdb(const Arg *arg);
- static void zoom(const Arg *arg);
+-connectionOutput=$(wpa_supplicant -B -i wlp1s0 -c /etc/wpa_supplicant/$target.conf)
++connectionOutput=$(wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/$target.conf)
  
- /* variables */
-@@ -406,6 +425,17 @@ attach(Client *c)
- 	c->mon->clients = c;
- }
+ case $connectionOutput in 
+     *p2p)
+@@ -66,7 +60,7 @@ case $connectionOutput in
+         exit 1
+ esac
  
-+void
-+attachbelow(Client *c)
-+{
-+	Client *below = c->mon->clients;
-+	for (; below && below->next; below = below->next);
-+	if (below)
-+		below->next = c;
-+	else
-+		c->mon->clients = c;
-+}
-+
- void
- attachstack(Client *c)
- {
-@@ -416,7 +446,7 @@ attachstack(Client *c)
- void
- buttonpress(XEvent *e)
- {
--	unsigned int i, x, click;
-+	unsigned int i, x, click, occ = 0;
- 	Arg arg = {0};
- 	Client *c;
- 	Monitor *m;
-@@ -431,9 +461,14 @@ buttonpress(XEvent *e)
- 	}
- 	if (ev->window == selmon->barwin) {
- 		i = x = 0;
--		do
-+		for (c = m->clients; c; c = c->next)
-+			occ |= c->tags == 255 ? 0 : c->tags;
-+		do {
-+			/* do not reserve space for vacant tags */
-+			if (!(occ & 1 << i || m->tagset[m->seltags] & 1 << i))
-+				continue;
- 			x += TEXTW(tags[i]);
--		while (ev->x >= x && ++i < LENGTH(tags));
-+		} while (ev->x >= x && ++i < LENGTH(tags));
- 		if (i < LENGTH(tags)) {
- 			click = ClkTagBar;
- 			arg.ui = 1 << i;
-@@ -699,29 +734,43 @@ drawbar(Monitor *m)
- 	int boxs = drw->fonts->h / 9;
- 	int boxw = drw->fonts->h / 6 + 2;
- 	unsigned int i, occ = 0, urg = 0;
-+    char *ts = stext;
-+    char *tp = stext;
-+    int tx = 0;
-+    char ctmp;
- 	Client *c;
+-dhcpcd wlp1s0  > /dev/null 2>&1
++dhcpcd wlp3s0  > /dev/null 2>&1
+ pid=$!
+ wait $pid
  
- 	/* draw status first so it can be overdrawn by tags later */
- 	if (m == selmon) { /* status is only drawn on selected monitor */
- 		drw_setscheme(drw, scheme[SchemeNorm]);
- 		sw = TEXTW(stext) - lrpad + 2; /* 2px right padding */
--		drw_text(drw, m->ww - sw, 0, sw, bh, 0, stext, 0);
-+		while (1) {
-+			if ((unsigned int)*ts > LENGTH(colors)) { ts++; continue ; }
-+			ctmp = *ts;
-+			*ts = '\0';
-+			drw_text(drw, m->ww - sw + tx, 0, sw - tx, bh, 0, tp, 0);
-+			tx += TEXTW(tp) -lrpad;
-+			if (ctmp == '\0') { break; }
-+			drw_setscheme(drw, scheme[(unsigned int)(ctmp-1)]);
-+			*ts = ctmp;
-+			tp = ++ts;
-+		}
- 	}
- 
- 	for (c = m->clients; c; c = c->next) {
--		occ |= c->tags;
-+		occ |= c->tags == 255 ? 0 : c->tags;
- 		if (c->isurgent)
- 			urg |= c->tags;
- 	}
- 	x = 0;
- 	for (i = 0; i < LENGTH(tags); i++) {
-+		/* do not draw vacant tags */
-+		if (!(occ & 1 << i || m->tagset[m->seltags] & 1 << i))
-+		continue;
-+
- 		w = TEXTW(tags[i]);
- 		drw_setscheme(drw, scheme[m->tagset[m->seltags] & 1 << i ? SchemeSel : SchemeNorm]);
- 		drw_text(drw, x, 0, w, bh, lrpad / 2, tags[i], urg & 1 << i);
--		if (occ & 1 << i)
--			drw_rect(drw, x + boxs, boxs, boxw, boxw,
--				m == selmon && selmon->sel && selmon->sel->tags & 1 << i,
--				urg & 1 << i);
- 		x += w;
- 	}
- 	w = blw = TEXTW(m->ltsymbol);
-@@ -730,7 +779,7 @@ drawbar(Monitor *m)
- 
- 	if ((w = m->ww - sw - x) > bh) {
- 		if (m->sel) {
--			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]);
-+			drw_setscheme(drw, scheme[m == selmon ? SchemeTitle : SchemeNorm]);
- 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
- 			if (m->sel->isfloating)
- 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
-@@ -1014,6 +1063,47 @@ killclient(const Arg *arg)
- 	}
- }
- 
-+void
-+loadxrdb()
-+{
-+  Display *display;
-+  char * resm;
-+  XrmDatabase xrdb;
-+  char *type;
-+  XrmValue value;
-+
-+  display = XOpenDisplay(NULL);
-+
-+  if (display != NULL) {
-+    resm = XResourceManagerString(display);
-+
-+    if (resm != NULL) {
-+      xrdb = XrmGetStringDatabase(resm);
-+
-+      if (xrdb != NULL) {
-+        XRDB_LOAD_COLOR("dwm.base00", base00)
-+        XRDB_LOAD_COLOR("dwm.base01", base01)
-+        XRDB_LOAD_COLOR("dwm.base02", base02)
-+        XRDB_LOAD_COLOR("dwm.base03", base03)
-+        XRDB_LOAD_COLOR("dwm.base04", base04)
-+        XRDB_LOAD_COLOR("dwm.base05", base05)
-+        XRDB_LOAD_COLOR("dwm.base06", base06)
-+        XRDB_LOAD_COLOR("dwm.base07", base07)
-+        XRDB_LOAD_COLOR("dwm.base08", base08)
-+        XRDB_LOAD_COLOR("dwm.base09", base09)
-+        XRDB_LOAD_COLOR("dwm.base0A", base0A)
-+        XRDB_LOAD_COLOR("dwm.base0B", base0B)
-+        XRDB_LOAD_COLOR("dwm.base0C", base0C)
-+        XRDB_LOAD_COLOR("dwm.base0D", base0D)
-+        XRDB_LOAD_COLOR("dwm.base0E", base0E)
-+        XRDB_LOAD_COLOR("dwm.base0F", base0F)
-+      }
-+    }
-+  }
-+
-+  XCloseDisplay(display);
-+}
-+
- void
- manage(Window w, XWindowAttributes *wa)
- {
-@@ -1062,7 +1152,7 @@ manage(Window w, XWindowAttributes *wa)
- 		c->isfloating = c->oldstate = trans != None || c->isfixed;
- 	if (c->isfloating)
- 		XRaiseWindow(dpy, c->win);
--	attach(c);
-+	attachbelow(c);
- 	attachstack(c);
- 	XChangeProperty(dpy, root, netatom[NetClientList], XA_WINDOW, 32, PropModeAppend,
- 		(unsigned char *) &(c->win), 1);
-@@ -1282,6 +1372,13 @@ resizeclient(Client *c, int x, int y, int w, int h)
- 	c->oldw = c->w; c->w = wc.width = w;
- 	c->oldh = c->h; c->h = wc.height = h;
- 	wc.border_width = c->bw;
-+    if (((nexttiled(c->mon->clients) == c && !nexttiled(c->next))
-+        || &monocle == c->mon->lt[c->mon->sellt]->arrange)
-+        && !c->isfullscreen && !c->isfloating) {
-+            c->w = wc.width += c->bw * 2;
-+            c->h = wc.height += c->bw * 2;
-+            wc.border_width = 0;
-+    }
- 	XConfigureWindow(dpy, c->win, CWX|CWY|CWWidth|CWHeight|CWBorderWidth, &wc);
- 	configure(c);
- 	XSync(dpy, False);
-@@ -1417,7 +1514,7 @@ sendmon(Client *c, Monitor *m)
- 	detachstack(c);
- 	c->mon = m;
- 	c->tags = m->tagset[m->seltags]; /* assign tags of target monitor */
--	attach(c);
-+	attachbelow(c);
- 	attachstack(c);
- 	focus(NULL);
- 	arrange(NULL);
-@@ -1673,26 +1770,29 @@ tagmon(const Arg *arg)
- void
- tile(Monitor *m)
- {
--	unsigned int i, n, h, mw, my, ty;
-+	unsigned int i, n, h, mw, my, ty, ns;
- 	Client *c;
- 
- 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
- 	if (n == 0)
- 		return;
- 
--	if (n > m->nmaster)
-+	if (n > m->nmaster) {
- 		mw = m->nmaster ? m->ww * m->mfact : 0;
--	else
-+		ns = m->nmaster > 0 ? 2 : 1;
-+	} else {
- 		mw = m->ww;
--	for (i = my = ty = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
-+		ns = 1;
-+	}
-+	for(i = 0, my = ty = gappx, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
- 		if (i < m->nmaster) {
--			h = (m->wh - my) / (MIN(n, m->nmaster) - i);
--			resize(c, m->wx, m->wy + my, mw - (2*c->bw), h - (2*c->bw), 0);
--			my += HEIGHT(c);
-+			h = (m->wh - my) / (MIN(n, m->nmaster) - i) - gappx;
-+			resize(c, m->wx + gappx, m->wy + my, mw - (2*c->bw) - gappx*(5-ns)/2, h - (2*c->bw), False);
-+			my += HEIGHT(c) + gappx;
- 		} else {
--			h = (m->wh - ty) / (n - i);
--			resize(c, m->wx + mw, m->wy + ty, m->ww - mw - (2*c->bw), h - (2*c->bw), 0);
--			ty += HEIGHT(c);
-+			h = (m->wh - ty) / (n - i) - gappx;
-+			resize(c, m->wx + mw + gappx/ns, m->wy + ty, m->ww - mw - (2*c->bw) - gappx*(5-ns)/2, h - (2*c->bw), False);
-+			ty += HEIGHT(c) + gappx;
- 		}
- }
- 
-@@ -1897,7 +1997,7 @@ updategeom(void)
- 					m->clients = c->next;
- 					detachstack(c);
- 					c->mon = mons;
--					attach(c);
-+					attachbelow(c);
- 					attachstack(c);
- 				}
- 				if (m == selmon)
-@@ -2110,6 +2210,17 @@ xerrorstart(Display *dpy, XErrorEvent *ee)
- 	return -1;
- }
- 
-+void
-+xrdb(const Arg *arg)
-+{
-+  loadxrdb();
-+  int i;
-+  for (i = 0; i < LENGTH(colors); i++)
-+                scheme[i] = drw_scm_create(drw, colors[i], 3);
-+  focus(NULL);
-+  arrange(NULL);
-+}
-+
- void
- zoom(const Arg *arg)
- {
-@@ -2136,6 +2247,8 @@ main(int argc, char *argv[])
- 	if (!(dpy = XOpenDisplay(NULL)))
- 		die("dwm: cannot open display");
- 	checkotherwm();
-+        XrmInitialize();
-+        loadxrdb();
- 	setup();
- #ifdef __OpenBSD__
- 	if (pledge("stdio rpath proc exec", NULL) == -1)

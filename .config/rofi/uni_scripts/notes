@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ~/.virtualenvs/lec/bin/activate
+python /home/ginko/.config/rofi/uni_scripts/$1
