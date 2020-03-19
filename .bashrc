@@ -20,7 +20,7 @@ alias v='nvim'
 alias n='nvim $HOME/.config/nvim/init.vim'
 alias r=lfcd 
 alias ipython="ipython --no-banner"
-
+alias icat="kitty +kitten icat"
 
 
 

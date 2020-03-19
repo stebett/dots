@@ -35,10 +35,10 @@
 "sudo /home/ginko/Documents/scripts/wifi/./scan_bash"
     XF86Search
 
-"xbacklight -dec 10"
+"/home/ginko/Documents/scripts/brightness/./bright_up down"
     XF86MonBrightnessDown
 
-"xbacklight -inc 10"
+"/home/ginko/Documents/scripts/brightness/./bright_up up"
     XF86MonBrightnessUp
 
 "pamixer -t"

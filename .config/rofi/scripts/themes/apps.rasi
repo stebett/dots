@@ -31,7 +31,7 @@
 /* ########### */
 
 #window {
-  width: 15%;
+  width: 17%;
   height: 15%;
 }
 

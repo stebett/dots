@@ -12,16 +12,25 @@ rofi_command="rofi
 -xoffset -13
 -no-fullscreen"
 
-# Links
+kb_now=$(setxkbmap -print -verbose 10 | grep layout)
+
+if [[ $kb_now == *us* ]]; then
+	kb_now=us
+	kb_new=it
+else
+	kb_now=it
+	kb_new=us
+fi
+
 terminal=""
 files="ﱮ"
-# editor=""
+keyboard=""
 browser=""
 # music=""
 # settings="漣"
 
 # Variable passed to rofi
-options="$terminal\n$files\n$browser"
+options="$terminal\n$files\n$browser\n$keyboard"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Most Used" -dmenu -selected-row 0)"
 case $chosen in
@@ -31,9 +40,9 @@ case $chosen in
     $files)
         nautilus &
         ;;
-    # $editor)
-    #     geany &
-    #     ;;
+    $keyboard)
+        setxkbmap $kb_new
+        ;;
     $browser)
         brave &
         ;;
