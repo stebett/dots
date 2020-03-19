@@ -27,13 +27,6 @@ nnoremap <F10> :call screenshot#TakeScreenshot()<cr><cr>
 "===================== Ulitisnip ============================
 "============================================================
 
-let g:UltiSnipsNoPythonWarning = 1
-let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
-let g:UltiSnipsEditSplit = 'vertical'
-
-let g:UltiSnipsExpandTrigger = "<c-space>"
-let g:UltiSnipsJumpForwardTrigger = "<c-space>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 
 " Accents
