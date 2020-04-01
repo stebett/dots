@@ -1,6 +1,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Temporary functions
+alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/projects/tesi/ && ls'
+
+
+
 # Unlimited history
 HISTSIZE=-1
 HISTFILESIZE=-1
@@ -27,13 +32,13 @@ alias icat="kitty +kitten icat"
 # Keybindings
 
 bind '"\er":"lfcd\C-m"'
-
-
+bind '"\C-v":"fo\C-m"'
 
 
 # Variables
 
 export sal='ginkobab@192.168.178.222'
+export tesi='scp://ginkobab@192.168.178.222/~/tesi/'
 export EDITOR='nvim' 
 export INIT='/home/ginko/.config/nvim/init.vim'
 export VISUAL='less'
@@ -146,9 +151,18 @@ export base0D=$(formatColor $base0D) # blue
 export base0E=$(formatColor $base0E) # purple
 export base0F=$(formatColor $base0F) # brown
 
-# Sourced files
-
 # source $HOME/Packs/nest-simulator/install_dict/bin/nest_vars.sh
+# Modified version where you can press
+#   - CTRL-O to open with `open` command,
+#   - CTRL-E or Enter key to open with the $EDITOR
+fo() (
+  IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+	  [ "$key" = ctrl-o ] && ( (setsid xdg-open "$file" &) && kill -9 $PPID) || ${EDITOR:-vim} "$file"
+  fi
+)
 
 VENV="$(virtualenv_info)" # Maybe the color is better on 1
 # PS1='\n\[\033[01;38;5;142m\]\W \[\033[0m\]\n\[\033[38;5;211m\]$(virtualenv_info)\[\033[38;5;166m\]❯\[\033[0m\] '

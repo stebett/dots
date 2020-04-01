@@ -1390,49 +1390,9 @@ endfunction
 
 " }}}
 
-" Statusline ------------------------------------------------------------------ 
-set statusline=%{statusline#RedrawModeColors(mode())}
-" Left side items
-" =======================
-set statusline+=%#MyStatuslineAccent#\ 
-set statusline+=%#MyStatuslineAccentBody#●\ 
-" Filename
-set statusline+=%#MyStatuslineFilename#%t
-set statusline+=%#MyStatuslineSeparator#\ 
-" Right side items
-" =======================
-set statusline+=%=
-" Line and Column
-set statusline+=%#MyStatuslineLineCol#
-set statusline+=%#MyStatuslineLineColBody#%2l
-set statusline+=\/%#MyStatuslineLineColBody#%2c
-set statusline+=%#MyStatuslineLineCol#
-" Padding
-set statusline+=\ 
-" Current scroll percentage and total lines of the file
-set statusline+=%#MyStatuslinePercentage#
-set statusline+=%#MyStatuslinePercentageBody#%P
-set statusline+=\/\%#MyStatuslinePercentageBody#%L
-set statusline+=%#MyStatuslinePercentage#
-" Padding
-set statusline+=\ 
-" Filetype
-set statusline+=%#MyStatuslineFiletype#
-set statusline+=%#MyStatuslineFiletypeBody#%{statusline#SetFiletype(&filetype)}
-set statusline+=%#MyStatuslineFiletype#\ 
 
-hi StatusLine            guifg=#282828 guibg=#98971a
-hi StatusLineNC          guifg=#282828 guibg=#98971a
-hi mystatuslineseparator guifg=#3c3836 guibg=None
-hi MyStatuslineModified  guifg=#3c3836 guibg=None
-hi MyStatuslineFiletype  guifg=#3c3836 guibg=None
-
-hi MyStatuslineFiletypeBody   ctermfg=5     cterm=italic ctermbg=0    guifg=#689d6a guibg=#3c3836 gui=italic
-hi MyStatuslinePercentageBody guifg=#d65d0e guibg=#3c3836
-hi MyStatuslinePercentage     guibg=None    guifg=#3c3836
-hi MyStatuslineLineCol        ctermfg=0     cterm=NONE   ctermbg=NONE guifg=#3c3836 guibg=None
-hi MyStatuslineLineColBody    ctermbg=0     cterm=none   ctermfg=2    guifg=#458588 guibg=#3c3836
 " No tilde in blank lines
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
-
+source ~/.config/nvim/colors/statusline.vim
+source ~/.config/nvim/colors/tabline.vim
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:

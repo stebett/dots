@@ -118,7 +118,7 @@ format-charging-foreground = ${colors.foreground}
 format-charging-padding = 1
 format-charging-font = 3
 
-full-at = 79
+full-at = 78
 format-full = %{A1:~/.config/rofi/scripts/./battery.sh &:}%{A}
 format-full-background = ${colors.background}
 format-full-foreground = ${colors.foreground}

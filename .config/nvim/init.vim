@@ -1,24 +1,23 @@
 call plug#begin()
 
-" Snippets
-Plug 'SirVer/ultisnips', {'for': ['tex']}
+" Python 
+Plug 'alfredodeza/pytest.vim', {'for': ['python']}
+Plug 'jpalardy/vim-slime', {'for': ['python']}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python']}
+
 
 " Latex
 Plug 'lervag/vimtex', {'for': ['tex']}
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': ['tex']}
+" Snippets
+Plug 'SirVer/ultisnips' , {'for': ['tex']}
 
-" Python 
-Plug 'alfredodeza/pytest.vim', {'for': ['python']}
-Plug 'w0rp/ale', {'for': ['python']}
-Plug 'jpalardy/vim-slime', {'for': ['python']}
 
 " General
 Plug 'tpope/vim-sensible'
-Plug 'preservim/nerdtree'
-Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-unimpaired' 
-
+Plug 'junegunn/fzf.vim'
 " Manipulation
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround' 
@@ -26,19 +25,17 @@ Plug 'tpope/vim-commentary'
 
 call plug#end()
 
+filetype plugin on          " netrw
+
 "============================================================
 ""===================== Leader ==============================
 "============================================================
 let mapleader=' '
 
-nnoremap <leader>w :w!<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>p "+p
-
 "============================================================
 "===================== UltiSnips ============================
 "============================================================
-
+let g:tex_flavor = "latex"
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
 let g:UltiSnipsEditSplit = 'vertical'
@@ -48,25 +45,28 @@ let g:UltiSnipsJumpForwardTrigger = "<c-space>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "============================================================
-"===================== Nerdtree =============================
+"===================== Netrw =============================
 "============================================================
 
-let NERDTreeIgnore=['.*pycache.*', '\~$']
-let NERDTreeQuitOnOpen = 1
-let NERDTreeStatusline=" "
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+let g:netrw_list_hide= '^\.'
+let g:netrw_menu=0
+let g:netrw_preview=1
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"============================================================
+"========================== Coc =============================
+"============================================================
 
-nnoremap <silent> <A-n> :NERDTreeFind<cr>
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
-augroup nerdtreehidecwd
-	autocmd!
-	autocmd FileType nerdtree syntax match NERDTreeHideCWD #^[</].*$# conceal
-augroup end
-
+inoremap <silent><expr> <TAB>
+	  \ pumvisible() ? "\<C-n>" :
+	  \ <SID>check_back_space() ? "\<TAB>" :
+	  \ coc#refresh()
+ 
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
 "============================================================
 "===================== Easy Align ===========================
@@ -80,8 +80,7 @@ nmap ga <Plug>(EasyAlign)
 "============================================================
 
 set termguicolors
-colo gruvbox
-
+colorscheme custom
 "============================================================
 "===================== Mappings =============================
 "============================================================
@@ -100,9 +99,28 @@ inoremap <A-j> <Esc><C-w>j
 inoremap <A-k> <Esc><C-w>k
 inoremap <A-l> <Esc><C-w>l
 
-" Help 
-command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
+nnoremap <A-1> 1gt
+nnoremap <A-2> 2gt
+nnoremap <A-3> 3gt
+nnoremap ]t gt
+nnoremap [t gT
+nnoremap <silent><C-w>t :tabnew<cr>
 
+nnoremap Zb :Buffers<cr>
+nnoremap Zl :Lines<cr>
+nnoremap Zf :Files<cr>
+nnoremap Zh :History<cr>
+nnoremap Zm :Marks<cr>
+nnoremap Zr :Rg<cr>
+
+
+
+" nnoremap Zq :call helpers#quit()<cr>
+
+nnoremap Zp "+p
+nnoremap Q :Explore<cr>
+
+command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
 "============================================================
 "===================== Settings =============================
 "============================================================
@@ -118,9 +136,10 @@ set smartindent
 set showmatch
 set noshowmode
 set laststatus=2
+set inccommand=nosplit
 set mat=2
 set t_vb=
-set timeoutlen=500 
+" set timeoutlen=1000 
 set clipboard+=unnamedplus
 set grepprg=rg\ --vimgrep
 set mouse=a
