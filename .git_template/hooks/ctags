@@ -5,4 +5,4 @@ PATH="usr/local/bin:$PATH"
 trap 'rm -f "$$.tags"' EXIT
 git ls-files | \
   ctags --tag-relative -L - -f"$$.tags" --languages=python
-mv "$$.tags" "tags"
+mv "$$.tags" ".tags"

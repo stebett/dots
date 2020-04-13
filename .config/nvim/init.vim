@@ -141,6 +141,7 @@ set linebreak
 set smartindent
 set showmatch
 set noshowmode
+set autochdir
 set laststatus=2
 set inccommand=nosplit
 set mat=2
@@ -153,3 +154,4 @@ set wildignore=*.o,*~,*pyc,*/.git/*,*/.hg/*,*/.svn/*
 set whichwrap+=<,>,h,l
 set shiftwidth=4
 set tabstop=4
+set tags+=./.tags
