@@ -6,8 +6,7 @@ setlocal spell
 inoremap == <esc>o\item 
 setlocal statusline=\ 
 set nonumber
-set spelllang=it,en_us
-let g:tex_flavor = 'latex'
+set spelllang=en_us,it
 set conceallevel=2
 let g:tex_conceal ='abdmg'
 hi Conceal ctermbg=none

@@ -41,8 +41,8 @@ case $chosen in
         nautilus &
         ;;
     $keyboard)
-        setxkbmap $kb_new
-        ;;
+        setxkbmap $kb_new; setxkbmap -option ctrl:swapcaps
+		;;
     $browser)
         brave &
         ;;

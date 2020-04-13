@@ -38,6 +38,12 @@ snippet sbs "subsection" bA
 $0
 endsnippet
 
+snippet myp "myparagraph" bA
+\myparagraph{$1} 
+
+$0
+endsnippet
+
 snippet enum "enumerate" b
 \begin{enumerate}
 	\item
@@ -110,4 +116,15 @@ $0
 \end{document}
 endsnippet
 
+snippet dsm "dsm format" b
+\begin{itemize}
+	\item \textbf{A.} $1
+	\begin{enumerate}
+		\item
+	\end{enumerate}
+
+	\item \textbf{B.} $2
+	\item \textbf{C.} $3
+\end{itemize}
+endsnippet
 

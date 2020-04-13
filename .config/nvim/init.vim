@@ -1,8 +1,8 @@
 call plug#begin()
 
 " Python 
+Plug 'urbainvaes/vim-ripple', {'for': ['python']}
 Plug 'alfredodeza/pytest.vim', {'for': ['python']}
-Plug 'jpalardy/vim-slime', {'for': ['python']}
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python']}
 
 
@@ -18,6 +18,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-repeat' 
 Plug 'tpope/vim-unimpaired' 
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 " Manipulation
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround' 
@@ -25,7 +26,7 @@ Plug 'tpope/vim-commentary'
 
 call plug#end()
 
-filetype plugin on          " netrw
+" filetype plugin on       
 
 "============================================================
 ""===================== Leader ==============================
@@ -36,6 +37,7 @@ let mapleader=' '
 "===================== UltiSnips ============================
 "============================================================
 let g:tex_flavor = "latex"
+let g:vimtex_quickfix_mode=0
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories=["~/.UltiSnips"]
 let g:UltiSnipsEditSplit = 'vertical'
@@ -49,8 +51,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "============================================================
 
 let g:netrw_list_hide= '^\.'
-let g:netrw_menu=0
-let g:netrw_preview=1
+let g:netrw_banner=0
+let g:netrw_fastbrowse = 1
+let g:netrw_winsize = 40
+
 
 "============================================================
 "========================== Coc =============================
@@ -67,6 +71,10 @@ inoremap <silent><expr> <TAB>
 	  \ coc#refresh()
  
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
+
+"============================================================
+"===================== Python ===============================
+"============================================================
 
 "============================================================
 "===================== Easy Align ===========================
@@ -114,17 +122,15 @@ nnoremap Zm :Marks<cr>
 nnoremap Zr :Rg<cr>
 
 
-
-" nnoremap Zq :call helpers#quit()<cr>
-
 nnoremap Zp "+p
-nnoremap Q :Explore<cr>
+nnoremap Q :Lexplore<cr>
 
 command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
 "============================================================
 "===================== Settings =============================
 "============================================================
 
+set splitright
 set hidden
 set number
 set noswapfile 

@@ -852,8 +852,8 @@ hi! link DirvishArg GruvboxYellow
 " }}}
 " Netrw: {{{
 
-hi! link netrwDir GruvboxAqua
-hi! link netrwClassify GruvboxAqua
+hi! link netrwDir GruvboxBlue
+hi! link netrwClassify GruvboxBlue
 hi! link netrwLink GruvboxGray
 hi! link netrwSymLink GruvboxFg1
 hi! link netrwExe GruvboxYellow
