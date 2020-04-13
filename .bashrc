@@ -2,8 +2,8 @@
 [[ $- != *i* ]] && return
 
 # Temporary functions
-alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/projects/tesi/ && ls'
-
+alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/ && nvim .'
+alias tesisal='nvim scp://ginkobab@192.168.178.222/~/Thesis/'
 
 
 # Unlimited history
@@ -38,7 +38,6 @@ bind '"\C-v":"fo\C-m"'
 # Variables
 
 export sal='ginkobab@192.168.178.222'
-export tesi='scp://ginkobab@192.168.178.222/~/tesi/'
 export EDITOR='nvim' 
 export INIT='/home/ginko/.config/nvim/init.vim'
 export VISUAL='less'
