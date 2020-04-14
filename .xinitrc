@@ -13,6 +13,7 @@ xrdb -merge ~/.Xresources
 setxkbmap -option ctrl:swapcaps
 xbindkeys --poll-rc
 picom -b
+~/Documents/scripts/wifi/./scan_bash &
 
 exec bspwm
 
