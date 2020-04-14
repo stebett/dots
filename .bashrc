@@ -2,8 +2,10 @@
 [[ $- != *i* ]] && return
 
 # Temporary functions
-alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/ && nvim .'
-alias tesisal='nvim scp://ginkobab@192.168.178.222/~/Thesis/'
+alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/ && ls'
+alias tesisal='export TERM=xterm-256color && ssh ginkobab@salvatore -t tmux a'
+alias vtesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/ && nvim .'
+alias vtesisal='nvim scp://ginkobab@192.168.178.222/~/Thesis/'
 
 
 # Unlimited history
