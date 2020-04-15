@@ -1,5 +1,6 @@
 nnoremap <F5> :exec '!python' shellescape(@%, 1)<cr>
 
+set define=^class
 let g:ipythonname = "IPython"
 tnoremap <Esc> <C-\><C-n>
 au TermOpen * setlocal statusline=\ \ %{g:ipythonname}

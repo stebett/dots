@@ -116,9 +116,6 @@ inoremap <A-l> <Esc><C-w>l
 nnoremap <A-1> 1gt
 nnoremap <A-2> 2gt
 nnoremap <A-3> 3gt
-nnoremap ]t gt
-nnoremap [t gT
-nnoremap <silent><C-w>t :tabnew<cr>
 
 nnoremap Zb :Buffers<cr>
 nnoremap Zl :Lines<cr>
