@@ -26,12 +26,17 @@ Plug 'tpope/vim-commentary'
 
 call plug#end()
 
-" filetype plugin on       
+filetype plugin on       
 
+set omnifunc=python3complete#Complete
 "============================================================
 ""===================== Leader ==============================
 "============================================================
 let mapleader=' '
+
+nnoremap <leader>vv :VimtexView<CR>
+nnoremap <leader>vc :VimtexClean<CR>
+nnoremap <leader>vs :VimtexCompile<CR>
 
 "============================================================
 "===================== UltiSnips ============================
@@ -71,10 +76,6 @@ inoremap <silent><expr> <TAB>
 	  \ coc#refresh()
  
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
-
-"============================================================
-"===================== Python ===============================
-"============================================================
 
 "============================================================
 "===================== Easy Align ===========================
@@ -149,7 +150,6 @@ set laststatus=2
 set inccommand=nosplit
 set mat=2
 set t_vb=
-" set timeoutlen=1000 
 set clipboard+=unnamedplus
 set grepprg=rg\ --vimgrep
 set mouse=a
@@ -158,3 +158,4 @@ set whichwrap+=<,>,h,l
 set shiftwidth=4
 set tabstop=4
 set tags+=./.tags
+set completeopt=longest,menuone
