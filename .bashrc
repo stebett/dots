@@ -165,7 +165,7 @@ put_template 8  $base06 # +++
 put_template 9  $base09 # orange
 put_template 10 $base0B # green
 put_template 11 $base0A # yellow
-put_template 12 $base02 # --
+put_template 12 $base0D # blue
 put_template 13 $base04 # +
 put_template 14 $base0C # aqua
 put_template 15 $base07 # ++++
