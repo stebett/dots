@@ -23,5 +23,6 @@ bspc rule -a Gimp        	desktop='^8' state=floating follow=on
 bspc rule -a Zathura     	state=tiled
 bspc rule -a Matplotlib  	state=floating
 bspc rule -a "GNU Octave"    state=floating
+bspc rule -a processing-app-Base    state=floating
 
 $HOME/.config/polybar/launch.sh
