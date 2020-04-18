@@ -5,10 +5,7 @@ source ~/.git-prompt.sh
 
 # Temporary functions
 alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/'
-alias tesisal='export TERM=xterm-256color && ssh ginkobab@salvatore -t tmux a'
-alias vtesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/ && nvim .'
-alias vtesisal='nvim scp://ginkobab@192.168.178.222/~/Thesis/'
-
+alias sal='export TERM=xterm-256color && ssh ginkobab@salvatore -t tmux a'
 
 # Unlimited history
 HISTSIZE=-1
@@ -17,37 +14,20 @@ HISTFILESIZE=-1
 # Aliases
 
 alias ls='ls --color=always'
-alias mm='rm config.h && make && sudo make clean install'
-alias lowpow='source $HOME/Documents/scripts/battery/battery_saver.sh'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
-alias gp="git add . && git commit -m 'auto-commit' && git push origin master"
 alias venv='source $HOME/Documents/scripts/various/venv'
-alias won='sudo $HOME/Documents/scripts/wifi/./scan'
-alias woff='sudo $HOME/Documents/scripts/wifi/./plane-mode'
 alias shut='systemctl poweroff'
-alias v='nvim'
-alias n='nvim $HOME/.config/nvim/init.vim'
 alias r=lfcd 
-alias ipython="ipython --no-banner"
-alias icat="kitty +kitten icat"
-
-
-
-# Keybindings
-
-bind '"\er":"lfcd\C-m"'
-bind '"\C-v":"fo\C-m"'
 
 
 # Variables
 
 export sal='ginkobab@192.168.178.222'
-export EDITOR='nvim' 
-export INIT='/home/ginko/.config/nvim/init.vim'
+export EDITOR='vim' 
 export VISUAL='less'
 export OPENER='xdg-open'
-export BROWSER='brave'
-export TERMINAL='st'
+export BROWSER='firefox'
+export TERMINAL='xterm-kitty'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export TESSDATA_PREFIX=/usr/local/share/tessdata/
 
@@ -67,19 +47,6 @@ lfcd () {
         fi
     fi
 }
-
-# source $HOME/Packs/nest-simulator/install_dict/bin/nest_vars.sh
-# Modified version where you can press
-#   - CTRL-O to open with `open` command,
-#   - CTRL-E or Enter key to open with the $EDITOR
-fo() (
-  IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
-  key=$(head -1 <<< "$out")
-  file=$(head -2 <<< "$out" | tail -1)
-  if [ -n "$file" ]; then
-	  [ "$key" = ctrl-o ] && ( (setsid xdg-open "$file" &) && kill -9 $PPID) || ${EDITOR:-vim} "$file"
-  fi
-)
 
 
 virtualenv_info(){
@@ -170,22 +137,6 @@ put_template 13 $base04 # +
 put_template 14 $base0C # aqua
 put_template 15 $base07 # ++++
 
-export base00=$(formatColor $base00) # ----
-export base01=$(formatColor $base01) # ---
-export base02=$(formatColor $base02) # --
-export base03=$(formatColor $base03) # -
-export base04=$(formatColor $base04) # +
-export base05=$(formatColor $base05) # ++
-export base06=$(formatColor $base06) # +++
-export base07=$(formatColor $base07) # ++++
-export base08=$(formatColor $base08) # red
-export base09=$(formatColor $base09) # orange
-export base0A=$(formatColor $base0A) # yellow
-export base0B=$(formatColor $base0B) # green
-export base0C=$(formatColor $base0C) # aqua/cyan
-export base0D=$(formatColor $base0D) # blue
-export base0E=$(formatColor $base0E) # purple
-export base0F=$(formatColor $base0F) # brown
 
 set_ps1(){
 	venv="$(virtualenv_info)" 
