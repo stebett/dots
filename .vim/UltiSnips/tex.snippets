@@ -81,41 +81,6 @@ snippet mini "minipage" b
 \end{minipage}
 endsnippet
 
-
-snippet head "Header" b
-\documentclass[12pt, a4paper]{article}
-\usepackage{graphicx}
-
-\date{`!p snip.rv = get_date()`}
-\title{`!p snip.rv = get_tex_name()`}
-\author{`!p snip.rv = get_lesson_dir()`}
-
-\begin{document}
-
-\maketitle
-
-\section{$4}
-
-$0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\end{document}
-endsnippet
-
 snippet dsm "dsm format" b
 \begin{itemize}
 	\item \textbf{A.} $1

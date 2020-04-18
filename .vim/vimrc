@@ -7,12 +7,14 @@ endif
 call plug#begin()
 Plug 'urbainvaes/vim-ripple', {'for': ['python']}
 Plug 'davidhalter/jedi-vim', {'for': ['python']}
-Plug 'SirVer/ultisnips' , {'for': ['tex']}
+Plug 'SirVer/ultisnips'
 Plug 'lervag/vimtex', {'for': ['tex']}
 Plug 'tpope/vim-sensible'
 call plug#end()
 
 let g:python3_host_prog="/home/ginko/.virtualenvs/nvim/bin/python3"
+let g:tex_flavor = "latex"
+let g:UltiSnipsSnippetsDir='/home/ginko/.UltiSnips/'
 
 let mapleader=' '
 
@@ -46,6 +48,7 @@ set tabstop=4
 set tags+=./.tags
 set completeopt=longest,menuone,noinsert
 set completeopt-=preview
+set path=.,~/.vim/,~/.vim/ftplugin,,
 
 
 " Intelligently navigate tmux panes and Vim splits using the same keys.
@@ -55,3 +58,19 @@ set title titlestring=%{progname}\ %f\ +%l\ #%{tabpagenr()}.%{winnr()}
 if &term =~ '^screen' && !has('nvim') | exe "set t_ts=\e]2; t_fs=\7" | endif
 
 command! -nargs=1 -complete=help H :enew | :set buftype=help | :h <args>
+
+set grepprg=rg\ --vimgrep
+
+function! Grep(...)
+	return system(join([&grepprg] + [a:1] + [expandcmd(join(a:000[1:-1], ' '))], ' '))
+endfunction
+
+command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
+
+cnoreabbrev <expr> grep  (getcmdtype() ==# ':' && getcmdline() ==# 'grep')  ? 'Grep'  : 'grep'
+
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost cgetexpr cwindow
+    autocmd QuickFixCmdPost lgetexpr lwindow
+augroup END
