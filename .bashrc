@@ -4,7 +4,7 @@
 source ~/.git-prompt.sh
 
 # Temporary functions
-alias tesi='source ~/.virtualenvs/tesi/bin/activate && cd ~/Thesis/'
+alias tesi="source $HOME/.virtualenvs/tesi/bin/activate && cd ~/Thesis/"
 alias sal='export TERM=xterm-256color && ssh ginkobab@salvatore -t tmux a'
 
 # Unlimited history
@@ -17,12 +17,14 @@ alias ls='ls --color=always'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias venv='source $HOME/Documents/scripts/various/venv'
 alias shut='systemctl poweroff'
-alias r=lfcd 
+alias r='lfcd'
 
 
 # Variables
 
 export sal='ginkobab@192.168.178.222'
+export GOPATH="$HOME/golearn"
+export GOBIN="$GOPATH/golearn/bin"
 export EDITOR='vim' 
 export VISUAL='less'
 export OPENER='xdg-open'
@@ -30,6 +32,7 @@ export BROWSER='firefox'
 export TERMINAL='xterm-kitty'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export TESSDATA_PREFIX=/usr/local/share/tessdata/
+export PATH=$HOME/golearn/bin:$PATH
 
 
 # Functions
@@ -137,8 +140,23 @@ put_template 13 $base04 # +
 put_template 14 $base0C # aqua
 put_template 15 $base07 # ++++
 
+checkdir(){
+	case $1 in
+		$HOME/livequiz*)
+			source $HOME/.virtualenvs/livequiz/bin/activate
+		;;
+		$HOME/Thesis*)
+			source $HOME/.virtualenvs/tesi/bin/activate
+		;;
+		$HOME/goapp*)
+			export GOBIN="$HOME/goapp/bin"
+			export GOPATH="$HOME/goapp"
+
+	esac
+}
 
 set_ps1(){
+	checkdir $(pwd)
 	venv="$(virtualenv_info)" 
 	host="$(hostname)"
 	branch="$(__git_ps1)"
@@ -152,5 +170,6 @@ set_ps1(){
 	ps_prompt=$(colorize 9 $prompt space)
 
 	PS1="\n$ps_host$ps_branch\n$ps_dir\n$ps_venv$ps_prompt"
+
 }
 PROMPT_COMMAND=set_ps1

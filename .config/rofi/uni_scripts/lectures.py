@@ -48,7 +48,7 @@ class Lecture():
         subprocess.Popen([
             "kitty",
             "-e", "bash", "-i", "-c",
-            f"\\nvim {str(self.file_path)}"
+            f"\\vim {str(self.file_path)}"
         ])
 
     def __str__(self):

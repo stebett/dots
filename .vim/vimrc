@@ -7,14 +7,16 @@ endif
 call plug#begin()
 Plug 'urbainvaes/vim-ripple', {'for': ['python']}
 Plug 'davidhalter/jedi-vim', {'for': ['python']}
-Plug 'SirVer/ultisnips'
+Plug 'maxmellon/vim-jsx-pretty', {'for': ['javascriptreact']}
+Plug 'pangloss/vim-javascript', {'for': ['javascriptreact']}
+Plug 'fatih/vim-go', {'for': ['go']}
 Plug 'lervag/vimtex', {'for': ['tex']}
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
 let g:python3_host_prog="/home/ginko/.virtualenvs/nvim/bin/python3"
 let g:tex_flavor = "latex"
-let g:UltiSnipsSnippetsDir='/home/ginko/.UltiSnips/'
 
 let mapleader=' '
 
@@ -36,7 +38,6 @@ set linebreak
 set smartindent
 set showmatch
 set noshowmode
-set autochdir
 set grepprg=rg\ --vimgrep
 set mat=2
 set t_vb=
@@ -73,3 +74,9 @@ augroup quickfix
     autocmd!
     autocmd QuickFixCmdPost cgetexpr cwindow
 augroup END
+
+nnoremap <silent> [c :cprevious<cr>
+nnoremap <silent> ]c :cnext<cr>
+nnoremap <silent> [b :bprevious<cr>
+nnoremap <silent> ]b :bnext<cr>
+
