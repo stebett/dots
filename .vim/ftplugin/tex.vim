@@ -1,6 +1,6 @@
 let g:vimtex_quickfix_mode=0
 
-inoremap <C-k> <c-g>u<esc>[s1z=`]a<c-g>u
+inoremap <C-l> <c-g>u<esc>[s1z=`]a<c-g>u
 inoremap == <esc>o\item 
 nnoremap == o\item 
 

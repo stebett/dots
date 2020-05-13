@@ -16,8 +16,8 @@ HISTFILESIZE=-1
 alias ls='ls --color=always'
 alias dot='git --git-dir=$HOME/.dots/ --work-tree=$HOME'
 alias venv='source $HOME/Documents/scripts/various/venv'
-alias shut='systemctl poweroff'
-alias r='lfcd'
+# alias shut='systemctl poweroff'
+# alias r='lfcd'
 
 
 # Variables
@@ -149,8 +149,8 @@ checkdir(){
 			source $HOME/.virtualenvs/tesi/bin/activate
 		;;
 		$HOME/goapp*)
-			export GOBIN="$HOME/goapp/bin"
-			export GOPATH="$HOME/goapp"
+			export GOBIN="$HOME/goapp/backend/bin"
+			export GOPATH="$HOME/goapp/backend"
 
 	esac
 }
